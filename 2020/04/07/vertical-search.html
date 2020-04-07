@@ -368,11 +368,15 @@ Ideally, our implemented search engine should give results similar to TED websit
     
     
 <div class="cell border-box-sizing code_cell rendered">
+<details class="description" open="">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Create edges dataframe which will be used to create directed graph</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-show</span>
+<span class="c1">#Create edges dataframe which will be used to create directed graph</span>
 <span class="n">recommendations_df</span> <span class="o">=</span> <span class="n">final_ted_df</span><span class="p">[[</span><span class="s2">"title"</span><span class="p">,</span><span class="s2">"related_talks"</span><span class="p">]]</span>
 <span class="k">def</span> <span class="nf">recommended_titles_list</span><span class="p">(</span><span class="n">reco_str</span><span class="p">):</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">literal_eval</span><span class="p">(</span><span class="n">reco_str</span><span class="p">))</span>
@@ -397,6 +401,7 @@ Ideally, our implemented search engine should give results similar to TED websit
 </div>
 </div>
 
+    </details>
 <div class="output_wrapper">
 <div class="output">
 
@@ -649,20 +654,6 @@ Average out degree:   5.8667
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#hide-input</span>
-<span class="c1">#Following is the picture of biggest modularity class (subgroup) and the associated data.</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="n">filename</span> <span class="o">=</span> <span class="n">image_folder_path</span> <span class="o">+</span> <span class="s2">"technology&amp;innovation_module.png"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="n">filename</span> <span class="o">=</span> <span class="n">image_folder_path</span> <span class="o">+</span> <span class="s2">"technology&amp;innovation_module_data.png"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
