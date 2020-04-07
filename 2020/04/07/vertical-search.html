@@ -177,25 +177,26 @@ Ideally, our implemented search engine should give results similar to TED websit
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Conceptual-Overview">
 <a class="anchor" href="#Conceptual-Overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conceptual Overview<a class="anchor-link" href="#Conceptual-Overview"> </a>
 </h1>
 <p>To provide top search results Search Engines like Google, Bing look at 3 distinct sources of information-</p>
-<ol>
+<ul>
     <li>
 <b>Content Relevance:Vector Model </b>- It looks at the relevance of content with search keywords. We will use an important metric Term Frequency-Inverse Document Frequency (TFIDF) to find out important words in the transcript data of the TED talks. More prominent are the search query words in a document higher is the TFIDF score.</li>
     <li>
 <b>Network Popularity:Citiation Model</b> - Famously known as pagerank (Initially, Google search's competitive advantage over other search engines like Yahoo). Web search engines use a crawler to create a network of web pages where web pages cited by other important web pages have higher pagerank. For our purpose, we create a network (directed graph) of TED talks as nodes and a directed edge if destination TED talk is recommendation in source TED talk. We use eigenvector metric, pagerank is a variant of eigenvectors. We use Python Networkx library to build this. </li>
     <li>
-<b>Behaviorial Data</b> - Metrics such as CTR (click through rate) and time spent on web page etc are also looked at.&lt;/b&gt;</li>
-</ol>
-<p><b> In this tutorial, we focus one the first 2 i.e. Content Relevance and Network Popularity. We have limited behaviorial data such as views, comments on TED videos. We will incorporate them in next version.&lt;/p&gt;
+<b>Behaviorial Data</b> - Metrics such as CTR (click through rate) and time spent on web page etc are also looked at.</li>
+</ul>
+<p><b> In this tutorial, we focus one the first 2 i.e. Content Relevance and Network Popularity. We have limited behaviorial data such as views, comments on TED videos. We will incorporate them in next version.</b></p>
 
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -923,13 +924,8 @@ Average out degree:   5.8667
 </div>
     
 
-&lt;/div&gt;
- 
+</div>
 
-</b></p>
-</div>
-</div></div>
-</div>
 
 
   </div><!-- from https://github.com/utterance/utterances -->
