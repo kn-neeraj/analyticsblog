@@ -7,6 +7,12 @@
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
 // change padding of headings
+
+.post-content p, .post-content li {
+   font-size: 15px;
+   color: #515151;
+}
+
 h1 {
     margin-top:1.5rem !important;
 }
