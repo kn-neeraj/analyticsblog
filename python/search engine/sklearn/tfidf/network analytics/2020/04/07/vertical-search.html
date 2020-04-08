@@ -221,7 +221,8 @@ window.onload = wrap_img;
 <li>
 <strong>Network Popularity: Citiation Model</strong> - Google uses networks metrics such as pagerank (a variant of Eigenvector centrality network metric) which can be considered as the importance score of a web page. Web search engines use a crawler to create a network of web pages with hyperlinks b/w web pages as edges of the network. A web page (or network node) with high pagerank (or eigenvector centrality) is linked to other important network nodes. PageRank is defined recursively and depends on the number and PageRank metric of all pages that link to it ("incoming links"). A page that is linked to by many pages with high PageRank receives a high rank itself.</li>
 </ol>
-<p><img src="/analyticsblog/images/copied_from_nb/img/PageRanks-Example.svg.png" alt=""></p>
+<p>As visible in the following image, node C despite having ony 1 incoming hyperlink has high page rank as the source of that hyperlink is B, which is a node with high page rank itself. For more mathematical introduction to pagerank, check - <a hyperlink="https://www.geeksforgeeks.org/page-rank-algorithm-implementation/">Pagerank implementation</a></p>
+<p><img src="/analyticsblog/images/copied_from_nb/img/PageRanks-Example.svg.png" alt="" title="Credit: https://commons.wikimedia.org/wiki/File:PageRanks-Example.svg"></p>
 
 </div>
 </div>
@@ -229,17 +230,36 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-        <li>
-<b>Network Popularity:Citiation Model</b> - Famously known as pagerank (Initially, Google search's competitive advantage over other search engines like Yahoo). Web search engines use a crawler to create a network of web pages where web pages cited by other important web pages have higher pagerank. For our purpose, we create a network (directed graph) of TED talks as nodes and a directed edge if destination TED talk is recommendation in source TED talk. We use eigenvector metric, pagerank is a variant of eigenvectors. We use Python Networkx library to build this. </li>
-
-    <li>
-<b>Content Relevance:Vector Model </b>- It looks at the relevance of content with search keywords. We will use an important metric Term Frequency-Inverse Document Frequency (TFIDF) to find out important words in the transcript data of the TED talks. More prominent are the search query words in a document higher is the TFIDF score.</li>
-    <li>
-<b>Behaviorial Data</b> - Metrics such as CTR (click through rate) and time spent on web page etc are also looked at.</li>
-
+<ol>
+<li>
+<strong>Content Relevance:Vector Model</strong>- Here the search engine looks at the relevance of content of the web page with search keywords. In information retrieval, Term Frequency-Inverse Document Frequency (TF-IDF) metric reflects how important a word is to a document/web page. <ul>
+<li>Term Frequency is number of times a term appears in a doc</li>
+<li>Inverse Document Frequency is # of documents / # of documents containing the term. This metric makes sure that frequent terms like a,an,the,end etc which don't carry much information have less IDF value.</li>
+<li>TF-IDF is just multiplication of the both - TF * IDF</li>
 </ul>
-<p><b> In this tutorial, we focus on the first 2 i.e. Content Relevance and Network Popularity. We have limited behaviorial data such as views, comments on TED videos. We will incorporate them in next version.</b></p>
+</li>
+</ol>
+<p>After removing stop words ('a','the','and', etc), TF-IDF metric is calculated for all the terms in a document. The document having highest TF-IDF metric for the search keywords receives a high rank and surfaces to the top. For more understanding and implementation check this blog on <a hyperlink="https://towardsdatascience.com/tf-term-frequency-idf-inverse-document-frequency-from-scratch-in-python-6c2b61b78558">TowardsDataScience</a>.</p>
+<p><img src="/analyticsblog/images/copied_from_nb/img/TFIDF-image.png" alt="" title="Credit: https://towardsdatascience.com/tf-term-frequency-idf-inverse-document-frequency-from-scratch-in-python-6c2b61b78558"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>
+<strong>Usage or Behavioral Model</strong> - Here the search engine looks at the behavioral popularity score of the page which accounts for following metrics <ul>
+<li>Number of visitors to the page</li>
+<li>Amt. of time spent on the page </li>
+<li>Penalty for quick click to another link in search result page<br>
+and more...<br>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Note</strong>: Currently, we have limited behavioral or usage data of the TED videos except comments. Hence, we will not be taking into account behavioral model in our current implementation.</p>
 
 </div>
 </div>
