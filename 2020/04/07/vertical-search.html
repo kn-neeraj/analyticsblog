@@ -91,7 +91,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      17 min read
+      18 min read
     
 </span></p>
 
@@ -131,17 +131,17 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Calculating-eigenvector-value-for-each-ted-talk">Calculating eigenvector value for each ted talk </a></li>
 <li class="toc-entry toc-h3"><a href="#Graph-visualization-using-Gephi-(https://gephi.org/)">Graph visualization using Gephi (https://gephi.org/) </a>
 <ul>
-<li class="toc-entry toc-h4"><a href="#For-example,-following-is-graph-of-a-cluster-which-represent-talks-related-to-technology-and-innovation">For example, following is graph of a cluster which represent talks related to technology and innovation </a></li>
+<li class="toc-entry toc-h4"><a href="#For-example,-following-is-the-graph-of-the-biggest-community-in-the-above-network-representing-talks-related-to-technology-and-innovation">For example, following is the graph of the biggest community in the above network representing talks related to technology and innovation </a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h3"><a href="#Calculate-TF-IDF-value-of-terms-in-ted-talk-transcripts">Calculate TF-IDF value of terms in ted talk transcripts </a></li>
 <li class="toc-entry toc-h3"><a href="#Search-query">Search query </a></li>
 <li class="toc-entry toc-h3"><a href="#Create-matching-score-based-on-search-query-terms">Create matching score based on search query terms </a></li>
-<li class="toc-entry toc-h3"><a href="#Combine-Eigen-vector-and-Matching-score-values-to-create-a-composite-score-and-find-top-5-search-results">Combine Eigen-vector and Matching score values to create a composite score and find top 5 search results </a></li>
-<li class="toc-entry toc-h3"><a href="#Search-results">Search results </a></li>
+<li class="toc-entry toc-h3"><a href="#Total-Score-:-Combine-Eigen-vector-and-Matching-score-values-to-create-a-composite-score">Total Score : Combine Eigen-vector and Matching score values to create a composite score </a></li>
+<li class="toc-entry toc-h3"><a href="#Search-results-(top-5)">Search results (top 5) </a></li>
 <li class="toc-entry toc-h3"><a href="#Shortcomings">Shortcomings </a>
 <ul>
-<li class="toc-entry toc-h4"><a href="#If-you-have-any-comments-or-suggestions-please-post-below-or-tweet-to-me-at---https://twitter.com/kn_neeraj">If you have any comments or suggestions please post below or tweet to me at - https://twitter.com/kn_neeraj </a></li>
+<li class="toc-entry toc-h4"><a href="#So-we-have-implemented-a-basic-search-engine-in-Python.-I-will-be-improving-on-it-in-further-blog-posts.--If-you-have-any-comments-or-suggestions-please-post-below-or-tweet-to-me-at---https://twitter.com/kn_neeraj-or-on-LinkedIn">So we have implemented a basic search engine in Python. I will be improving on it in further blog posts.  If you have any comments or suggestions please post below or tweet to me at - https://twitter.com/kn_neeraj or on LinkedIn </a></li>
 </ul>
 </li>
 </ul><!--
@@ -644,14 +644,6 @@ Notice the last column having eigen_vector values for each TED talk :
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>![](img/overall_graph.png)</code></p>
-
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -678,17 +670,9 @@ Notice the last column having eigen_vector values for each TED talk :
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="For-example,-following-is-graph-of-a-cluster-which-represent-talks-related-to-technology-and-innovation">
-<a class="anchor" href="#For-example,-following-is-graph-of-a-cluster-which-represent-talks-related-to-technology-and-innovation" aria-hidden="true"><span class="octicon octicon-link"></span></a>For example, following is graph of a cluster which represent talks related to technology and innovation<a class="anchor-link" href="#For-example,-following-is-graph-of-a-cluster-which-represent-talks-related-to-technology-and-innovation"> </a>
+<h4 id="For-example,-following-is-the-graph-of-the-biggest-community-in-the-above-network-representing-talks-related-to-technology-and-innovation">
+<a class="anchor" href="#For-example,-following-is-the-graph-of-the-biggest-community-in-the-above-network-representing-talks-related-to-technology-and-innovation" aria-hidden="true"><span class="octicon octicon-link"></span></a>For example, following is the graph of the biggest community in the above network representing talks related to technology and innovation<a class="anchor-link" href="#For-example,-following-is-the-graph-of-the-biggest-community-in-the-above-network-representing-talks-related-to-technology-and-innovation"> </a>
 </h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>![](img/technology&amp;innovation_module.png.png)</code></p>
-
 </div>
 </div>
 </div>
@@ -742,9 +726,10 @@ Notice the last column having eigen_vector values for each TED talk :
 <span class="n">tfidf_vector</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">stop_words</span><span class="o">=</span><span class="s1">'english'</span><span class="p">)</span>
 <span class="n">tfidf_values</span> <span class="o">=</span> <span class="n">tfidf_vector</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">final_ted_df</span><span class="p">[</span><span class="s1">'transcript'</span><span class="p">])</span>
 <span class="n">tfidf_matrix</span> <span class="o">=</span> <span class="n">tfidf_values</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="c1"># some of the identified features/terms from transcripts</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">tfidf_vector</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">()[</span><span class="mi">5000</span><span class="p">:</span><span class="mi">5050</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"TFIDF vectorizer has identified </span><span class="si">{}</span><span class="s2"> unique tokens all the ted talk transcripts data"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Following are some of the identified tokens:"</span><span class="p">)</span>
+<span class="n">tfidf_vector</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">()[</span><span class="mi">5000</span><span class="p">:</span><span class="mi">5025</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -758,10 +743,44 @@ Notice the last column having eigen_vector values for each TED talk :
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(2467, 58489)
-['baldness', 'baldwin', 'baldy', 'bale', 'baleen', 'baleful', 'balenciaga', 'balers', 'bales', 'balfour', 'bali', 'balikpapan', 'balinese', 'balk', 'balkan', 'balkans', 'balked', 'balkh', 'balkhi', 'ball', 'ballads', 'ballah', 'ballard', 'ballast', 'ballasted', 'ballbot', 'ballbots', 'balled', 'ballerina', 'ballet', 'balletic', 'ballets', 'ballgame', 'ballistic', 'ballistically', 'ballistics', 'ballmer', 'balloon', 'ballooning', 'balloonist', 'balloons', 'ballot', 'ballots', 'ballpark', 'ballplayer', 'ballpoint', 'ballroom', 'ballrooms', 'balls', 'ballsy']
+<pre>TFIDF vectorizer has identified 58489 unique tokens all the ted talk transcripts data
+Following are some of the identified tokens:
 </pre>
 </div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>['baldness',
+ 'baldwin',
+ 'baldy',
+ 'bale',
+ 'baleen',
+ 'baleful',
+ 'balenciaga',
+ 'balers',
+ 'bales',
+ 'balfour',
+ 'bali',
+ 'balikpapan',
+ 'balinese',
+ 'balk',
+ 'balkan',
+ 'balkans',
+ 'balked',
+ 'balkh',
+ 'balkhi',
+ 'ball',
+ 'ballads',
+ 'ballah',
+ 'ballard',
+ 'ballast',
+ 'ballasted']</pre>
+</div>
+
 </div>
 
 </div>
@@ -786,7 +805,8 @@ Notice the last column having eigen_vector values for each TED talk :
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">search_query</span> <span class="o">=</span> <span class="s2">"inspiration and courage"</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
+<span class="n">search_query</span> <span class="o">=</span> <span class="s2">"inspiration and courage"</span>
 </pre></div>
 
     </div>
@@ -803,7 +823,7 @@ Notice the last column having eigen_vector values for each TED talk :
 <a class="anchor" href="#Create-matching-score-based-on-search-query-terms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create matching score based on search query terms<a class="anchor-link" href="#Create-matching-score-based-on-search-query-terms"> </a>
 </h3>
 <ul>
-    <li>Matching score - For a ted talk it is the sum of all TF-IDF values for the search query terms</li>
+    <li>Matching score of a ted talk - it is the sum of all TF-IDF values for terms in search query </li>
 </ul>
 </div>
 </div>
@@ -835,8 +855,10 @@ Notice the last column having eigen_vector values for each TED talk :
     <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">token_indexes</span><span class="p">:</span>
         <span class="n">matching_scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">matching_scores</span><span class="p">,</span> <span class="n">tfidf_matrix</span><span class="p">[:,</span><span class="n">index</span><span class="p">])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">matching_scores</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="n">matching_scores</span><span class="p">[:</span><span class="mi">20</span><span class="p">]</span>
+<span class="n">search_dataframe</span> <span class="o">=</span> <span class="n">final_ted_df</span><span class="p">[[</span><span class="s1">'title'</span><span class="p">,</span><span class="s1">'url'</span><span class="p">,</span> <span class="s1">'eigenvector_value'</span><span class="p">]]</span>
+<span class="n">search_dataframe</span> <span class="o">=</span> <span class="n">search_dataframe</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">matching_scores</span><span class="o">=</span><span class="n">matching_scores</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Notice the matching_scores column for the above specified search query:"</span><span class="p">)</span>
+<span class="n">search_dataframe</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -850,7 +872,7 @@ Notice the last column having eigen_vector values for each TED talk :
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(2467,)
+<pre>Notice the matching_scores column for the above specified search query:
 </pre>
 </div>
 </div>
@@ -858,12 +880,70 @@ Notice the last column having eigen_vector values for each TED talk :
 <div class="output_area">
 
 
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="output_text output_subarea output_execute_result">
-<pre>array([0.        , 0.        , 0.        , 0.01719561, 0.        ,
-       0.        , 0.        , 0.        , 0.        , 0.        ,
-       0.        , 0.        , 0.        , 0.        , 0.        ,
-       0.        , 0.02922756, 0.        , 0.01868499, 0.        ])</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>title</th>
+      <th>url</th>
+      <th>eigenvector_value</th>
+      <th>matching_scores</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>Do schools kill creativity?</td>
+      <td>https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity\n</td>
+      <td>0.003404</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Averting the climate crisis</td>
+      <td>https://www.ted.com/talks/al_gore_on_averting_climate_crisis\n</td>
+      <td>0.001041</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Simplicity sells</td>
+      <td>https://www.ted.com/talks/david_pogue_says_simplicity_sells\n</td>
+      <td>0.000441</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Greening the ghetto</td>
+      <td>https://www.ted.com/talks/majora_carter_s_tale_of_urban_renewal\n</td>
+      <td>0.001574</td>
+      <td>0.017196</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>The best stats you've ever seen</td>
+      <td>https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen\n</td>
+      <td>0.001933</td>
+      <td>0.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
 </div>
@@ -877,8 +957,8 @@ Notice the last column having eigen_vector values for each TED talk :
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Combine-Eigen-vector-and-Matching-score-values-to-create-a-composite-score-and-find-top-5-search-results">
-<a class="anchor" href="#Combine-Eigen-vector-and-Matching-score-values-to-create-a-composite-score-and-find-top-5-search-results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Combine Eigen-vector and Matching score values to create a composite score and find top 5 search results<a class="anchor-link" href="#Combine-Eigen-vector-and-Matching-score-values-to-create-a-composite-score-and-find-top-5-search-results"> </a>
+<h3 id="Total-Score-:-Combine-Eigen-vector-and-Matching-score-values-to-create-a-composite-score">
+<a class="anchor" href="#Total-Score-:-Combine-Eigen-vector-and-Matching-score-values-to-create-a-composite-score" aria-hidden="true"><span class="octicon octicon-link"></span></a>Total Score : Combine Eigen-vector and Matching score values to create a composite score<a class="anchor-link" href="#Total-Score-:-Combine-Eigen-vector-and-Matching-score-values-to-create-a-composite-score"> </a>
 </h3>
 <ul>
     <li>We give equal weightage to eigenvector value and matching score and calculate a composite score for each ted talk and sort to get top 5 search results</li>
@@ -897,9 +977,9 @@ Notice the last column having eigen_vector values for each TED talk :
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-show</span>
-<span class="n">search_dataframe</span> <span class="o">=</span> <span class="n">final_ted_df</span><span class="p">[[</span><span class="s1">'title'</span><span class="p">,</span><span class="s1">'url'</span><span class="p">,</span> <span class="s1">'eigenvector_value'</span><span class="p">]]</span>
-<span class="n">search_dataframe</span> <span class="o">=</span> <span class="n">search_dataframe</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">matching_scores</span><span class="o">=</span><span class="n">matching_scores</span><span class="p">)</span>
 <span class="n">search_dataframe</span><span class="p">[</span><span class="s1">'total_score'</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">search_dataframe</span><span class="p">[</span><span class="s1">'matching_scores'</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">search_dataframe</span><span class="p">[</span><span class="s1">'eigenvector_value'</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"We have calculated a composite total score for each ted talk. Notice the total_Score column:"</span><span class="p">)</span>
+<span class="n">search_dataframe</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -907,19 +987,110 @@ Notice the last column having eigen_vector values for each TED talk :
 </div>
 
     </details>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>We have calculated a composite total score for each ted talk. Notice the total_Score column:
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>title</th>
+      <th>url</th>
+      <th>eigenvector_value</th>
+      <th>matching_scores</th>
+      <th>total_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>Do schools kill creativity?</td>
+      <td>https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity\n</td>
+      <td>0.003404</td>
+      <td>0.000000</td>
+      <td>0.001702</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Averting the climate crisis</td>
+      <td>https://www.ted.com/talks/al_gore_on_averting_climate_crisis\n</td>
+      <td>0.001041</td>
+      <td>0.000000</td>
+      <td>0.000521</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Simplicity sells</td>
+      <td>https://www.ted.com/talks/david_pogue_says_simplicity_sells\n</td>
+      <td>0.000441</td>
+      <td>0.000000</td>
+      <td>0.000220</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Greening the ghetto</td>
+      <td>https://www.ted.com/talks/majora_carter_s_tale_of_urban_renewal\n</td>
+      <td>0.001574</td>
+      <td>0.017196</td>
+      <td>0.009385</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>The best stats you've ever seen</td>
+      <td>https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen\n</td>
+      <td>0.001933</td>
+      <td>0.000000</td>
+      <td>0.000966</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     
 
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Search-results">
-<a class="anchor" href="#Search-results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Search results<a class="anchor-link" href="#Search-results"> </a>
+<h3 id="Search-results-(top-5)">
+<a class="anchor" href="#Search-results-(top-5)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Search results (top 5)<a class="anchor-link" href="#Search-results-(top-5)"> </a>
 </h3>
 <ul>
-<li>Search results are <i>"Courage is contagious", "Its time for women to run for office"</i> etc and appear quite relevant.</li> 
+<li>Search results are <i>"Courage is contagious", "Its time for women to run for office"</i> etc and appear quite relevant of inspiration and courage</li> 
 <li>If we check the transcript of these talks they have lot of words like inspiration or courage or both.</li> 
-<li>Also, these talks are similar to other important talks and therefore have high eigenvector values.</li>
+<li>Also, these talks are recommended in other important talks and therefore have high eigenvector values.</li>
 </ul>
 </div>
 </div>
@@ -937,6 +1108,7 @@ Notice the last column having eigen_vector values for each TED talk :
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-show</span>
 <span class="c1"># Show the top 5 search results</span>
 <span class="n">search_dataframe</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">'total_score'</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="kc">False</span><span class="p">],</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Following are the top 5 search results:"</span><span class="p">)</span>
 <span class="n">search_dataframe</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)[[</span><span class="s1">'title'</span><span class="p">,</span><span class="s1">'url'</span><span class="p">]]</span>
 </pre></div>
 
@@ -947,6 +1119,14 @@ Notice the last column having eigen_vector values for each TED talk :
     </details>
 <div class="output_wrapper">
 <div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Following are the top 5 search results:
+</pre>
+</div>
+</div>
 
 <div class="output_area">
 
@@ -1030,8 +1210,8 @@ Notice the last column having eigen_vector values for each TED talk :
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="If-you-have-any-comments-or-suggestions-please-post-below-or-tweet-to-me-at---https://twitter.com/kn_neeraj">
-<a class="anchor" href="#If-you-have-any-comments-or-suggestions-please-post-below-or-tweet-to-me-at---https://twitter.com/kn_neeraj" aria-hidden="true"><span class="octicon octicon-link"></span></a>If you have any comments or suggestions please post below or tweet to me at - <a href="https://twitter.com/kn_neeraj">https://twitter.com/kn_neeraj</a><a class="anchor-link" href="#If-you-have-any-comments-or-suggestions-please-post-below-or-tweet-to-me-at---https://twitter.com/kn_neeraj"> </a>
+<h4 id="So-we-have-implemented-a-basic-search-engine-in-Python.-I-will-be-improving-on-it-in-further-blog-posts.--If-you-have-any-comments-or-suggestions-please-post-below-or-tweet-to-me-at---https://twitter.com/kn_neeraj-or-on-LinkedIn">
+<a class="anchor" href="#So-we-have-implemented-a-basic-search-engine-in-Python.-I-will-be-improving-on-it-in-further-blog-posts.--If-you-have-any-comments-or-suggestions-please-post-below-or-tweet-to-me-at---https://twitter.com/kn_neeraj-or-on-LinkedIn" aria-hidden="true"><span class="octicon octicon-link"></span></a>So we have implemented a basic search engine in Python. I will be improving on it in further blog posts.  If you have any comments or suggestions please post below or tweet to me at - <a href="https://twitter.com/kn_neeraj">https://twitter.com/kn_neeraj</a> or on <a url="https://www.linkedin.com/in/neerajkumar89/">LinkedIn</a><a class="anchor-link" href="#So-we-have-implemented-a-basic-search-engine-in-Python.-I-will-be-improving-on-it-in-further-blog-posts.--If-you-have-any-comments-or-suggestions-please-post-below-or-tweet-to-me-at---https://twitter.com/kn_neeraj-or-on-LinkedIn"> </a>
 </h4>
 </div>
 </div>
