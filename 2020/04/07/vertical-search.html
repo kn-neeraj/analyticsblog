@@ -166,7 +166,7 @@ window.onload = wrap_img;
 <h3 id="Introduction">
 <a class="anchor" href="#Introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction<a class="anchor-link" href="#Introduction"> </a>
 </h3>
-<p>In the grad school classes (<i>Machine Learning for Business Managers, Network Analytics, Fintech, Data Driven Customer Management</i>) I took in my last few terms at B-school, I was introduced to Network Analytics and Google search algorithm in more detail. It seemed like a perfect match of network analytics concepts like pagerank, eigenvector metrics and basic NLP algorithms I learned in the classes. Hence, in this post I implement a basic search engine using eigenvector and TF-IDF metric using Sklearn, Networkx in Python.</p>
+<p>In the grad school classes (<i>Machine Learning for Business Managers, Network Analytics, Fintech, Data Driven Customer Management</i>) I took in my last few terms at B-school, I was introduced to Network Analytics and Google search algorithm in more detail.Search seemed like a perfect match of network analytics concepts like pagerank, eigenvector metrics and basic NLP algorithms I learned in the classes. Hence, in this post I implement a basic search engine using metrics such as eigenvector and TF-IDF. We use following Python libraries - Pandas, Sklearn, Networkx.</p>
 
 </div>
 </div>
@@ -203,7 +203,7 @@ window.onload = wrap_img;
     <li>
 <b>Behaviorial Data</b> - Metrics such as CTR (click through rate) and time spent on web page etc are also looked at.</li>
 </ul>
-<p><b> In this tutorial, we focus one the first 2 i.e. Content Relevance and Network Popularity. We have limited behaviorial data such as views, comments on TED videos. We will incorporate them in next version.</b></p>
+<p><b> In this tutorial, we focus on the first 2 i.e. Content Relevance and Network Popularity. We have limited behaviorial data such as views, comments on TED videos. We will incorporate them in next version.</b></p>
 
 </div>
 </div>
@@ -295,7 +295,7 @@ window.onload = wrap_img;
 <span class="n">final_ted_df</span> <span class="o">=</span> <span class="n">transcripts_df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">ted_main_df</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">"url"</span><span class="p">)</span>
 <span class="n">final_ted_df</span> <span class="o">=</span> <span class="n">final_ted_df</span><span class="p">[[</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">'url'</span><span class="p">,</span> <span class="s1">'transcript'</span><span class="p">,</span> <span class="s1">'related_talks'</span><span class="p">]]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"We have data on </span><span class="si">{}</span><span class="s2"> talks. Notice the title, url, transcrip, and related_talks columns below:"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">final_ted_df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"We have data on </span><span class="si">{}</span><span class="s2"> talks. Notice the title, url, transcript, and related_talks columns below:"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">final_ted_df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 <span class="n">final_ted_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
@@ -639,7 +639,7 @@ Notice the last column having eigen_vector values for each TED talk :
 </h3>
 <ul>
     <li> Gephi is a free software which provides GUI type interface to do network analytics and produce network metrics such as eigenvector and pagerank metrics.</li>
-    <li>Following is a visual representation of our network graph with different colors representing different clusters or communities within graph. Talks with similar themes or topic will tend to be in one cluster</li>
+    <li>Following is a visual representation of our network graph with different colors representing different clusters or communities within graph. TED talks with similar themes or topic will tend to be in one cluster</li>
 </ul>
 </div>
 </div>
@@ -727,9 +727,9 @@ Notice the last column having eigen_vector values for each TED talk :
 <span class="n">tfidf_values</span> <span class="o">=</span> <span class="n">tfidf_vector</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">final_ted_df</span><span class="p">[</span><span class="s1">'transcript'</span><span class="p">])</span>
 <span class="n">tfidf_matrix</span> <span class="o">=</span> <span class="n">tfidf_values</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
 <span class="c1"># some of the identified features/terms from transcripts</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"TFIDF vectorizer has identified </span><span class="si">{}</span><span class="s2"> unique tokens all the ted talk transcripts data"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"TFIDF vectorizer has identified </span><span class="si">{}</span><span class="s2"> unique tokens in all the transcripts data."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Following are some of the identified tokens:"</span><span class="p">)</span>
-<span class="n">tfidf_vector</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">()[</span><span class="mi">5000</span><span class="p">:</span><span class="mi">5025</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tfidf_vector</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">()[</span><span class="mi">5000</span><span class="p">:</span><span class="mi">5025</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -743,44 +743,11 @@ Notice the last column having eigen_vector values for each TED talk :
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>TFIDF vectorizer has identified 58489 unique tokens all the ted talk transcripts data
+<pre>TFIDF vectorizer has identified 58489 unique tokens in all the transcripts data.
 Following are some of the identified tokens:
+['baldness', 'baldwin', 'baldy', 'bale', 'baleen', 'baleful', 'balenciaga', 'balers', 'bales', 'balfour', 'bali', 'balikpapan', 'balinese', 'balk', 'balkan', 'balkans', 'balked', 'balkh', 'balkhi', 'ball', 'ballads', 'ballah', 'ballard', 'ballast', 'ballasted']
 </pre>
 </div>
-</div>
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>['baldness',
- 'baldwin',
- 'baldy',
- 'bale',
- 'baleen',
- 'baleful',
- 'balenciaga',
- 'balers',
- 'bales',
- 'balfour',
- 'bali',
- 'balikpapan',
- 'balinese',
- 'balk',
- 'balkan',
- 'balkans',
- 'balked',
- 'balkh',
- 'balkhi',
- 'ball',
- 'ballads',
- 'ballah',
- 'ballard',
- 'ballast',
- 'ballasted']</pre>
-</div>
-
 </div>
 
 </div>
@@ -1088,9 +1055,9 @@ Following are some of the identified tokens:
 <a class="anchor" href="#Search-results-(top-5)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Search results (top 5)<a class="anchor-link" href="#Search-results-(top-5)"> </a>
 </h3>
 <ul>
-<li>Search results are <i>"Courage is contagious", "Its time for women to run for office"</i> etc and appear quite relevant of inspiration and courage</li> 
-<li>If we check the transcript of these talks they have lot of words like inspiration or courage or both.</li> 
-<li>Also, these talks are recommended in other important talks and therefore have high eigenvector values.</li>
+<li>Search results are <i>"Courage is contagious", "Its time for women to run for office"</i> etc and appear quite relevant to our search query - 'inspiration and courage'</li> 
+<li>If we check the transcript of these talks they have lot of words like inspiration, courage or both leading to high TF-IDF values</li> 
+<li>Also, these talks are more recommended in other important talks and therefore have high eigenvector values.</li>
 </ul>
 </div>
 </div>
@@ -1211,7 +1178,7 @@ Following are some of the identified tokens:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="So-we-have-implemented-a-basic-search-engine-in-Python.-I-will-be-improving-on-it-in-further-blog-posts.--If-you-have-any-comments-or-suggestions-please-post-below-or-tweet-to-me-at---https://twitter.com/kn_neeraj-or-on-LinkedIn">
-<a class="anchor" href="#So-we-have-implemented-a-basic-search-engine-in-Python.-I-will-be-improving-on-it-in-further-blog-posts.--If-you-have-any-comments-or-suggestions-please-post-below-or-tweet-to-me-at---https://twitter.com/kn_neeraj-or-on-LinkedIn" aria-hidden="true"><span class="octicon octicon-link"></span></a>So we have implemented a basic search engine in Python. I will be improving on it in further blog posts.  If you have any comments or suggestions please post below or tweet to me at - <a href="https://twitter.com/kn_neeraj">https://twitter.com/kn_neeraj</a> or on <a url="https://www.linkedin.com/in/neerajkumar89/">LinkedIn</a><a class="anchor-link" href="#So-we-have-implemented-a-basic-search-engine-in-Python.-I-will-be-improving-on-it-in-further-blog-posts.--If-you-have-any-comments-or-suggestions-please-post-below-or-tweet-to-me-at---https://twitter.com/kn_neeraj-or-on-LinkedIn"> </a>
+<a class="anchor" href="#So-we-have-implemented-a-basic-search-engine-in-Python.-I-will-be-improving-on-it-in-further-blog-posts.--If-you-have-any-comments-or-suggestions-please-post-below-or-tweet-to-me-at---https://twitter.com/kn_neeraj-or-on-LinkedIn" aria-hidden="true"><span class="octicon octicon-link"></span></a>So we have implemented a basic search engine in Python. I will be improving on it in further blog posts.  If you have any comments or suggestions please post below or tweet to me at - <a href="https://twitter.com/kn_neeraj">https://twitter.com/kn_neeraj</a> or on <a href="https://www.linkedin.com/in/neerajkumar89/">LinkedIn</a><a class="anchor-link" href="#So-we-have-implemented-a-basic-search-engine-in-Python.-I-will-be-improving-on-it-in-further-blog-posts.--If-you-have-any-comments-or-suggestions-please-post-below-or-tweet-to-me-at---https://twitter.com/kn_neeraj-or-on-LinkedIn"> </a>
 </h4>
 </div>
 </div>
