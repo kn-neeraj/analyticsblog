@@ -103,7 +103,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      18 min read
+      19 min read
     
 </span></p>
 
@@ -216,14 +216,28 @@ window.onload = wrap_img;
 <h3 id="Conceptual-Overview">
 <a class="anchor" href="#Conceptual-Overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conceptual Overview<a class="anchor-link" href="#Conceptual-Overview"> </a>
 </h3>
-<p>To provide top search results Search Engines like Google, Bing look at 3 distinct sources of information-</p>
+<p>To provide search results, search engines like Google, Bing look at 3 distinct sources of information-</p>
+<ol>
+<li>
+<strong>Network Popularity: Citiation Model</strong> - Google uses networks metrics such as pagerank (a variant of Eigenvector centrality network metric) which can be considered as the importance score of a web page. Web search engines use a crawler to create a network of web pages with hyperlinks b/w web pages as edges of the network. A web page (or network node) with high pagerank (or eigenvector centrality) is linked to other important network nodes. PageRank is defined recursively and depends on the number and PageRank metric of all pages that link to it ("incoming links"). A page that is linked to by many pages with high PageRank receives a high rank itself.</li>
+</ol>
+<p><code>![](img/PageRanks-Example.svg.png)</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
+        <li>
+<b>Network Popularity:Citiation Model</b> - Famously known as pagerank (Initially, Google search's competitive advantage over other search engines like Yahoo). Web search engines use a crawler to create a network of web pages where web pages cited by other important web pages have higher pagerank. For our purpose, we create a network (directed graph) of TED talks as nodes and a directed edge if destination TED talk is recommendation in source TED talk. We use eigenvector metric, pagerank is a variant of eigenvectors. We use Python Networkx library to build this. </li>
+
     <li>
 <b>Content Relevance:Vector Model </b>- It looks at the relevance of content with search keywords. We will use an important metric Term Frequency-Inverse Document Frequency (TFIDF) to find out important words in the transcript data of the TED talks. More prominent are the search query words in a document higher is the TFIDF score.</li>
     <li>
-<b>Network Popularity:Citiation Model</b> - Famously known as pagerank (Initially, Google search's competitive advantage over other search engines like Yahoo). Web search engines use a crawler to create a network of web pages where web pages cited by other important web pages have higher pagerank. For our purpose, we create a network (directed graph) of TED talks as nodes and a directed edge if destination TED talk is recommendation in source TED talk. We use eigenvector metric, pagerank is a variant of eigenvectors. We use Python Networkx library to build this. </li>
-    <li>
 <b>Behaviorial Data</b> - Metrics such as CTR (click through rate) and time spent on web page etc are also looked at.</li>
+
 </ul>
 <p><b> In this tutorial, we focus on the first 2 i.e. Content Relevance and Network Popularity. We have limited behaviorial data such as views, comments on TED videos. We will incorporate them in next version.</b></p>
 
@@ -1190,6 +1204,7 @@ Following are some of the identified tokens:
 </h3>
 <ul>
 <li>Matching score metric doesn't work well with long search queries. Need to look into cosine similarity metric.</li>
+<li>Using eigenvector metric instead of pagerank</li>
 <li>No contextual understanding of the query.</li>
 </ul>
 
