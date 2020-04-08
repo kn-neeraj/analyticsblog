@@ -3,11 +3,7 @@ layout: page
 title: About Me
 permalink: /about/
 ---
+## Hi there! I am Neeraj.  I have just completed my grad school from ISB, India and will start working as Product Manager in Browserstack. This is the website to share my analytics related personal projects.
+<br/>
+### If you want to chat about Tech, Products, or Analytics feel free to reach out to me on <a href="https://twitter.com/kn_neeraj">Twitter</a> or <a href="https://www.linkedin.com/in/neerajkumar89/">Linkedin</a>
 
-This is where you put the contents of your *About* page. Like all your pages, it's in [Markdown](https://guides.github.com/features/mastering-markdown/) format.
-
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
-
-
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
