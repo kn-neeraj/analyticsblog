@@ -3,34 +3,34 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Basic Google search implementation using Python, Sklearn, and networkx | fastpages</title>
+<title>Building basic search engine from scratch using Python, Sklearn, and Networkx | fastpages</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Basic Google search implementation using Python, Sklearn, and networkx" />
+<meta property="og:title" content="Building basic search engine from scratch using Python, Sklearn, and Networkx" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A tutorial demonstrating how to implement basic search algorithm using Python, sklearn, and networkx" />
-<meta property="og:description" content="A tutorial demonstrating how to implement basic search algorithm using Python, sklearn, and networkx" />
+<meta name="description" content="A tutorial demonstrating how to implement basic search engine algorithm using Python, Sklearn, and Networkx" />
+<meta property="og:description" content="A tutorial demonstrating how to implement basic search engine algorithm using Python, Sklearn, and Networkx" />
 <link rel="canonical" href="https://kn-neeraj.github.io/analyticsblog/2020/04/07/vertical-search.html" />
 <meta property="og:url" content="https://kn-neeraj.github.io/analyticsblog/2020/04/07/vertical-search.html" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-04-07T00:00:00-05:00" />
 <script type="application/ld+json">
-{"datePublished":"2020-04-07T00:00:00-05:00","dateModified":"2020-04-07T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://kn-neeraj.github.io/analyticsblog/2020/04/07/vertical-search.html"},"description":"A tutorial demonstrating how to implement basic search algorithm using Python, sklearn, and networkx","@type":"BlogPosting","url":"https://kn-neeraj.github.io/analyticsblog/2020/04/07/vertical-search.html","headline":"Basic Google search implementation using Python, Sklearn, and networkx","@context":"https://schema.org"}</script>
+{"datePublished":"2020-04-07T00:00:00-05:00","dateModified":"2020-04-07T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://kn-neeraj.github.io/analyticsblog/2020/04/07/vertical-search.html"},"description":"A tutorial demonstrating how to implement basic search engine algorithm using Python, Sklearn, and Networkx","@type":"BlogPosting","url":"https://kn-neeraj.github.io/analyticsblog/2020/04/07/vertical-search.html","headline":"Building basic search engine from scratch using Python, Sklearn, and Networkx","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/analyticsblog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://kn-neeraj.github.io/analyticsblog/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/analyticsblog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Basic Google search implementation using Python, Sklearn, and networkx | fastpages</title>
+<title>Building basic search engine from scratch using Python, Sklearn, and Networkx | fastpages</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Basic Google search implementation using Python, Sklearn, and networkx" />
+<meta property="og:title" content="Building basic search engine from scratch using Python, Sklearn, and Networkx" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A tutorial demonstrating how to implement basic search algorithm using Python, sklearn, and networkx" />
-<meta property="og:description" content="A tutorial demonstrating how to implement basic search algorithm using Python, sklearn, and networkx" />
+<meta name="description" content="A tutorial demonstrating how to implement basic search engine algorithm using Python, Sklearn, and Networkx" />
+<meta property="og:description" content="A tutorial demonstrating how to implement basic search engine algorithm using Python, Sklearn, and Networkx" />
 <link rel="canonical" href="https://kn-neeraj.github.io/analyticsblog/2020/04/07/vertical-search.html" />
 <meta property="og:url" content="https://kn-neeraj.github.io/analyticsblog/2020/04/07/vertical-search.html" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-04-07T00:00:00-05:00" />
 <script type="application/ld+json">
-{"datePublished":"2020-04-07T00:00:00-05:00","dateModified":"2020-04-07T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://kn-neeraj.github.io/analyticsblog/2020/04/07/vertical-search.html"},"description":"A tutorial demonstrating how to implement basic search algorithm using Python, sklearn, and networkx","@type":"BlogPosting","url":"https://kn-neeraj.github.io/analyticsblog/2020/04/07/vertical-search.html","headline":"Basic Google search implementation using Python, Sklearn, and networkx","@context":"https://schema.org"}</script>
+{"datePublished":"2020-04-07T00:00:00-05:00","dateModified":"2020-04-07T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://kn-neeraj.github.io/analyticsblog/2020/04/07/vertical-search.html"},"description":"A tutorial demonstrating how to implement basic search engine algorithm using Python, Sklearn, and Networkx","@type":"BlogPosting","url":"https://kn-neeraj.github.io/analyticsblog/2020/04/07/vertical-search.html","headline":"Building basic search engine from scratch using Python, Sklearn, and Networkx","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -85,7 +85,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Basic Google search implementation using Python, Sklearn, and networkx</h1><p class="page-description">A tutorial demonstrating how to implement basic search algorithm using Python, sklearn, and networkx</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-04-07T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Building basic search engine from scratch using Python, Sklearn, and Networkx</h1><p class="page-description">A tutorial demonstrating how to implement basic search engine algorithm using Python, Sklearn, and Networkx</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-04-07T00:00:00-05:00" itemprop="datePublished">
         Apr 7, 2020
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -124,12 +124,12 @@ window.onload = wrap_img;
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
 <li class="toc-entry toc-h3"><a href="#Introduction">Introduction </a></li>
-<li class="toc-entry toc-h3"><a href="#About">About </a></li>
+<li class="toc-entry toc-h3"><a href="#Data-Source">Data Source </a></li>
 <li class="toc-entry toc-h3"><a href="#Conceptual-Overview">Conceptual Overview </a></li>
-<li class="toc-entry toc-h3"><a href="#Library-Imports">Library Imports </a></li>
+<li class="toc-entry toc-h3"><a href="#Imports">Imports </a></li>
 <li class="toc-entry toc-h3"><a href="#Data-processing">Data processing </a></li>
 <li class="toc-entry toc-h3"><a href="#Calculating-eigenvector-value-for-each-ted-talk">Calculating eigenvector value for each ted talk </a></li>
-<li class="toc-entry toc-h3"><a href="#Graph-visualization-using-Gephi">Graph visualization using Gephi </a>
+<li class="toc-entry toc-h3"><a href="#Graph-visualization-using-Gephi-(https://gephi.org/)">Graph visualization using Gephi (https://gephi.org/) </a>
 <ul>
 <li class="toc-entry toc-h4"><a href="#For-example,-following-is-graph-of-a-cluster-which-represent-talks-related-to-technology-and-innovation">For example, following is graph of a cluster which represent talks related to technology and innovation </a></li>
 </ul>
@@ -166,7 +166,7 @@ window.onload = wrap_img;
 <h3 id="Introduction">
 <a class="anchor" href="#Introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction<a class="anchor-link" href="#Introduction"> </a>
 </h3>
-<p>In the grad school classes (<i>Machine Learning for Business Managers, Network Analytics, Fintech, Data Driven Customer Management</i>) I took in my last few terms at B-school, I was introduced to Network Analytics and Google search algorithm in more detail. Google's organic search algorithm seemed like a perfect match of network analytics concepts like pagerank, eigenvector and basic NLP algorithms I learned in above mentioned classes. Hence, this post is about implementing search algorithm using Python and libraries such as sklearn, networkx.</p>
+<p>In the grad school classes (<i>Machine Learning for Business Managers, Network Analytics, Fintech, Data Driven Customer Management</i>) I took in my last few terms at B-school, I was introduced to Network Analytics and Google search algorithm in more detail. It seemed like a perfect match of network analytics concepts like pagerank, eigenvector metrics and basic NLP algorithms I learned in the classes. Hence, in this post I implement a basic search engine using eigenvector and TF-IDF metric using Sklearn, Networkx in Python.</p>
 
 </div>
 </div>
@@ -174,11 +174,16 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="About">
-<a class="anchor" href="#About" aria-hidden="true"><span class="octicon octicon-link"></span></a>About<a class="anchor-link" href="#About"> </a>
+<h3 id="Data-Source">
+<a class="anchor" href="#Data-Source" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Source<a class="anchor-link" href="#Data-Source"> </a>
 </h3>
-<p>We will implement search based on user queries for TED talks based on data available at Kaggle and show top 5 results. We will use Pandas - a data manipulation library, Sklearn - a machine learning library, and Networkx - a Python library for studying graphs.
-Ideally, our implemented search engine should give results similar to TED website search (<a href="https://www.ted.com/search?q=technology+and+robots">https://www.ted.com/search?q=technology+and+robots</a>)</p>
+<p>We will implement search to find relevant TED talks based on user query. We will use data available on Kaggle - <a href="https://www.kaggle.com/rounakbanik/ted-talks">https://www.kaggle.com/rounakbanik/ted-talks</a>.</p>
+<p>It contains information about all audio-video recordings of TED Talks uploaded to the official TED.com website until September 21st, 2017. There are two CSV files</p>
+<ol>
+    <li> ted_main.csv - Contains data such as talk title, speaker, related talks </li>
+    <li> transcripts.csv - Contains data such as talk transcripts and url </li>
+</ol>
+<p>Ideally, our implemented search engine should give results similar to TED website search (<a href="https://www.ted.com/search?q=technology+and+robots">https://www.ted.com/search?q=technology+and+robots</a>)</p>
 
 </div>
 </div>
@@ -206,8 +211,8 @@ Ideally, our implemented search engine should give results similar to TED websit
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Library-Imports">
-<a class="anchor" href="#Library-Imports" aria-hidden="true"><span class="octicon octicon-link"></span></a>Library Imports<a class="anchor-link" href="#Library-Imports"> </a>
+<h3 id="Imports">
+<a class="anchor" href="#Imports" aria-hidden="true"><span class="octicon octicon-link"></span></a>Imports<a class="anchor-link" href="#Imports"> </a>
 </h3>
 <p>We use following libraries</p>
 <ul>
@@ -224,11 +229,15 @@ Ideally, our implemented search engine should give results similar to TED websit
     
     
 <div class="cell border-box-sizing code_cell rendered">
+<details class="description" open="">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-show</span>
+<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">json</span>
@@ -245,6 +254,7 @@ Ideally, our implemented search engine should give results similar to TED websit
 </div>
 </div>
 
+    </details>
 </div>
     
 
@@ -255,8 +265,8 @@ Ideally, our implemented search engine should give results similar to TED websit
 <a class="anchor" href="#Data-processing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data processing<a class="anchor-link" href="#Data-processing"> </a>
 </h3>
 <ul>
-    <li>We load csv files and create dataframe</li>
-    <li>As visible in the output below, final dataframe contains columns - title, transcript, url, and title</li>
+    <li>We load csv files, merge them and create a single dataframe</li>
+    <li>As visible in the output below, final dataframe contains columns - title, transcript, url, and related talks</li>
     <li>There are 2467 TED talks</li>
 </ul>
 </div>
@@ -283,8 +293,9 @@ Ideally, our implemented search engine should give results similar to TED websit
 
 <span class="c1">#merge the two dataframes to create one. </span>
 <span class="n">final_ted_df</span> <span class="o">=</span> <span class="n">transcripts_df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">ted_main_df</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">"url"</span><span class="p">)</span>
+<span class="n">final_ted_df</span> <span class="o">=</span> <span class="n">final_ted_df</span><span class="p">[[</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">'url'</span><span class="p">,</span> <span class="s1">'transcript'</span><span class="p">,</span> <span class="s1">'related_talks'</span><span class="p">]]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">final_ted_df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"We have data on </span><span class="si">{}</span><span class="s2"> talks. Notice the title, url, transcrip, and related_talks columns below:"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">final_ted_df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 <span class="n">final_ted_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
@@ -299,7 +310,7 @@ Ideally, our implemented search engine should give results similar to TED websit
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(2467, 4)
+<pre>We have data on 2467 talks. Notice the title, url, transcrip, and related_talks columns below:
 </pre>
 </div>
 </div>
@@ -326,25 +337,25 @@ Ideally, our implemented search engine should give results similar to TED websit
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>transcript</th>
-      <th>url</th>
       <th>title</th>
+      <th>url</th>
+      <th>transcript</th>
       <th>related_talks</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>0</td>
-      <td>Good morning. How are you?(Laughter)It's been great, hasn't it? I've been blown away by the whole thing. In fact, I'm leaving.(Laughter)There have been three themes running through the conference which are relevant to what I want to talk about. One is the extraordinary evidence of human creativity in all of the presentations that we've had and in all of the people here. Just the variety of it and the range of it. The second is that it's put us in a place where we have no idea what's going to happen, in terms of the future. No idea how this may play out.I have an interest in education. Actually, what I find is everybody has an interest in education. Don't you? I find this very interesting. If you're at a dinner party, and you say you work in education — Actually, you're not often at dinner parties, frankly.(Laughter)If you work in education, you're not asked.(Laughter)And you're never asked back, curiously. That's strange to me. But if you are, and you say to somebody, you know, the...</td>
-      <td>https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity\n</td>
       <td>Do schools kill creativity?</td>
+      <td>https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity\n</td>
+      <td>Good morning. How are you?(Laughter)It's been great, hasn't it? I've been blown away by the whole thing. In fact, I'm leaving.(Laughter)There have been three themes running through the conference which are relevant to what I want to talk about. One is the extraordinary evidence of human creativity in all of the presentations that we've had and in all of the people here. Just the variety of it and the range of it. The second is that it's put us in a place where we have no idea what's going to happen, in terms of the future. No idea how this may play out.I have an interest in education. Actually, what I find is everybody has an interest in education. Don't you? I find this very interesting. If you're at a dinner party, and you say you work in education — Actually, you're not often at dinner parties, frankly.(Laughter)If you work in education, you're not asked.(Laughter)And you're never asked back, curiously. That's strange to me. But if you are, and you say to somebody, you know, the...</td>
       <td>[{'id': 865, 'hero': 'https://pe.tedcdn.com/images/ted/172559_800x600.jpg', 'speaker': 'Ken Robinson', 'title': 'Bring on the learning revolution!', 'duration': 1008, 'slug': 'sir_ken_robinson_bring_on_the_revolution', 'viewed_count': 7266103}, {'id': 1738, 'hero': 'https://pe.tedcdn.com/images/ted/de98b161ad1434910ff4b56c89de71af04b8b873_1600x1200.jpg', 'speaker': 'Ken Robinson', 'title': "How to escape education's death valley", 'duration': 1151, 'slug': 'ken_robinson_how_to_escape_education_s_death_valley', 'viewed_count': 6657572}, {'id': 2276, 'hero': 'https://pe.tedcdn.com/images/ted/3821f3728e0b755c7b9aea2e69cc093eca41abe1_2880x1620.jpg', 'speaker': 'Linda Cliatt-Wayman', 'title': 'How to fix a broken school? Lead fearlessly, love hard', 'duration': 1027, 'slug': 'linda_cliatt_wayman_how_to_fix_a_broken_school_lead_fearlessly_love_hard', 'viewed_count': 1617101}, {'id': 892, 'hero': 'https://pe.tedcdn.com/images/ted/e79958940573cc610ccb583619a54866c41ef303_2880x1620.jpg', 's...</td>
     </tr>
     <tr>
       <td>1</td>
-      <td>Thank you so much, Chris. And it's truly a great honor to have the opportunity to come to this stage twice; I'm extremely grateful. I have been blown away by this conference, and I want to thank all of you for the many nice comments about what I had to say the other night. And I say that sincerely, partly because (Mock sob) I need that.(Laughter)Put yourselves in my position.(Laughter)I flew on Air Force Two for eight years.(Laughter)Now I have to take off my shoes or boots to get on an airplane!(Laughter)(Applause)I'll tell you one quick story to illustrate what that's been like for me.(Laughter)It's a true story — every bit of this is true.Soon after Tipper and I left the — (Mock sob) White House —(Laughter)we were driving from our home in Nashville to a little farm we have 50 miles east of Nashville. Driving ourselves.(Laughter)I know it sounds like a little thing to you, but —(Laughter)I looked in the rear-view mirror and all of a sudden it just hit me. There was no motorcade b...</td>
-      <td>https://www.ted.com/talks/al_gore_on_averting_climate_crisis\n</td>
       <td>Averting the climate crisis</td>
+      <td>https://www.ted.com/talks/al_gore_on_averting_climate_crisis\n</td>
+      <td>Thank you so much, Chris. And it's truly a great honor to have the opportunity to come to this stage twice; I'm extremely grateful. I have been blown away by this conference, and I want to thank all of you for the many nice comments about what I had to say the other night. And I say that sincerely, partly because (Mock sob) I need that.(Laughter)Put yourselves in my position.(Laughter)I flew on Air Force Two for eight years.(Laughter)Now I have to take off my shoes or boots to get on an airplane!(Laughter)(Applause)I'll tell you one quick story to illustrate what that's been like for me.(Laughter)It's a true story — every bit of this is true.Soon after Tipper and I left the — (Mock sob) White House —(Laughter)we were driving from our home in Nashville to a little farm we have 50 miles east of Nashville. Driving ourselves.(Laughter)I know it sounds like a little thing to you, but —(Laughter)I looked in the rear-view mirror and all of a sudden it just hit me. There was no motorcade b...</td>
       <td>[{'id': 243, 'hero': 'https://pe.tedcdn.com/images/ted/566c14767bd62c5ff760e483c5b16cd2753328cd_2880x1620.jpg', 'speaker': 'Al Gore', 'title': 'New thinking on the climate crisis', 'duration': 1674, 'slug': 'al_gore_s_new_thinking_on_the_climate_crisis', 'viewed_count': 1751408}, {'id': 547, 'hero': 'https://pe.tedcdn.com/images/ted/89288_800x600.jpg', 'speaker': 'Ray Anderson', 'title': 'The business logic of sustainability', 'duration': 954, 'slug': 'ray_anderson_on_the_business_logic_of_sustainability', 'viewed_count': 881833}, {'id': 2093, 'hero': 'https://pe.tedcdn.com/images/ted/146d88845861cbf768bbf8bec8b2e41f8bfc7903_2400x1800.jpg', 'speaker': 'Lord Nicholas Stern', 'title': 'The state of the climate — and what we might do about it', 'duration': 993, 'slug': 'lord_nicholas_stern_the_state_of_the_climate_and_what_we_might_do_about_it', 'viewed_count': 773779}, {'id': 2784, 'hero': 'https://pe.tedcdn.com/images/ted/e835e670a7836cf65aca2a7a644fd94398cb4b8e_2880x1620.jpg', 'spe...</td>
     </tr>
   </tbody>
@@ -367,8 +378,8 @@ Ideally, our implemented search engine should give results similar to TED websit
 <a class="anchor" href="#Calculating-eigenvector-value-for-each-ted-talk" aria-hidden="true"><span class="octicon octicon-link"></span></a>Calculating eigenvector value for each ted talk<a class="anchor-link" href="#Calculating-eigenvector-value-for-each-ted-talk"> </a>
 </h3>
 <ul>
-    <li> We need to create Networkx directed graph and for that we need dataframe like - (source ted talk, related ted talk).</li>
-    <li> Then we get eigenvector values using networkx library.  </li>
+    <li> First, we need to create a directed graph where a node is a TED talk and an edge is - (source ted talk -&gt; related ted talk). To create the graph we need a dataframe where each row represents an edge </li>
+    <li> Then we get eigenvector values using networkx library function</li>
 </ul>
 </div>
 </div>
@@ -401,7 +412,7 @@ Ideally, our implemented search engine should give results similar to TED websit
     <span class="n">reco_list</span> <span class="o">=</span> <span class="n">recommended_titles_list</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'related_talks'</span><span class="p">])</span>
     <span class="k">for</span> <span class="n">reco_title</span> <span class="ow">in</span> <span class="n">reco_list</span><span class="p">:</span>
         <span class="n">edges_df</span> <span class="o">=</span> <span class="n">edges_df</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">'title'</span><span class="p">:</span><span class="n">title</span><span class="p">,</span> <span class="s1">'related_title'</span><span class="p">:</span><span class="n">reco_title</span><span class="p">},</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">edges_df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"In following dataframe each row represents an edge with total of </span><span class="si">{}</span><span class="s2"> edges:"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">edges_df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 <span class="n">edges_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
@@ -416,7 +427,7 @@ Ideally, our implemented search engine should give results similar to TED websit
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(14802, 2)
+<pre>In following dataframe each row represents an edge with total of 14802 edges:
 </pre>
 </div>
 </div>
@@ -509,9 +520,9 @@ Ideally, our implemented search engine should give results similar to TED websit
 
 <span class="c1"># Add the eigen vector values for each ted talk to the main dataframe</span>
 <span class="n">eigenvectors_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">normalised_eigenvector_dict</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">'eigenvector_value'</span><span class="p">])</span>
-<span class="n">final_ted_df</span> <span class="o">=</span> <span class="n">final_ted_df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">eigenvectors_df</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s2">"title"</span><span class="p">)</span>
-
+<span class="n">final_ted_df</span> <span class="o">=</span> <span class="n">final_ted_df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">eigenvectors_df</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">"title"</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">nx</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">di_reco_graph</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Notice the last column having eigen_vector values for each TED talk : "</span><span class="p">)</span>
 <span class="n">final_ted_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
@@ -532,6 +543,7 @@ Number of nodes: 2520
 Number of edges: 14784
 Average in degree:   5.8667
 Average out degree:   5.8667
+Notice the last column having eigen_vector values for each TED talk : 
 </pre>
 </div>
 </div>
@@ -558,9 +570,9 @@ Average out degree:   5.8667
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>transcript</th>
-      <th>url</th>
       <th>title</th>
+      <th>url</th>
+      <th>transcript</th>
       <th>related_talks</th>
       <th>eigenvector_value</th>
     </tr>
@@ -568,41 +580,41 @@ Average out degree:   5.8667
   <tbody>
     <tr>
       <td>0</td>
-      <td>Good morning. How are you?(Laughter)It's been great, hasn't it? I've been blown away by the whole thing. In fact, I'm leaving.(Laughter)There have been three themes running through the conference which are relevant to what I want to talk about. One is the extraordinary evidence of human creativity in all of the presentations that we've had and in all of the people here. Just the variety of it and the range of it. The second is that it's put us in a place where we have no idea what's going to happen, in terms of the future. No idea how this may play out.I have an interest in education. Actually, what I find is everybody has an interest in education. Don't you? I find this very interesting. If you're at a dinner party, and you say you work in education — Actually, you're not often at dinner parties, frankly.(Laughter)If you work in education, you're not asked.(Laughter)And you're never asked back, curiously. That's strange to me. But if you are, and you say to somebody, you know, the...</td>
-      <td>https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity\n</td>
       <td>Do schools kill creativity?</td>
+      <td>https://www.ted.com/talks/ken_robinson_says_schools_kill_creativity\n</td>
+      <td>Good morning. How are you?(Laughter)It's been great, hasn't it? I've been blown away by the whole thing. In fact, I'm leaving.(Laughter)There have been three themes running through the conference which are relevant to what I want to talk about. One is the extraordinary evidence of human creativity in all of the presentations that we've had and in all of the people here. Just the variety of it and the range of it. The second is that it's put us in a place where we have no idea what's going to happen, in terms of the future. No idea how this may play out.I have an interest in education. Actually, what I find is everybody has an interest in education. Don't you? I find this very interesting. If you're at a dinner party, and you say you work in education — Actually, you're not often at dinner parties, frankly.(Laughter)If you work in education, you're not asked.(Laughter)And you're never asked back, curiously. That's strange to me. But if you are, and you say to somebody, you know, the...</td>
       <td>[{'id': 865, 'hero': 'https://pe.tedcdn.com/images/ted/172559_800x600.jpg', 'speaker': 'Ken Robinson', 'title': 'Bring on the learning revolution!', 'duration': 1008, 'slug': 'sir_ken_robinson_bring_on_the_revolution', 'viewed_count': 7266103}, {'id': 1738, 'hero': 'https://pe.tedcdn.com/images/ted/de98b161ad1434910ff4b56c89de71af04b8b873_1600x1200.jpg', 'speaker': 'Ken Robinson', 'title': "How to escape education's death valley", 'duration': 1151, 'slug': 'ken_robinson_how_to_escape_education_s_death_valley', 'viewed_count': 6657572}, {'id': 2276, 'hero': 'https://pe.tedcdn.com/images/ted/3821f3728e0b755c7b9aea2e69cc093eca41abe1_2880x1620.jpg', 'speaker': 'Linda Cliatt-Wayman', 'title': 'How to fix a broken school? Lead fearlessly, love hard', 'duration': 1027, 'slug': 'linda_cliatt_wayman_how_to_fix_a_broken_school_lead_fearlessly_love_hard', 'viewed_count': 1617101}, {'id': 892, 'hero': 'https://pe.tedcdn.com/images/ted/e79958940573cc610ccb583619a54866c41ef303_2880x1620.jpg', 's...</td>
       <td>0.003404</td>
     </tr>
     <tr>
       <td>1</td>
-      <td>Thank you so much, Chris. And it's truly a great honor to have the opportunity to come to this stage twice; I'm extremely grateful. I have been blown away by this conference, and I want to thank all of you for the many nice comments about what I had to say the other night. And I say that sincerely, partly because (Mock sob) I need that.(Laughter)Put yourselves in my position.(Laughter)I flew on Air Force Two for eight years.(Laughter)Now I have to take off my shoes or boots to get on an airplane!(Laughter)(Applause)I'll tell you one quick story to illustrate what that's been like for me.(Laughter)It's a true story — every bit of this is true.Soon after Tipper and I left the — (Mock sob) White House —(Laughter)we were driving from our home in Nashville to a little farm we have 50 miles east of Nashville. Driving ourselves.(Laughter)I know it sounds like a little thing to you, but —(Laughter)I looked in the rear-view mirror and all of a sudden it just hit me. There was no motorcade b...</td>
-      <td>https://www.ted.com/talks/al_gore_on_averting_climate_crisis\n</td>
       <td>Averting the climate crisis</td>
+      <td>https://www.ted.com/talks/al_gore_on_averting_climate_crisis\n</td>
+      <td>Thank you so much, Chris. And it's truly a great honor to have the opportunity to come to this stage twice; I'm extremely grateful. I have been blown away by this conference, and I want to thank all of you for the many nice comments about what I had to say the other night. And I say that sincerely, partly because (Mock sob) I need that.(Laughter)Put yourselves in my position.(Laughter)I flew on Air Force Two for eight years.(Laughter)Now I have to take off my shoes or boots to get on an airplane!(Laughter)(Applause)I'll tell you one quick story to illustrate what that's been like for me.(Laughter)It's a true story — every bit of this is true.Soon after Tipper and I left the — (Mock sob) White House —(Laughter)we were driving from our home in Nashville to a little farm we have 50 miles east of Nashville. Driving ourselves.(Laughter)I know it sounds like a little thing to you, but —(Laughter)I looked in the rear-view mirror and all of a sudden it just hit me. There was no motorcade b...</td>
       <td>[{'id': 243, 'hero': 'https://pe.tedcdn.com/images/ted/566c14767bd62c5ff760e483c5b16cd2753328cd_2880x1620.jpg', 'speaker': 'Al Gore', 'title': 'New thinking on the climate crisis', 'duration': 1674, 'slug': 'al_gore_s_new_thinking_on_the_climate_crisis', 'viewed_count': 1751408}, {'id': 547, 'hero': 'https://pe.tedcdn.com/images/ted/89288_800x600.jpg', 'speaker': 'Ray Anderson', 'title': 'The business logic of sustainability', 'duration': 954, 'slug': 'ray_anderson_on_the_business_logic_of_sustainability', 'viewed_count': 881833}, {'id': 2093, 'hero': 'https://pe.tedcdn.com/images/ted/146d88845861cbf768bbf8bec8b2e41f8bfc7903_2400x1800.jpg', 'speaker': 'Lord Nicholas Stern', 'title': 'The state of the climate — and what we might do about it', 'duration': 993, 'slug': 'lord_nicholas_stern_the_state_of_the_climate_and_what_we_might_do_about_it', 'viewed_count': 773779}, {'id': 2784, 'hero': 'https://pe.tedcdn.com/images/ted/e835e670a7836cf65aca2a7a644fd94398cb4b8e_2880x1620.jpg', 'spe...</td>
       <td>0.001041</td>
     </tr>
     <tr>
       <td>2</td>
-      <td>(Music: "The Sound of Silence," Simon &amp; Garfunkel)Hello voice mail, my old friend.(Laughter)I've called for tech support again. I ignored my boss's warning. I called on a Monday morning. Now it's evening, and my dinner first grew cold, and then grew mold. I'm still on hold. I'm listening to the sounds of silence. I don't think you understand. I think your phone lines are unmanned. I punched every touch tone I was told, but I've still spent 18 hours on hold. It's not enough your software crashed my Mac, and it constantly hangs and bombs — it erased my ROMs! Now the Mac makes the sounds of silence. In my dreams I fantasize of wreaking vengeance on you guys. Say your motorcycle crashes. Blood comes gushing from your gashes. With your fading strength, you call 9-1-1 and you pray for a trained MD. But you get me.(Laughter)And you listen to the sounds of silence.(Music)(Applause)Thank you.Good evening and welcome to: "Spot the TED Presenter Who Used to Be a Broadway Accompanist."(Laughte...</td>
-      <td>https://www.ted.com/talks/david_pogue_says_simplicity_sells\n</td>
       <td>Simplicity sells</td>
+      <td>https://www.ted.com/talks/david_pogue_says_simplicity_sells\n</td>
+      <td>(Music: "The Sound of Silence," Simon &amp; Garfunkel)Hello voice mail, my old friend.(Laughter)I've called for tech support again. I ignored my boss's warning. I called on a Monday morning. Now it's evening, and my dinner first grew cold, and then grew mold. I'm still on hold. I'm listening to the sounds of silence. I don't think you understand. I think your phone lines are unmanned. I punched every touch tone I was told, but I've still spent 18 hours on hold. It's not enough your software crashed my Mac, and it constantly hangs and bombs — it erased my ROMs! Now the Mac makes the sounds of silence. In my dreams I fantasize of wreaking vengeance on you guys. Say your motorcycle crashes. Blood comes gushing from your gashes. With your fading strength, you call 9-1-1 and you pray for a trained MD. But you get me.(Laughter)And you listen to the sounds of silence.(Music)(Applause)Thank you.Good evening and welcome to: "Spot the TED Presenter Who Used to Be a Broadway Accompanist."(Laughte...</td>
       <td>[{'id': 1725, 'hero': 'https://pe.tedcdn.com/images/ted/b7f415a054cc0a2bfdd90d0ad5a7f64cf060150d_1600x1200.jpg', 'speaker': 'David Pogue', 'title': '10 top time-saving tech tips', 'duration': 344, 'slug': 'david_pogue_10_top_time_saving_tech_tips', 'viewed_count': 4843421}, {'id': 2274, 'hero': 'https://pe.tedcdn.com/images/ted/608e677e4392bcdcf82b068fa221b9df74a213ef_2880x1620.jpg', 'speaker': 'Tony Fadell', 'title': 'The first secret of design is ... noticing', 'duration': 1001, 'slug': 'tony_fadell_the_first_secret_of_design_is_noticing', 'viewed_count': 2005916}, {'id': 172, 'hero': 'https://pe.tedcdn.com/images/ted/b790be2f87ceffba73fe73837944400c7d61cba2_1600x1200.jpg', 'speaker': 'John Maeda', 'title': 'Designing for simplicity', 'duration': 959, 'slug': 'john_maeda_on_the_simple_life', 'viewed_count': 1215942}, {'id': 2664, 'hero': 'https://pe.tedcdn.com/images/ted/092f184f6625c2aeef10949c8d7b2aa14ba4132b_2880x1620.jpg', 'speaker': 'Dan Bricklin', 'title': 'Meet the invento...</td>
       <td>0.000441</td>
     </tr>
     <tr>
       <td>3</td>
-      <td>If you're here today — and I'm very happy that you are — you've all heard about how sustainable development will save us from ourselves. However, when we're not at TED, we are often told that a real sustainability policy agenda is just not feasible, especially in large urban areas like New York City. And that's because most people with decision-making powers, in both the public and the private sector, really don't feel as though they're in danger.The reason why I'm here today, in part, is because of a dog — an abandoned puppy I found back in the rain, back in 1998. She turned out to be a much bigger dog than I'd anticipated. When she came into my life, we were fighting against a huge waste facility planned for the East River waterfront despite the fact that our small part of New York City already handled more than 40 percent of the entire city's commercial waste: a sewage treatment pelletizing plant, a sewage sludge plant, four power plants, the world's largest food-distribution ce...</td>
-      <td>https://www.ted.com/talks/majora_carter_s_tale_of_urban_renewal\n</td>
       <td>Greening the ghetto</td>
+      <td>https://www.ted.com/talks/majora_carter_s_tale_of_urban_renewal\n</td>
+      <td>If you're here today — and I'm very happy that you are — you've all heard about how sustainable development will save us from ourselves. However, when we're not at TED, we are often told that a real sustainability policy agenda is just not feasible, especially in large urban areas like New York City. And that's because most people with decision-making powers, in both the public and the private sector, really don't feel as though they're in danger.The reason why I'm here today, in part, is because of a dog — an abandoned puppy I found back in the rain, back in 1998. She turned out to be a much bigger dog than I'd anticipated. When she came into my life, we were fighting against a huge waste facility planned for the East River waterfront despite the fact that our small part of New York City already handled more than 40 percent of the entire city's commercial waste: a sewage treatment pelletizing plant, a sewage sludge plant, four power plants, the world's largest food-distribution ce...</td>
       <td>[{'id': 1041, 'hero': 'https://pe.tedcdn.com/images/ted/96c703bb13a2e9c2d351a5e6b52390bc35eaad06_800x600.jpg', 'speaker': 'Majora Carter', 'title': '3 stories of local eco-entrepreneurship', 'duration': 1079, 'slug': 'majora_carter_3_stories_of_local_ecoactivism', 'viewed_count': 702642}, {'id': 1892, 'hero': 'https://pe.tedcdn.com/images/ted/f5ebbf91eb093a2da2cfe1941724a3e55d222713_1600x1200.jpg', 'speaker': 'Toni Griffin', 'title': 'A new vision for rebuilding Detroit', 'duration': 708, 'slug': 'toni_griffin_a_new_vision_for_rebuilding_detroit', 'viewed_count': 826727}, {'id': 2078, 'hero': 'https://pe.tedcdn.com/images/ted/92ddb109a1f98a3745fe1b2b0d2c5519ab3931dc_2400x1800.jpg', 'speaker': 'Dan Barasch', 'title': 'A park underneath the hustle and bustle of New York City', 'duration': 377, 'slug': 'dan_barasch_a_park_underneath_the_hustle_and_bustle_of_new_york_city', 'viewed_count': 862197}, {'id': 2873, 'hero': 'https://pe.tedcdn.com/images/ted/635f76d5d4d0a454b6131b93b471d1f65...</td>
       <td>0.001574</td>
     </tr>
     <tr>
       <td>4</td>
-      <td>About 10 years ago, I took on the task to teach global development to Swedish undergraduate students. That was after having spent about 20 years together with African institutions studying hunger in Africa, so I was sort of expected to know a little about the world. And I started in our medical university, Karolinska Institute, an undergraduate course called Global Health. But when you get that opportunity, you get a little nervous. I thought, these students coming to us actually have the highest grade you can get in Swedish college systems — so I thought, maybe they know everything I'm going to teach them about. So I did a pre-test when they came. And one of the questions from which I learned a lot was this one: "Which country has the highest child mortality of these five pairs?"I put them together, so that in each pair of country, one has twice the child mortality of the other. And this means that it's much bigger a difference than the uncertainty of the data. I won't put you at ...</td>
-      <td>https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen\n</td>
       <td>The best stats you've ever seen</td>
+      <td>https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen\n</td>
+      <td>About 10 years ago, I took on the task to teach global development to Swedish undergraduate students. That was after having spent about 20 years together with African institutions studying hunger in Africa, so I was sort of expected to know a little about the world. And I started in our medical university, Karolinska Institute, an undergraduate course called Global Health. But when you get that opportunity, you get a little nervous. I thought, these students coming to us actually have the highest grade you can get in Swedish college systems — so I thought, maybe they know everything I'm going to teach them about. So I did a pre-test when they came. And one of the questions from which I learned a lot was this one: "Which country has the highest child mortality of these five pairs?"I put them together, so that in each pair of country, one has twice the child mortality of the other. And this means that it's much bigger a difference than the uncertainty of the data. I won't put you at ...</td>
       <td>[{'id': 2056, 'hero': 'https://pe.tedcdn.com/images/ted/afc9b259845ec1b543419871e10753d4d9044fda_2400x1800.jpg', 'speaker': 'Talithia Williams', 'title': "Own your body's data", 'duration': 1023, 'slug': 'talithia_williams_own_your_body_s_data', 'viewed_count': 1345319}, {'id': 2296, 'hero': 'https://pe.tedcdn.com/images/ted/9e003b0a822daba702608136e73f7be001b6b2f2_2880x1620.jpg', 'speaker': 'Manuel Lima', 'title': 'A visual history of human knowledge', 'duration': 769, 'slug': 'manuel_lima_a_visual_history_of_human_knowledge', 'viewed_count': 1710818}, {'id': 620, 'hero': 'https://pe.tedcdn.com/images/ted/111517_800x600.jpg', 'speaker': 'Hans Rosling', 'title': 'Let my dataset change your mindset', 'duration': 1196, 'slug': 'hans_rosling_at_state', 'viewed_count': 1471015}, {'id': 974, 'hero': 'https://pe.tedcdn.com/images/ted/205077_800x600.jpg', 'speaker': 'Hans Rosling', 'title': "The good news of the decade? We're winning the war against child mortality", 'duration': 934, 'slu...</td>
       <td>0.001933</td>
     </tr>
@@ -622,14 +634,21 @@ Average out degree:   5.8667
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Graph-visualization-using-Gephi">
-<a class="anchor" href="#Graph-visualization-using-Gephi" aria-hidden="true"><span class="octicon octicon-link"></span></a>Graph visualization using Gephi<a class="anchor-link" href="#Graph-visualization-using-Gephi"> </a>
+<h3 id="Graph-visualization-using-Gephi-(https://gephi.org/)">
+<a class="anchor" href="#Graph-visualization-using-Gephi-(https://gephi.org/)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Graph visualization using Gephi (<a href="https://gephi.org/">https://gephi.org/</a>)<a class="anchor-link" href="#Graph-visualization-using-Gephi-(https://gephi.org/)"> </a>
 </h3>
 <ul>
     <li> Gephi is a free software which provides GUI type interface to do network analytics and produce network metrics such as eigenvector and pagerank metrics.</li>
-    <li>Following is a visual representation of our network graph with different colors representing different clusters or communities within graph. Talks over similar themes or topic will tend to be in one cluster</li>
-    <li>Modularity is a measure of the structure of networks or graphs. It is designed to measure the strength of division of a network into modules or clusters.</li>
+    <li>Following is a visual representation of our network graph with different colors representing different clusters or communities within graph. Talks with similar themes or topic will tend to be in one cluster</li>
 </ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>![](img/overall_graph.png)</code></p>
+
 </div>
 </div>
 </div>
@@ -662,6 +681,14 @@ Average out degree:   5.8667
 <h4 id="For-example,-following-is-graph-of-a-cluster-which-represent-talks-related-to-technology-and-innovation">
 <a class="anchor" href="#For-example,-following-is-graph-of-a-cluster-which-represent-talks-related-to-technology-and-innovation" aria-hidden="true"><span class="octicon octicon-link"></span></a>For example, following is graph of a cluster which represent talks related to technology and innovation<a class="anchor-link" href="#For-example,-following-is-graph-of-a-cluster-which-represent-talks-related-to-technology-and-innovation"> </a>
 </h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>![](img/technology&amp;innovation_module.png.png)</code></p>
+
 </div>
 </div>
 </div>
