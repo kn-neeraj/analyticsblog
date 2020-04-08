@@ -272,14 +272,14 @@ and more...<br>
 <a class="anchor" href="#Implementation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implementation<a class="anchor-link" href="#Implementation"> </a>
 </h3>
 <p>To implement search for TED videos we will do the following -</p>
-
-<pre><code>- Preprocess the raw csv files
-- Calculate eigenvector-centrality metric (a variant of pagerank metric) by creating a directed graph of TED talks. Each node in the graph represents a TED talk and directed edge represents that the destination TED video is mentioned in the "related talks" of source TED video. We use Networkx library for this
-- Calculate TF-IDF metric for each term in TED video transcript using TFIDFVectorizer of Sklearn library
-- Based on search query, we calculate the matching score for every TED video which is the sum of TF-IDF values of all the terms
-- Finally, we create a composite score for every TED video by taking into account both Eigenvector and Matching Score.
-- Sort and show top 5 TED videos</code></pre>
-
+<ol>
+    <li> Preprocess the raw csv files</li>
+    <li> Calculate eigenvector-centrality metric (a variant of pagerank metric) by creating a directed graph of TED talks. Each node in the graph represents a TED talk and directed edge represents that the destination TED video is mentioned in the "related talks" of source TED video. We use Networkx library for this </li>
+    <li> Calculate TF-IDF metric for each term in TED video transcript using TFIDFVectorizer of Sklearn library </li>
+    <li> Based on search query, we calculate the matching score for every TED video which is the sum of TF-IDF values of all the terms </li>
+    <li> Finally, we create a composite score for every TED video by taking into account both Eigenvector and Matching Score. </li>
+    <li> Sort and show top 5 TED videos based on the composite score </li>
+ </ol>
 </div>
 </div>
 </div>
