@@ -103,7 +103,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      19 min read
+      20 min read
     
 </span></p>
 
@@ -152,6 +152,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Introduction">Introduction </a></li>
 <li class="toc-entry toc-h3"><a href="#Data-Source">Data Source </a></li>
 <li class="toc-entry toc-h3"><a href="#Conceptual-Overview">Conceptual Overview </a></li>
+<li class="toc-entry toc-h3"><a href="#Implementation">Implementation </a></li>
 <li class="toc-entry toc-h3"><a href="#Imports">Imports </a></li>
 <li class="toc-entry toc-h3"><a href="#Data-processing">Data processing </a></li>
 <li class="toc-entry toc-h3"><a href="#Calculating-eigenvector-value-for-each-ted-talk">Calculating eigenvector value for each ted talk </a></li>
@@ -217,10 +218,10 @@ window.onload = wrap_img;
 <a class="anchor" href="#Conceptual-Overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conceptual Overview<a class="anchor-link" href="#Conceptual-Overview"> </a>
 </h3>
 <p>To provide search results, search engines like Google, Bing look at 3 distinct sources of information-</p>
-<ol>
+<ul>
 <li>
 <strong>Network Popularity: Citiation Model</strong> - Google uses networks metrics such as pagerank (a variant of Eigenvector centrality network metric) which can be considered as the importance score of a web page. Web search engines use a crawler to create a network of web pages with hyperlinks b/w web pages as edges of the network. A web page (or network node) with high pagerank (or eigenvector centrality) is linked to other important network nodes. PageRank is defined recursively and depends on the number and PageRank metric of all pages that link to it ("incoming links"). A page that is linked to by many pages with high PageRank receives a high rank itself.</li>
-</ol>
+</ul>
 <p>As visible in the following image, node C despite having ony 1 incoming hyperlink has high page rank as the source of that hyperlink is B, which is a node with high page rank itself. For more mathematical introduction to pagerank, check - <a hyperlink="https://www.geeksforgeeks.org/page-rank-algorithm-implementation/">Pagerank implementation</a></p>
 <p><img src="/analyticsblog/images/copied_from_nb/img/PageRanks-Example.svg.png" alt="" title="Credit: https://commons.wikimedia.org/wiki/File:PageRanks-Example.svg"></p>
 
@@ -230,7 +231,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ol>
+<ul>
 <li>
 <strong>Content Relevance:Vector Model</strong>- Here the search engine looks at the relevance of content of the web page with search keywords. In information retrieval, Term Frequency-Inverse Document Frequency (TF-IDF) metric reflects how important a word is to a document/web page. <ul>
 <li>Term Frequency is number of times a term appears in a doc</li>
@@ -238,7 +239,7 @@ window.onload = wrap_img;
 <li>TF-IDF is just multiplication of the both - TF * IDF</li>
 </ul>
 </li>
-</ol>
+</ul>
 <p>After removing stop words ('a','the','and', etc), TF-IDF metric is calculated for all the terms in a document. The document having highest TF-IDF metric for the search keywords receives a high rank and surfaces to the top. For more understanding and implementation check this blog on <a hyperlink="https://towardsdatascience.com/tf-term-frequency-idf-inverse-document-frequency-from-scratch-in-python-6c2b61b78558">TowardsDataScience</a>.</p>
 <p><img src="/analyticsblog/images/copied_from_nb/img/TFIDF-image.png" alt="" title="Credit: https://towardsdatascience.com/tf-term-frequency-idf-inverse-document-frequency-from-scratch-in-python-6c2b61b78558"></p>
 
@@ -248,7 +249,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ol>
+<ul>
 <li>
 <strong>Usage or Behavioral Model</strong> - Here the search engine looks at the behavioral popularity score of the page which accounts for following metrics <ul>
 <li>Number of visitors to the page</li>
@@ -258,8 +259,26 @@ and more...<br>
 </li>
 </ul>
 </li>
-</ol>
+</ul>
 <p><strong>Note</strong>: Currently, we have limited behavioral or usage data of the TED videos except comments. Hence, we will not be taking into account behavioral model in our current implementation.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Implementation">
+<a class="anchor" href="#Implementation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implementation<a class="anchor-link" href="#Implementation"> </a>
+</h3>
+<p>To implement search for TED videos we will do the following -</p>
+
+<pre><code>- Preprocess the raw csv files
+- Calculate eigenvector-centrality metric (a variant of pagerank metric) by creating a directed graph of TED talks. Each node in the graph represents a TED talk and directed edge represents that the destination TED video is mentioned in the "related talks" of source TED video. We use Networkx library for this
+- Calculate TF-IDF metric for each term in TED video transcript using TFIDFVectorizer of Sklearn library
+- Based on search query, we calculate the matching score for every TED video which is the sum of TF-IDF values of all the terms
+- Finally, we create a composite score for every TED video by taking into account both Eigenvector and Matching Score.
+- Sort and show top 5 TED videos</code></pre>
 
 </div>
 </div>
