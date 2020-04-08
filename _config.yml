@@ -6,8 +6,8 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: fastpages
-description: An easy to use blogging platform with support for Jupyter Notebooks.
+title: Home
+description: Personal website for all analytics projects.
 github_username: kn-neeraj
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "analyticsblog"
@@ -49,13 +49,13 @@ use_math:
 show_description: true
 
 # Set this to true to display image previews on home page, if they exist
-show_image: false
+show_image: true
 
 # Set this to true to display tags on each post
 show_tags: true
 
 # Add your Google Analytics ID here if you have one and want to use it
-google_analytics: 
+google_analytics: UA-163129841-1
 
 exclude:
   - docker-compose.yml
@@ -69,7 +69,7 @@ include:
 # This specifies what badges are turned on by default for notebook posts.
 default_badges:
   github: true
-  binder: true
+  binder: false
   colab: true
 
 # Everything below here should be left alone. Modifications may break fastpages
