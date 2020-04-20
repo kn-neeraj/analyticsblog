@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Churn Analysis",
-            "content": "Introduction .",
+            "content": "Introduction . I am sure you have heard the phrase - retention is the key! Indeed, strong retention of users over time is a great indicator of product-market fit, something all start-ups intend to achieve. . To improve retention, it is imperative to understand leading indicators of churn and then improve the product accordingly. . So in this post, we look at a fictious SaaS company’s 3 months data (generated randomly) to understand how to do churn analysis. . Company Details &amp; Data . TakeZero is a fictitious SaaS company that allows teams to collaborate and build basic no code web and mobile apps. We have data points for Q4 2019 i.e. October, November, December. . File - https://drive.google.com/file/d/1nSvVEAIh2sEIzTep53OcRjgXhYZyWrbn/view?usp=sharing . Objective . Our objective is to suggest product changes needed to reduce churn. .",
             "url": "https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html",
             "relUrl": "/2020/04/20/Churn-Analysis.html",
             "date": " • Apr 20, 2020"
