@@ -103,7 +103,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -119,12 +119,6 @@ window.onload = wrap_img;
 <p>To improve retention, it is imperative to understand leading indicators of churn and then improve the product accordingly.</p>
 
 <p>So in this post, we look at a fictious SaaS company’s 3 months data (generated randomly) to understand how to do churn analysis.</p>
-
-<h2 id="company-details--data"><strong>Company Details &amp; Data</strong></h2>
-
-<p>TakeZero is a fictitious SaaS company (like no-code platforms) which allows teams to collaborate and build basic no code web and mobile apps through its web application. We have data points for Q4 2019 i.e. October, November, December. Data and description of all the columns can be found here -</p>
-
-<p>File - <a href="https://drive.google.com/file/d/1okQlxFfRKLR8Sakk0QjNtqA8frGCqZH2/view?usp=sharing">https://drive.google.com/file/d/1okQlxFfRKLR8Sakk0QjNtqA8frGCqZH2/view?usp=sharing</a></p>
 
 <h2 id="objective"><strong>Objective</strong></h2>
 
@@ -146,20 +140,16 @@ window.onload = wrap_img;
 
 <ul>
   <li>
-    <p><strong>Monthly churn rat</strong>e – This is a basic month-on-month (MOM) customer churn. It is calculated by following formula</p>
-
-    <ul>
-      <li>Churn rate for a period = Total customers churned in that period / (Avg. number of customers in that period)</li>
-    </ul>
+    <p><strong>Monthly churn rate</strong> – This is a basic month-on-month (MOM) customer churn.</p>
+  </li>
+  <li>
+    <p><strong>Churn rates by customer segmentation</strong> – Churn rates are reported with some customer segmentation. For instance, customers from different acquisition channels, region, subscription plan lead to different churn rates. Therefore, it is critical to understand what kind of customers have high churn rates</p>
   </li>
 </ul>
 
 <!-- end list -->
 
 <ul>
-  <li>
-    <p><strong>Churn rates by customer segmentation</strong> – Churn rates are reported with some customer segmentation. For instance, customers from different acquisition channels, region, subscription plan lead to different churn rates. Therefore, it is critical to understand what kind of customers have high churn rates</p>
-  </li>
   <li>
     <p><strong>Churn rates by customer behaviour</strong> – A user takes a series of steps after subscribing. It is important to find features which are sticky and drive retention in short term and long term. Drive usage of that feature to other customers as well</p>
   </li>
@@ -172,6 +162,14 @@ window.onload = wrap_img;
 </ul>
 
 <p><strong>Note:</strong> This post will focus on analysing customer churn and not revenue churn (we will do that in another post)</p>
+
+<h2 id="company-details--data"><strong>Company Details &amp; Data</strong></h2>
+
+<p>TakeZero is a fictitious SaaS company (like no-code platforms) which allows teams to collaborate and build basic no code web and mobile apps through its web application. We have data points for Q4 2019 i.e. October, November, December. Data and description of all the columns can be found here -</p>
+
+<p>File - <a href="https://drive.google.com/file/d/1okQlxFfRKLR8Sakk0QjNtqA8frGCqZH2/view?usp=sharing">https://drive.google.com/file/d/1okQlxFfRKLR8Sakk0QjNtqA8frGCqZH2/view?usp=sharing</a></p>
+
+<p>##</p>
 
 <h2 id="data-overview"><strong>Data Overview</strong></h2>
 
@@ -255,6 +253,261 @@ window.onload = wrap_img;
     <tr>
       <td>Month churned</td>
       <td>Month in which customer cancelled his plan. If empty, it means user did not churn. Churn data is available for November, December, &amp; January</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="implementation"><strong>Implementation</strong></h2>
+
+<p><strong>Monthly Churn Rate -</strong> Total customers churned in that period / Avg. number of customers in that period</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th><strong>new customers</strong></th>
+      <th><strong>start of month</strong></th>
+      <th><strong>churn</strong></th>
+      <th><strong>end of month</strong></th>
+      <th><strong>avg. number of customers</strong></th>
+      <th><strong>Monthly churn rate</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>October</strong></td>
+      <td>300</td>
+      <td>0</td>
+      <td>0</td>
+      <td>300</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>November</strong></td>
+      <td>401</td>
+      <td>701</td>
+      <td>60</td>
+      <td>641</td>
+      <td>671</td>
+      <td>2%</td>
+    </tr>
+    <tr>
+      <td><strong>December</strong></td>
+      <td>499</td>
+      <td>1140</td>
+      <td>130</td>
+      <td>1010</td>
+      <td>1075</td>
+      <td>3%</td>
+    </tr>
+    <tr>
+      <td><strong>January</strong></td>
+      <td>0</td>
+      <td>1010</td>
+      <td>170</td>
+      <td>840</td>
+      <td>925</td>
+      <td>5%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>According to calculations, our monthly churn rate is around 2-3% which is on the much lower end of avg. churn rates in early stage SaaS companies.</p>
+
+<p><strong>Churn rates by user segment</strong></p>
+
+<p>We have two data points on customer segmentation – region to which they belong, and purchase plan (# of seats they purchase). Let us look at churn rates by region and purchase plan to see if some kind customer segment is churning.</p>
+
+<p><strong>Churn rate by region</strong> – Observations,</p>
+
+<ul>
+  <li>69% of customers from Asia churn within 3 months. This is much higher than 16-18% churn of European and US customers in the same time period.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Region</strong></th>
+      <th><strong>New customers</strong></th>
+      <th><strong>Churned</strong></th>
+      <th><strong>%churn</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Asia</strong></td>
+      <td><strong>284</strong></td>
+      <td><strong>197</strong></td>
+      <td>69%</td>
+    </tr>
+    <tr>
+      <td><strong>Europe</strong></td>
+      <td><strong>334</strong></td>
+      <td><strong>55</strong></td>
+      <td>16%</td>
+    </tr>
+    <tr>
+      <td><strong>US</strong></td>
+      <td><strong>582</strong></td>
+      <td><strong>108</strong></td>
+      <td>19%</td>
+    </tr>
+    <tr>
+      <td><strong>Grand Total</strong></td>
+      <td><strong>1200</strong></td>
+      <td><strong>360</strong></td>
+      <td>30%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Churn rate by purchase plan</strong> – 2 important observations here,</p>
+
+<ul>
+  <li>
+    <p>Overall churn of customers who buy individual plans (47%) is much higher compared to customers who buy team plans (22-23%)</p>
+  </li>
+  <li>
+    <p>Customers who add users in less than 50% of the bought seats tend to churn much more. For ex, 100% of customers who bought 10-seat plan but filled less than 4 seats</p>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Purchase plan</strong></th>
+      <th><strong># of customers</strong></th>
+      <th><strong>Churn</strong></th>
+      <th><strong>%churn</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1</strong></td>
+      <td><strong>358</strong></td>
+      <td><strong>169</strong></td>
+      <td>47%</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>358</td>
+      <td>169</td>
+      <td>47%</td>
+    </tr>
+    <tr>
+      <td><strong>2</strong></td>
+      <td><strong>279</strong></td>
+      <td><strong>61</strong></td>
+      <td>22%</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>57</td>
+      <td>50</td>
+      <td>88%</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>222</td>
+      <td>11</td>
+      <td>5%</td>
+    </tr>
+    <tr>
+      <td><strong>5</strong></td>
+      <td><strong>275</strong></td>
+      <td><strong>63</strong></td>
+      <td>23%</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>18</td>
+      <td>17</td>
+      <td>94%</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>34</td>
+      <td>34</td>
+      <td>100%</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>7</td>
+      <td>0</td>
+      <td>0%</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>96</td>
+      <td>5</td>
+      <td>5%</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>120</td>
+      <td>7</td>
+      <td>6%</td>
+    </tr>
+    <tr>
+      <td><strong>10</strong></td>
+      <td><strong>288</strong></td>
+      <td><strong>67</strong></td>
+      <td>23%</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+      <td>100%</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>16</td>
+      <td>16</td>
+      <td>100%</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>22</td>
+      <td>22</td>
+      <td>100%</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>20</td>
+      <td>20</td>
+      <td>100%</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>59</td>
+      <td>1</td>
+      <td>2%</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>53</td>
+      <td>2</td>
+      <td>4%</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>63</td>
+      <td>1</td>
+      <td>2%</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>53</td>
+      <td>3</td>
+      <td>6%</td>
+    </tr>
+    <tr>
+      <td><strong>Grand Total</strong></td>
+      <td><strong>1200</strong></td>
+      <td><strong>360</strong></td>
+      <td>30%</td>
     </tr>
   </tbody>
 </table>
