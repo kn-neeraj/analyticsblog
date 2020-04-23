@@ -103,7 +103,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      4 min read
     
 </span></p>
 
@@ -122,7 +122,7 @@ window.onload = wrap_img;
 
 <h2 id="company-details--data"><strong>Company Details &amp; Data</strong></h2>
 
-<p>TakeZero is a fictitious SaaS company that allows teams to collaborate and build basic no code web and mobile apps through its web app. We have data points for Q4 2019 i.e. October, November, December. Data and description of all the columns can be found here -</p>
+<p>TakeZero is a fictitious SaaS company (like no-code platforms) which allows teams to collaborate and build basic no code web and mobile apps through its web application. We have data points for Q4 2019 i.e. October, November, December. Data and description of all the columns can be found here -</p>
 
 <p>File - <a href="https://drive.google.com/file/d/1okQlxFfRKLR8Sakk0QjNtqA8frGCqZH2/view?usp=sharing">https://drive.google.com/file/d/1okQlxFfRKLR8Sakk0QjNtqA8frGCqZH2/view?usp=sharing</a></p>
 
@@ -172,6 +172,88 @@ window.onload = wrap_img;
 </ul>
 
 <p><strong>Note:</strong> This post will focus on analysing customer churn and not revenue churn (we will do that in another post)</p>
+
+<h2 id="data-overview"><strong>Data Overview</strong></h2>
+
+<p>Here is a snapshot of the first 2 rows of the data –</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>ID</strong></th>
+      <th><strong>Purchase month</strong></th>
+      <th><strong>purchase plan - # seats</strong></th>
+      <th><strong>Team members added</strong></th>
+      <th><strong>Customer Region</strong></th>
+      <th><strong>avg number of web app sessions ran per month</strong></th>
+      <th><strong>avg number of mobile app sessions ran per month</strong></th>
+      <th><strong>Month churned</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>October</td>
+      <td>2</td>
+      <td>2</td>
+      <td>US</td>
+      <td>30</td>
+      <td>16</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>October</td>
+      <td>10</td>
+      <td>4</td>
+      <td>US</td>
+      <td>68</td>
+      <td>12</td>
+      <td>November</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>In which, columns mean the following -</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>ID</strong></th>
+      <th>Serial number of the customer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Purchase month</strong></td>
+      <td>Month in which subscription plan was purchased, we have 3 months data: October, November, and December</td>
+    </tr>
+    <tr>
+      <td><strong>Purchase plan - # seats</strong></td>
+      <td>Customers can buy <em>individual plan (1 seat)</em> or <em>team plans ( 2, 5 or 10 seats)</em>. Seats refer to maximum number of users that can be onboarded on the platform by the user</td>
+    </tr>
+    <tr>
+      <td><strong>Team members added</strong></td>
+      <td>Actual number of users added by the customer (capped to the number of seats in the bought subscription plan)</td>
+    </tr>
+    <tr>
+      <td><strong>Web app sessions per month</strong></td>
+      <td>Avg. number of monthly sessions building no code web apps by the customer</td>
+    </tr>
+    <tr>
+      <td><strong>Mobile app sessions per month</strong></td>
+      <td>Avg. number of monthly sessions building no code mobile by the customer</td>
+    </tr>
+    <tr>
+      <td><strong>Customer Region</strong></td>
+      <td>Continent to which the customer belongs.</td>
+    </tr>
+    <tr>
+      <td><strong>Month churned</strong></td>
+      <td>Month in which customer cancelled his plan. If empty, it means user did not churn. Churn data is available for November, December, &amp; January</td>
+    </tr>
+  </tbody>
+</table>
 
   </div><a class="u-url" href="/analyticsblog/2020/04/20/Churn-Analysis.html" hidden></a>
 </article>
