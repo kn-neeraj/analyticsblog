@@ -103,7 +103,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      11 min read
     
 </span></p>
 
@@ -685,9 +685,9 @@ window.onload = wrap_img;
 
 <p><strong>Behavioural Cohorts</strong></p>
 
-<p><img src="https://kn-neeraj.github.io/analyticsblog/assets/img/2020-04-20-Churn-Analysis/media/image2.png" alt="" />Based on what we saw in “Churn rate by Customer Behaviour” section, we can form two hypotheses</p>
+<p>Based on what we saw in “Churn rate by Customer Behaviour” section, we can form two hypotheses</p>
 
-<p>Hypothesis 1: We believe team plan subscribers who fill more than 60% of the bought seats within first 3 months retain better</p>
+<p><img src="https://kn-neeraj.github.io/analyticsblog/assets/img/2020-04-20-Churn-Analysis/media/image2.png" alt="" />Hypothesis 1: We believe team plan subscribers who fill more than 60% of the bought seats within first 3 months retain better</p>
 
 <ul>
   <li>
@@ -708,6 +708,125 @@ window.onload = wrap_img;
     <p>Therefore, mobile app dev seems to be a sticky feature for short term retention. Therefore, it is important to improve its discovery, usage, flow to ensure 100% of the customers start using this feature in 1<sup>st</sup> month after acquisition</p>
   </li>
 </ul>
+
+<p>##</p>
+
+<p>##</p>
+
+<h2 id="churn-prediction"><strong>Churn Prediction</strong></h2>
+
+<p>We can use historical data to build a churn prediction model which attaches churn risk score to new customers. Our exploratory analysis till now has revealed following predictors that could be significant in explaining churn</p>
+
+<ul>
+  <li>
+    <p>Customer region</p>
+  </li>
+  <li>
+    <p># of seats bought</p>
+  </li>
+  <li>
+    <p>Users added / # of seats bought</p>
+  </li>
+  <li>
+    <p>Mobile app dev sessions per month per user</p>
+  </li>
+</ul>
+
+<p>We can use any of the tools such as XLMiner (a paid Excel plugin) or Scikit-learn to perform classification machine learning algorithms to create a model. Simpler techniques like Logistic Regression or Decision Trees should product good results.</p>
+
+<p>I have used Logistic Regression on XLMiner to do data partition (training (70%) &amp; validation(30%)) and the resultant classification model provides following evaluation metrics on validation data</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Metrics</strong></th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Metric</strong></td>
+      <td><strong>Value</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Accuracy (#correct)</strong></td>
+      <td>237</td>
+    </tr>
+    <tr>
+      <td><strong>Accuracy (%correct)</strong></td>
+      <td>98.75</td>
+    </tr>
+    <tr>
+      <td><strong>Specificity</strong></td>
+      <td>0.9878788</td>
+    </tr>
+    <tr>
+      <td><strong>Sensitivity (Recall)</strong></td>
+      <td>0.9866667</td>
+    </tr>
+    <tr>
+      <td><strong>Precision</strong></td>
+      <td>0.9736842</td>
+    </tr>
+    <tr>
+      <td><strong>F1 score</strong></td>
+      <td>0.9801325</td>
+    </tr>
+    <tr>
+      <td><strong>Success Class</strong></td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td><strong>Success Probability</strong></td>
+      <td>0.5</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Since we are predicting churn we are optimising for low False -ves i.e. our model should not predict large number of customers who will churn as not churn. Therefore, Recall metric is primary model evaluation metric and a value of 98% on validation data is a good outcome.</p>
+
+<p>Let us look at what predictors are significant at 95% confident interval (i.e. p-value &lt; 0.05)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Predictor</th>
+      <th>P-value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Intercept</td>
+      <td><strong>4.41E-6</strong></td>
+    </tr>
+    <tr>
+      <td>Number of user seats bought</td>
+      <td><strong>0.113</strong></td>
+    </tr>
+    <tr>
+      <td>User added/seats bought</td>
+      <td><strong>0.018</strong></td>
+    </tr>
+    <tr>
+      <td>Mobile sessions per month per added user</td>
+      <td><strong>5.83E-09</strong></td>
+    </tr>
+    <tr>
+      <td>Customer Region_Asia</td>
+      <td><strong>0.044</strong></td>
+    </tr>
+    <tr>
+      <td>Customer Region_Europe</td>
+      <td><strong>N/A</strong></td>
+    </tr>
+    <tr>
+      <td>Customer Region_North America</td>
+      <td><strong>0.196</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>As evident from the table above, mobile sessions per month per added user, and user added/seats bought are two metrics that are highly associated with churn. Customer region – Asia, Purchase plan – number of seats bought are weak predictors of churn.</p>
 
   </div><a class="u-url" href="/analyticsblog/2020/04/20/Churn-Analysis.html" hidden></a>
 </article>
