@@ -103,7 +103,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      14 min read
+      16 min read
     
 </span></p>
 
@@ -204,11 +204,11 @@ window.onload = wrap_img;
   </li>
 </ul>
 
-<h2 id="company-details--data"><strong>Company Details &amp; Data</strong></h2>
+<h2 id="company-overview"><strong>Company Overview</strong></h2>
 
-<p>TakeZero is a fictitious SaaS company (like no-code platforms) which allows teams to collaborate and build basic no code web and mobile apps through its web application. We have data points for Q4 2019 i.e. October, November, December. Data and description of all the columns can be found here -</p>
+<p>TakeZero is a fictitious SaaS company which provides an online platform to build no-code web and mobile apps. It works on a subscription model where customers can buy individual plans or team plans with pre-defined seats.</p>
 
-<p>File - <a href="https://drive.google.com/file/d/1okQlxFfRKLR8Sakk0QjNtqA8frGCqZH2/view?usp=sharing">https://drive.google.com/file/d/1okQlxFfRKLR8Sakk0QjNtqA8frGCqZH2/view?usp=sharing</a></p>
+<p>We have 2019 Q4 data. We have data on customers acquired in the month – October, November &amp; December and which of these users churned by January month (i.e. churn within first 3 months).</p>
 
 <p>##</p>
 
@@ -221,11 +221,11 @@ window.onload = wrap_img;
     <tr>
       <th><strong>ID</strong></th>
       <th><strong>Purchase month</strong></th>
-      <th><strong>purchase plan - # of seats</strong></th>
+      <th><strong># of seats bought</strong></th>
       <th><strong>Team members added</strong></th>
       <th><strong>Customer Region</strong></th>
-      <th><strong>avg number of web app sessions ran per month</strong></th>
-      <th><strong>avg number of mobile app sessions ran per month</strong></th>
+      <th><strong>avg number of web app development sessions ran per month</strong></th>
+      <th><strong>avg number of mobile app development sessions ran per month</strong></th>
       <th><strong>Month churned</strong></th>
     </tr>
   </thead>
@@ -250,53 +250,90 @@ window.onload = wrap_img;
       <td>12</td>
       <td>November</td>
     </tr>
-  </tbody>
-</table>
-
-<p>Column descriptions are the following -</p>
-
-<table>
-  <thead>
     <tr>
-      <th><strong>Column Name</strong></th>
-      <th><strong>Column Description</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>ID</td>
-      <td>Serial number of the customer</td>
+      <td>3</td>
+      <td>October</td>
+      <td>10</td>
+      <td>4</td>
+      <td>US</td>
+      <td>40</td>
+      <td>4</td>
+      <td>November</td>
     </tr>
     <tr>
-      <td>Purchase month</td>
-      <td>Month in which subscription plan was purchased, we have 3 months data: October, November, and December</td>
+      <td>4</td>
+      <td>October</td>
+      <td>2</td>
+      <td>1</td>
+      <td>Europe</td>
+      <td>16</td>
+      <td>20</td>
+      <td> </td>
     </tr>
     <tr>
-      <td>Purchase plan - # of seats</td>
-      <td>Customers can buy <em>individual plan (1 seat)</em> or <em>team plans ( 2, 5 or 10 seats)</em>. Seats refer to maximum number of users that can be onboarded on the platform by the user</td>
-    </tr>
-    <tr>
-      <td>Team members added</td>
-      <td>Actual number of users added by the customer (capped to the number of seats in the bought subscription plan)</td>
-    </tr>
-    <tr>
-      <td>Web app sessions per month</td>
-      <td>Avg. number of monthly sessions building no code web apps by the customer</td>
-    </tr>
-    <tr>
-      <td>Mobile app sessions per month</td>
-      <td>Avg. number of monthly sessions building no code mobile by the customer</td>
-    </tr>
-    <tr>
-      <td>Customer Region</td>
-      <td>Continent to which the customer belongs.</td>
-    </tr>
-    <tr>
-      <td>Month churned</td>
-      <td>Month in which customer cancelled his plan. If empty, it means user did not churn. Churn data is available for November, December, &amp; January</td>
+      <td>5</td>
+      <td>October</td>
+      <td>10</td>
+      <td>2</td>
+      <td>Asia</td>
+      <td>12</td>
+      <td>8</td>
+      <td>November</td>
     </tr>
   </tbody>
 </table>
+
+<p>Following are the column descriptions -</p>
+
+<ul>
+  <li>
+    <p><strong>ID</strong> – Serial number of the customer</p>
+  </li>
+  <li>
+    <p><strong>Purchase Month</strong> – Month in which subscription is bought</p>
+  </li>
+  <li>
+    <p><strong># of seats bought</strong> – Customer can buy individual plan (1 seat) or team plans (2,5, or 10 seats). Seats refer to the maximum number of team members the customers can add on the platform</p>
+  </li>
+  <li>
+    <p><strong>Team members added</strong> – How many team members were added by the customer on the purchased plan</p>
+  </li>
+  <li>
+    <p><strong>Customer Region</strong> – Continent to which the customer belongs</p>
+  </li>
+  <li>
+    <p><strong>Avg web app development sessions per month</strong> - This number captures on an average how many web app development sessions did a customer (inclusive of all her team members) do in a month</p>
+  </li>
+  <li>
+    <p><strong>Avg mobile app development sessions per month</strong> - This number captures on an average how many mobile app development sessions did a customer (inclusive of all her team members) do in a month</p>
+  </li>
+  <li>
+    <p><strong>Month Churned</strong> – Month in which customer cancelled her plan. We have churn data for Nov, Dec, Jan. If empty, it means customer did NOT churn till end of the month January 2020</p>
+  </li>
+</ul>
+
+<p>All the data is available in Excel format here -</p>
+
+<p>File - <a href="https://drive.google.com/file/d/1okQlxFfRKLR8Sakk0QjNtqA8frGCqZH2/view?usp=sharing">https://drive.google.com/file/d/1okQlxFfRKLR8Sakk0QjNtqA8frGCqZH2/view?usp=sharing</a></p>
+
+<h2 id="data-preparation"><strong>Data Preparation</strong></h2>
+
+<p>I created following new columns by manipulating existing data –</p>
+
+<ul>
+  <li>
+    <p><strong>Team members added/# of seats bought</strong> – This ratio helps us determine of how many of team members are onboarded against the seats bought by the customer. Having more team members onboarded is a leading indicator engagement of the user and its team on the platform. On the vice versa, very few members onboarded means customer may not be finding value in the platform</p>
+  </li>
+  <li>
+    <p><strong>Avg # of web app dev sessions per month per team member -</strong> Since different customers buy different team plans to compare engagement with web app development feature across customers we normalize by calculating avg number of sessions done in a month per user</p>
+  </li>
+  <li>
+    <p><strong>Avg # of mobile app dev sessions per month per team member -</strong> Since different customers buy different team plans to compare engagement with mobile app development feature across customers, we normalize by calculating avg number of sessions done in a month per user</p>
+  </li>
+  <li>
+    <p><strong>Churn Bool –</strong> A Boolean variable with value 1 if user churned and 0 otherwise</p>
+  </li>
+</ul>
 
 <h2 id="implementation"><strong>Implementation</strong></h2>
 

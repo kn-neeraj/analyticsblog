@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-24T16:53:39-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;h2 id=&quot;why&quot;&gt;&lt;strong&gt;Why&lt;/strong&gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-24T18:13:34-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;h2 id=&quot;why&quot;&gt;&lt;strong&gt;Why&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -90,11 +90,11 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;company-details--data&quot;&gt;&lt;strong&gt;Company Details &amp;amp; Data&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;company-overview&quot;&gt;&lt;strong&gt;Company Overview&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;TakeZero is a fictitious SaaS company (like no-code platforms) which allows teams to collaborate and build basic no code web and mobile apps through its web application. We have data points for Q4 2019 i.e. October, November, December. Data and description of all the columns can be found here -&lt;/p&gt;
+&lt;p&gt;TakeZero is a fictitious SaaS company which provides an online platform to build no-code web and mobile apps. It works on a subscription model where customers can buy individual plans or team plans with pre-defined seats.&lt;/p&gt;
 
-&lt;p&gt;File - &lt;a href=&quot;https://drive.google.com/file/d/1okQlxFfRKLR8Sakk0QjNtqA8frGCqZH2/view?usp=sharing&quot;&gt;https://drive.google.com/file/d/1okQlxFfRKLR8Sakk0QjNtqA8frGCqZH2/view?usp=sharing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We have 2019 Q4 data. We have data on customers acquired in the month – October, November &amp;amp; December and which of these users churned by January month (i.e. churn within first 3 months).&lt;/p&gt;
 
 &lt;p&gt;##&lt;/p&gt;
 
@@ -107,11 +107,11 @@
     &lt;tr&gt;
       &lt;th&gt;&lt;strong&gt;ID&lt;/strong&gt;&lt;/th&gt;
       &lt;th&gt;&lt;strong&gt;Purchase month&lt;/strong&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;strong&gt;purchase plan - # of seats&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;# of seats bought&lt;/strong&gt;&lt;/th&gt;
       &lt;th&gt;&lt;strong&gt;Team members added&lt;/strong&gt;&lt;/th&gt;
       &lt;th&gt;&lt;strong&gt;Customer Region&lt;/strong&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;strong&gt;avg number of web app sessions ran per month&lt;/strong&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;strong&gt;avg number of mobile app sessions ran per month&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;avg number of web app development sessions ran per month&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;avg number of mobile app development sessions ran per month&lt;/strong&gt;&lt;/th&gt;
       &lt;th&gt;&lt;strong&gt;Month churned&lt;/strong&gt;&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
@@ -136,53 +136,90 @@
       &lt;td&gt;12&lt;/td&gt;
       &lt;td&gt;November&lt;/td&gt;
     &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Column descriptions are the following -&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th&gt;&lt;strong&gt;Column Name&lt;/strong&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;strong&gt;Column Description&lt;/strong&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ID&lt;/td&gt;
-      &lt;td&gt;Serial number of the customer&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;October&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;US&lt;/td&gt;
+      &lt;td&gt;40&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;November&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Purchase month&lt;/td&gt;
-      &lt;td&gt;Month in which subscription plan was purchased, we have 3 months data: October, November, and December&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;October&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Europe&lt;/td&gt;
+      &lt;td&gt;16&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Purchase plan - # of seats&lt;/td&gt;
-      &lt;td&gt;Customers can buy &lt;em&gt;individual plan (1 seat)&lt;/em&gt; or &lt;em&gt;team plans ( 2, 5 or 10 seats)&lt;/em&gt;. Seats refer to maximum number of users that can be onboarded on the platform by the user&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Team members added&lt;/td&gt;
-      &lt;td&gt;Actual number of users added by the customer (capped to the number of seats in the bought subscription plan)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Web app sessions per month&lt;/td&gt;
-      &lt;td&gt;Avg. number of monthly sessions building no code web apps by the customer&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Mobile app sessions per month&lt;/td&gt;
-      &lt;td&gt;Avg. number of monthly sessions building no code mobile by the customer&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Customer Region&lt;/td&gt;
-      &lt;td&gt;Continent to which the customer belongs.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Month churned&lt;/td&gt;
-      &lt;td&gt;Month in which customer cancelled his plan. If empty, it means user did not churn. Churn data is available for November, December, &amp;amp; January&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;October&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Asia&lt;/td&gt;
+      &lt;td&gt;12&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;November&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;p&gt;Following are the column descriptions -&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;ID&lt;/strong&gt; – Serial number of the customer&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Purchase Month&lt;/strong&gt; – Month in which subscription is bought&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;# of seats bought&lt;/strong&gt; – Customer can buy individual plan (1 seat) or team plans (2,5, or 10 seats). Seats refer to the maximum number of team members the customers can add on the platform&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Team members added&lt;/strong&gt; – How many team members were added by the customer on the purchased plan&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Customer Region&lt;/strong&gt; – Continent to which the customer belongs&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Avg web app development sessions per month&lt;/strong&gt; - This number captures on an average how many web app development sessions did a customer (inclusive of all her team members) do in a month&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Avg mobile app development sessions per month&lt;/strong&gt; - This number captures on an average how many mobile app development sessions did a customer (inclusive of all her team members) do in a month&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Month Churned&lt;/strong&gt; – Month in which customer cancelled her plan. We have churn data for Nov, Dec, Jan. If empty, it means customer did NOT churn till end of the month January 2020&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All the data is available in Excel format here -&lt;/p&gt;
+
+&lt;p&gt;File - &lt;a href=&quot;https://drive.google.com/file/d/1okQlxFfRKLR8Sakk0QjNtqA8frGCqZH2/view?usp=sharing&quot;&gt;https://drive.google.com/file/d/1okQlxFfRKLR8Sakk0QjNtqA8frGCqZH2/view?usp=sharing&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;data-preparation&quot;&gt;&lt;strong&gt;Data Preparation&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;I created following new columns by manipulating existing data –&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Team members added/# of seats bought&lt;/strong&gt; – This ratio helps us determine of how many of team members are onboarded against the seats bought by the customer. Having more team members onboarded is a leading indicator engagement of the user and its team on the platform. On the vice versa, very few members onboarded means customer may not be finding value in the platform&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Avg # of web app dev sessions per month per team member -&lt;/strong&gt; Since different customers buy different team plans to compare engagement with web app development feature across customers we normalize by calculating avg number of sessions done in a month per user&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Avg # of mobile app dev sessions per month per team member -&lt;/strong&gt; Since different customers buy different team plans to compare engagement with mobile app development feature across customers, we normalize by calculating avg number of sessions done in a month per user&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Churn Bool –&lt;/strong&gt; A Boolean variable with value 1 if user churned and 0 otherwise&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;implementation&quot;&gt;&lt;strong&gt;Implementation&lt;/strong&gt;&lt;/h2&gt;
 
