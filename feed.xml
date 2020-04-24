@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-23T20:49:19-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;h2 id=&quot;introduction&quot;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-23T23:44:56-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;h2 id=&quot;introduction&quot;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;I am sure you have heard the phrase - retention is the key! Indeed, strong retention of users over time is a great indicator of product-market fit, something all start-ups intend to achieve.&lt;/p&gt;
 
@@ -201,7 +201,7 @@
 
 &lt;p&gt;According to calculations, our monthly churn rate is around 2-3% which is on the much lower end of avg. churn rates in early stage SaaS companies.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Churn rates by user segment&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;churn-rates-by-user-segment&quot;&gt;&lt;strong&gt;Churn rates by user segment&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;We have two data points on customer segmentation – region to which they belong, and purchase plan (# of seats they purchase). Let us look at churn rates by region and purchase plan to see if some kind customer segment is churning.&lt;/p&gt;
 
@@ -411,7 +411,187 @@
       &lt;td&gt;&lt;strong&gt;23%&lt;/strong&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name></name></author><summary type="html">Introduction</summary></entry><entry><title type="html">Building a basic search engine from scratch using Python, Sklearn, and Networkx</title><link href="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html" rel="alternate" type="text/html" title="Building a basic search engine from scratch using Python, Sklearn, and Networkx" /><published>2020-04-07T00:00:00-05:00</published><updated>2020-04-07T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html">&lt;!--
+&lt;/table&gt;
+
+&lt;h2 id=&quot;churn-rates-by-customer-behaviour&quot;&gt;&lt;strong&gt;Churn rates by customer behaviour&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Churn rates by team members added&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Churn rates by avg number of web app development sessions per month –&lt;/strong&gt; Observations,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;We know on an avg how many web app development sessions user does per month. We will normalize this metric to remove the effect of the number of seats team plan has i.e. avg number of web app development sessions per month per added user&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We don’t see much difference in the web app dev sessions done per month between churned and retained user. Therefore, there is no significant association between this metric and churn&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;strong&gt;Churn&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;avg web app dev sessions ran per month per added user&lt;/strong&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;10.21071429&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;9.913888889&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Grand Total&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;10.12166667&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;Churn rates by avg number of web app development sessions per month –&lt;/strong&gt; Observations,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;We know on an avg how many mobile app development sessions user does per month. We will normalize this metric to remove the effect of the number of seats team plan has i.e. avg number of mobile app development sessions per month per added user&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We see a big difference between averages of churn and retained users. It seems retained users are doing much more mobile app dev sessions per month than churned out users. It shows how mobile app dev on the TakeZero platform is a sticky feature for short term retention (This is an important insight!!)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;strong&gt;Churn&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;avg mobile app dev sessions ran per month per added user&lt;/strong&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;8.997619048&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;3.083333333&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Grand Total&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;7.223333333&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;cohort-analysis&quot;&gt;&lt;strong&gt;Cohort Analysis&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Cohort are groups of users sharing by a common characteristic. For instance, cohorts by acquisition date, daily, weekly, monthly cohorts etc&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Once can compare metrics such as engagement, retention, or conversion across cohorts&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Through cohort analysis, we want to understand if our product changes, campaigns or other investments are leading to positive retention among younger cohorts&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For improving retention, there are two broadly types of cohorts&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Acquisition Cohorts - Group user by their acquisition day, week or month and measure retention. This helps to understand when we are losing customers and when does churn stablise&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Behavioural Cohorts – Group users by specific behaviours they have or haven’t take on the product within a given timeframe. (For example – inviting a team member in 1&lt;sup&gt;st&lt;/sup&gt; month, Following 5 users in 1&lt;sup&gt;st&lt;/sup&gt; week etc). Then we can track retention across such cohorts and find out which are sticky features or which features lead to +ve retention&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;span class=&quot;chart&quot;&gt;[CHART]&lt;/span&gt;&lt;strong&gt;Acquisition Cohorts&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;strong&gt;% of customers retained in lifetime month&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;0&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;1&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;2&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;3&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;October&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;100%&lt;/td&gt;
+      &lt;td&gt;80%&lt;/td&gt;
+      &lt;td&gt;77%&lt;/td&gt;
+      &lt;td&gt;75%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;November&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;100%&lt;/td&gt;
+      &lt;td&gt;70%&lt;/td&gt;
+      &lt;td&gt;67%&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;December&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;100%&lt;/td&gt;
+      &lt;td&gt;69%&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Avg&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;100%&lt;/td&gt;
+      &lt;td&gt;73%&lt;/td&gt;
+      &lt;td&gt;72%&lt;/td&gt;
+      &lt;td&gt;75%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Observations,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If we look at cohorts of users acquired in month October, Nov, December – we can understand that we lose majority of customers in 1&lt;sup&gt;st&lt;/sup&gt; month and churn stabilises around 2&lt;sup&gt;nd&lt;/sup&gt;-3&lt;sup&gt;rd&lt;/sup&gt; month.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Behavioural Cohorts&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;chart&quot;&gt;[CHART]&lt;/span&gt;Based on what we saw in “Churn rate by Customer Behaviour” section, we can form two hypotheses&lt;/p&gt;
+
+&lt;p&gt;Hypothesis 1: We believe team plan subscribers who fill more than 60% of the bought seats within first 3 months retain better&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Around 20% of the customers who fill &amp;lt; 60% of the bought seats in team plan churn within 1&lt;sup&gt;st&lt;/sup&gt; month. Whereas, 0% churn in customers who fill &amp;gt; 60% seats bought in team plan&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Therefore, it is essential to improve team member invitation feature to ensure customers add more team members and fill as many seats bought in first month after onboarding&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;span class=&quot;chart&quot;&gt;[CHART]&lt;/span&gt;Hypothesis 2: We believe customers who do more mobile app dev sessions per month per user retain better&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Around 25% of the customers whose team does &amp;lt; 5 mobile app dev sessions per month per user churn within 1&lt;sup&gt;st&lt;/sup&gt; month. Whereas, 0% churn in customers whose team does more than 5 mobile app dev sessions per month per user&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Therefore, mobile app dev seems to be a sticky feature for short term retention. Therefore, it is important to improve its discovery, usage, flow to ensure 100% of the customers start using this feature in 1&lt;sup&gt;st&lt;/sup&gt; month after acquisition&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Introduction</summary></entry><entry><title type="html">Building a basic search engine from scratch using Python, Sklearn, and Networkx</title><link href="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html" rel="alternate" type="text/html" title="Building a basic search engine from scratch using Python, Sklearn, and Networkx" /><published>2020-04-07T00:00:00-05:00</published><updated>2020-04-07T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html">&lt;!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################

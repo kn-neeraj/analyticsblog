@@ -103,7 +103,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      9 min read
     
 </span></p>
 
@@ -315,7 +315,7 @@ window.onload = wrap_img;
 
 <p>According to calculations, our monthly churn rate is around 2-3% which is on the much lower end of avg. churn rates in early stage SaaS companies.</p>
 
-<p><strong>Churn rates by user segment</strong></p>
+<h2 id="churn-rates-by-user-segment"><strong>Churn rates by user segment</strong></h2>
 
 <p>We have two data points on customer segmentation – region to which they belong, and purchase plan (# of seats they purchase). Let us look at churn rates by region and purchase plan to see if some kind customer segment is churning.</p>
 
@@ -526,6 +526,186 @@ window.onload = wrap_img;
     </tr>
   </tbody>
 </table>
+
+<h2 id="churn-rates-by-customer-behaviour"><strong>Churn rates by customer behaviour</strong></h2>
+
+<p><strong>Churn rates by team members added</strong></p>
+
+<p><strong>Churn rates by avg number of web app development sessions per month –</strong> Observations,</p>
+
+<ul>
+  <li>
+    <p>We know on an avg how many web app development sessions user does per month. We will normalize this metric to remove the effect of the number of seats team plan has i.e. avg number of web app development sessions per month per added user</p>
+  </li>
+  <li>
+    <p>We don’t see much difference in the web app dev sessions done per month between churned and retained user. Therefore, there is no significant association between this metric and churn</p>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Churn</strong></th>
+      <th><strong>avg web app dev sessions ran per month per added user</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>10.21071429</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>9.913888889</td>
+    </tr>
+    <tr>
+      <td><strong>Grand Total</strong></td>
+      <td><strong>10.12166667</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Churn rates by avg number of web app development sessions per month –</strong> Observations,</p>
+
+<ul>
+  <li>
+    <p>We know on an avg how many mobile app development sessions user does per month. We will normalize this metric to remove the effect of the number of seats team plan has i.e. avg number of mobile app development sessions per month per added user</p>
+  </li>
+  <li>
+    <p>We see a big difference between averages of churn and retained users. It seems retained users are doing much more mobile app dev sessions per month than churned out users. It shows how mobile app dev on the TakeZero platform is a sticky feature for short term retention (This is an important insight!!)</p>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Churn</strong></th>
+      <th><strong>avg mobile app dev sessions ran per month per added user</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>8.997619048</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>3.083333333</td>
+    </tr>
+    <tr>
+      <td><strong>Grand Total</strong></td>
+      <td><strong>7.223333333</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="cohort-analysis"><strong>Cohort Analysis</strong></h2>
+
+<ul>
+  <li>
+    <p>Cohort are groups of users sharing by a common characteristic. For instance, cohorts by acquisition date, daily, weekly, monthly cohorts etc</p>
+  </li>
+  <li>
+    <p>Once can compare metrics such as engagement, retention, or conversion across cohorts</p>
+  </li>
+  <li>
+    <p>Through cohort analysis, we want to understand if our product changes, campaigns or other investments are leading to positive retention among younger cohorts</p>
+  </li>
+</ul>
+
+<p>For improving retention, there are two broadly types of cohorts</p>
+
+<ul>
+  <li>
+    <p>Acquisition Cohorts - Group user by their acquisition day, week or month and measure retention. This helps to understand when we are losing customers and when does churn stablise</p>
+  </li>
+  <li>
+    <p>Behavioural Cohorts – Group users by specific behaviours they have or haven’t take on the product within a given timeframe. (For example – inviting a team member in 1<sup>st</sup> month, Following 5 users in 1<sup>st</sup> week etc). Then we can track retention across such cohorts and find out which are sticky features or which features lead to +ve retention</p>
+  </li>
+</ul>
+
+<p><span class="chart">[CHART]</span><strong>Acquisition Cohorts</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>% of customers retained in lifetime month</strong></th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td><strong>0</strong></td>
+      <td><strong>1</strong></td>
+      <td><strong>2</strong></td>
+      <td><strong>3</strong></td>
+    </tr>
+    <tr>
+      <td><strong>October</strong></td>
+      <td>100%</td>
+      <td>80%</td>
+      <td>77%</td>
+      <td>75%</td>
+    </tr>
+    <tr>
+      <td><strong>November</strong></td>
+      <td>100%</td>
+      <td>70%</td>
+      <td>67%</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>December</strong></td>
+      <td>100%</td>
+      <td>69%</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>Avg</strong></td>
+      <td>100%</td>
+      <td>73%</td>
+      <td>72%</td>
+      <td>75%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Observations,</p>
+
+<ul>
+  <li>If we look at cohorts of users acquired in month October, Nov, December – we can understand that we lose majority of customers in 1<sup>st</sup> month and churn stabilises around 2<sup>nd</sup>-3<sup>rd</sup> month.</li>
+</ul>
+
+<p><strong>Behavioural Cohorts</strong></p>
+
+<p><span class="chart">[CHART]</span>Based on what we saw in “Churn rate by Customer Behaviour” section, we can form two hypotheses</p>
+
+<p>Hypothesis 1: We believe team plan subscribers who fill more than 60% of the bought seats within first 3 months retain better</p>
+
+<ul>
+  <li>
+    <p>Around 20% of the customers who fill &lt; 60% of the bought seats in team plan churn within 1<sup>st</sup> month. Whereas, 0% churn in customers who fill &gt; 60% seats bought in team plan</p>
+  </li>
+  <li>
+    <p>Therefore, it is essential to improve team member invitation feature to ensure customers add more team members and fill as many seats bought in first month after onboarding</p>
+  </li>
+</ul>
+
+<p><span class="chart">[CHART]</span>Hypothesis 2: We believe customers who do more mobile app dev sessions per month per user retain better</p>
+
+<ul>
+  <li>
+    <p>Around 25% of the customers whose team does &lt; 5 mobile app dev sessions per month per user churn within 1<sup>st</sup> month. Whereas, 0% churn in customers whose team does more than 5 mobile app dev sessions per month per user</p>
+  </li>
+  <li>
+    <p>Therefore, mobile app dev seems to be a sticky feature for short term retention. Therefore, it is important to improve its discovery, usage, flow to ensure 100% of the customers start using this feature in 1<sup>st</sup> month after acquisition</p>
+  </li>
+</ul>
 
   </div><a class="u-url" href="/analyticsblog/2020/04/20/Churn-Analysis.html" hidden></a>
 </article>
