@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-24T04:07:31-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;h2 id=&quot;introduction&quot;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-24T11:50:21-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;h2 id=&quot;introduction&quot;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;I am sure you have heard the phrase - retention is the key! Indeed, strong retention of users over time is a great indicator of product-market fit, something all start-ups intend to achieve.&lt;/p&gt;
 
@@ -13,8 +13,6 @@
 &lt;h2 id=&quot;conceptual-overview&quot;&gt;&lt;strong&gt;Conceptual Overview&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;In subscription businesses retention is the most important metric. Churn is like a hole in the boat, no matter how many customers a start-up acquires, it will not thrive without sticky features that retain users.&lt;/p&gt;
-
-&lt;p&gt;As a Product Manager, it is important to look deeper and analyse big numbers with scrutiny.&lt;/p&gt;
 
 &lt;p&gt;There are two kinds of churn -&lt;/p&gt;
 
@@ -595,10 +593,6 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;##&lt;/p&gt;
-
-&lt;p&gt;##&lt;/p&gt;
-
 &lt;h2 id=&quot;churn-prediction&quot;&gt;&lt;strong&gt;Churn Prediction&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;We can use historical data to build a churn prediction model which attaches churn risk score to new customers. Our exploratory analysis till now has revealed following predictors that could be significant in explaining churn&lt;/p&gt;
@@ -625,15 +619,11 @@
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th&gt;&lt;strong&gt;Metrics&lt;/strong&gt;&lt;/th&gt;
-      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;Metric&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;Value&lt;/strong&gt;&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Metric&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;Value&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;strong&gt;Accuracy (#correct)&lt;/strong&gt;&lt;/td&gt;
       &lt;td&gt;237&lt;/td&gt;
@@ -712,7 +702,80 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;As evident from the table above, mobile sessions per month per added user, and user added/seats bought are two metrics that are highly associated with churn. Customer region – Asia, Purchase plan – number of seats bought are weak predictors of churn.&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction</summary></entry><entry><title type="html">Building a basic search engine from scratch using Python, Sklearn, and Networkx</title><link href="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html" rel="alternate" type="text/html" title="Building a basic search engine from scratch using Python, Sklearn, and Networkx" /><published>2020-04-07T00:00:00-05:00</published><updated>2020-04-07T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html">&lt;!--
+&lt;p&gt;As evident from the table above, mobile sessions per month per added user, and user added/seats bought are two metrics that are highly associated with churn. Customer region – Asia, Purchase plan – number of seats bought are weak predictors of churn.&lt;/p&gt;
+
+&lt;h2 id=&quot;key-learnings&quot;&gt;&lt;strong&gt;Key Learnings&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Customers who buy individual plans churn more&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Customers from Asia region churn more&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Majority of users who buy individual plans come from Asia&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Churn stabilises by 2&lt;sup&gt;nd&lt;/sup&gt;-3&lt;sup&gt;rd&lt;/sup&gt; month&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Customers who fill more than 60% of the seats bought within first 1&lt;sup&gt;st&lt;/sup&gt; month of onboarding churn less.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Customers who use more do more than 5 mobile app dev sessions per month per user churn less&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Therefore, features such as adding members to the team and mobile app dev sessions are sticky features leading to better short-term retention of the onboarded users&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;##&lt;/p&gt;
+
+&lt;h2 id=&quot;recommendations&quot;&gt;&lt;strong&gt;Recommendations&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;It is important to understand that data analysis tells us “what” is happening but to understand “why” we should supplement it with qualitative user research.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Talk to customers who purchase individual plans and are leaving platform within first 3 month of on-boarding. Understand why they are leaving. We can form several hypotheses here –&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;It could be happy churn i.e. customers are satisfied with the product, but they still churn because their job is completed, and they don’t think they should pay for subscription anymore&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;It could be that our product is not suited to the needs of customer persona who buys individual purchase plans. I would want to go back to the user research in revalidate our assumptions and hypotheses there&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Are they even the most profitable customers that we want to go after?&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We have identified +ve correlation between features such as mobile app dev sessions, onboarding more team members against seats bought in the purchase plan and short-term retention.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;We should try to look at more data from previous quarters and see if same pattern follows&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Talk to customers who are using these features and understand what works for them&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;We should establish causal effect of these features to short-term retention through A/B experiments&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;If the above identified features indeed make the product sticky then we should focus on improving their discovery and usage through improvements in onboarding flow and nudge users towards these features early in their lifetime&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Use the churn prediction model to assign churn risk score to every customer. Prepare a marketing plan through various channels such as mailers, push notifications etc to keep those users engaged on the platform&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Retention is the most important metric in subscription businesses because a leaky product will never be able to build a critical mass of hooked users. As a Product Manager, it is important to look deeper then just the obvious metrics such as monthly churn rate and analyse big numbers with scrutiny. Also, it is critical to remember that data should inform us in building and validating better hypotheses, and what areas to focus on our qualitative research.&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction</summary></entry><entry><title type="html">Building a basic search engine from scratch using Python, Sklearn, and Networkx</title><link href="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html" rel="alternate" type="text/html" title="Building a basic search engine from scratch using Python, Sklearn, and Networkx" /><published>2020-04-07T00:00:00-05:00</published><updated>2020-04-07T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html">&lt;!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################

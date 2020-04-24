@@ -103,7 +103,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      13 min read
     
 </span></p>
 
@@ -127,8 +127,6 @@ window.onload = wrap_img;
 <h2 id="conceptual-overview"><strong>Conceptual Overview</strong></h2>
 
 <p>In subscription businesses retention is the most important metric. Churn is like a hole in the boat, no matter how many customers a start-up acquires, it will not thrive without sticky features that retain users.</p>
-
-<p>As a Product Manager, it is important to look deeper and analyse big numbers with scrutiny.</p>
 
 <p>There are two kinds of churn -</p>
 
@@ -709,10 +707,6 @@ window.onload = wrap_img;
   </li>
 </ul>
 
-<p>##</p>
-
-<p>##</p>
-
 <h2 id="churn-prediction"><strong>Churn Prediction</strong></h2>
 
 <p>We can use historical data to build a churn prediction model which attaches churn risk score to new customers. Our exploratory analysis till now has revealed following predictors that could be significant in explaining churn</p>
@@ -739,15 +733,11 @@ window.onload = wrap_img;
 <table>
   <thead>
     <tr>
-      <th><strong>Metrics</strong></th>
-      <th> </th>
+      <th><strong>Metric</strong></th>
+      <th><strong>Value</strong></th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><strong>Metric</strong></td>
-      <td><strong>Value</strong></td>
-    </tr>
     <tr>
       <td><strong>Accuracy (#correct)</strong></td>
       <td>237</td>
@@ -827,6 +817,79 @@ window.onload = wrap_img;
 </table>
 
 <p>As evident from the table above, mobile sessions per month per added user, and user added/seats bought are two metrics that are highly associated with churn. Customer region – Asia, Purchase plan – number of seats bought are weak predictors of churn.</p>
+
+<h2 id="key-learnings"><strong>Key Learnings</strong></h2>
+
+<ol>
+  <li>
+    <p>Customers who buy individual plans churn more</p>
+  </li>
+  <li>
+    <p>Customers from Asia region churn more</p>
+  </li>
+  <li>
+    <p>Majority of users who buy individual plans come from Asia</p>
+  </li>
+  <li>
+    <p>Churn stabilises by 2<sup>nd</sup>-3<sup>rd</sup> month</p>
+  </li>
+  <li>
+    <p>Customers who fill more than 60% of the seats bought within first 1<sup>st</sup> month of onboarding churn less.</p>
+  </li>
+  <li>
+    <p>Customers who use more do more than 5 mobile app dev sessions per month per user churn less</p>
+  </li>
+  <li>
+    <p>Therefore, features such as adding members to the team and mobile app dev sessions are sticky features leading to better short-term retention of the onboarded users</p>
+  </li>
+</ol>
+
+<p>##</p>
+
+<h2 id="recommendations"><strong>Recommendations</strong></h2>
+
+<p>It is important to understand that data analysis tells us “what” is happening but to understand “why” we should supplement it with qualitative user research.</p>
+
+<ol>
+  <li>
+    <p>Talk to customers who purchase individual plans and are leaving platform within first 3 month of on-boarding. Understand why they are leaving. We can form several hypotheses here –</p>
+
+    <ul>
+      <li>
+        <p>It could be happy churn i.e. customers are satisfied with the product, but they still churn because their job is completed, and they don’t think they should pay for subscription anymore</p>
+      </li>
+      <li>
+        <p>It could be that our product is not suited to the needs of customer persona who buys individual purchase plans. I would want to go back to the user research in revalidate our assumptions and hypotheses there</p>
+      </li>
+      <li>
+        <p>Are they even the most profitable customers that we want to go after?</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>We have identified +ve correlation between features such as mobile app dev sessions, onboarding more team members against seats bought in the purchase plan and short-term retention.</p>
+
+    <ul>
+      <li>
+        <p>We should try to look at more data from previous quarters and see if same pattern follows</p>
+      </li>
+      <li>
+        <p>Talk to customers who are using these features and understand what works for them</p>
+      </li>
+      <li>
+        <p>We should establish causal effect of these features to short-term retention through A/B experiments</p>
+      </li>
+      <li>
+        <p>If the above identified features indeed make the product sticky then we should focus on improving their discovery and usage through improvements in onboarding flow and nudge users towards these features early in their lifetime</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Use the churn prediction model to assign churn risk score to every customer. Prepare a marketing plan through various channels such as mailers, push notifications etc to keep those users engaged on the platform</p>
+  </li>
+</ol>
+
+<p>Retention is the most important metric in subscription businesses because a leaky product will never be able to build a critical mass of hooked users. As a Product Manager, it is important to look deeper then just the obvious metrics such as monthly churn rate and analyse big numbers with scrutiny. Also, it is critical to remember that data should inform us in building and validating better hypotheses, and what areas to focus on our qualitative research.</p>
 
   </div><a class="u-url" href="/analyticsblog/2020/04/20/Churn-Analysis.html" hidden></a>
 </article>
