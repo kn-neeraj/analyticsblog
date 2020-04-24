@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-23T23:44:56-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;h2 id=&quot;introduction&quot;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-23T23:55:32-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;h2 id=&quot;introduction&quot;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;I am sure you have heard the phrase - retention is the key! Indeed, strong retention of users over time is a great indicator of product-market fit, something all start-ups intend to achieve.&lt;/p&gt;
 
@@ -510,7 +510,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;span class=&quot;chart&quot;&gt;[CHART]&lt;/span&gt;&lt;strong&gt;Acquisition Cohorts&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kn-neeraj.github.io/analyticsblog/assets/img/2020-04-20-Churn-Analysis/media/image1.png&quot; alt=&quot;&quot; /&gt;&lt;strong&gt;Acquisition Cohorts&lt;/strong&gt;&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -569,7 +569,7 @@
 
 &lt;p&gt;&lt;strong&gt;Behavioural Cohorts&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span class=&quot;chart&quot;&gt;[CHART]&lt;/span&gt;Based on what we saw in “Churn rate by Customer Behaviour” section, we can form two hypotheses&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kn-neeraj.github.io/analyticsblog/assets/img/2020-04-20-Churn-Analysis/media/image2.png&quot; alt=&quot;&quot; /&gt;Based on what we saw in “Churn rate by Customer Behaviour” section, we can form two hypotheses&lt;/p&gt;
 
 &lt;p&gt;Hypothesis 1: We believe team plan subscribers who fill more than 60% of the bought seats within first 3 months retain better&lt;/p&gt;
 
@@ -582,7 +582,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;span class=&quot;chart&quot;&gt;[CHART]&lt;/span&gt;Hypothesis 2: We believe customers who do more mobile app dev sessions per month per user retain better&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kn-neeraj.github.io/analyticsblog/assets/img/2020-04-20-Churn-Analysis/media/image3.png&quot; alt=&quot;&quot; /&gt;Hypothesis 2: We believe customers who do more mobile app dev sessions per month per user retain better&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
