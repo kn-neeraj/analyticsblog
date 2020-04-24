@@ -1,33 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-24T11:50:21-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;h2 id=&quot;introduction&quot;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-24T16:53:39-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;h2 id=&quot;why&quot;&gt;&lt;strong&gt;Why&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;I am sure you have heard the phrase - retention is the key! Indeed, strong retention of users over time is a great indicator of product-market fit, something all start-ups intend to achieve.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;To develop a framework on how to approach churn analysis problems as a Product Manager&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;To improve skills in Excel&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;To improve writing skills and whether I am able to convey my thought process&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Finally, currently focus is on improving metrics and analysis skills&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;To improve retention, it is imperative to understand leading indicators of churn and then improve the product accordingly.&lt;/p&gt;
+&lt;p&gt;What&lt;/p&gt;
 
-&lt;p&gt;So in this post, we look at a fictious SaaS company’s 3 months data (generated randomly) to understand how to do churn analysis.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Take example of a fictious company TakeZero and dataset to do following analysis&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Monthly churn rate&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Acquisition Cohorts &amp;amp; retention curves&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Behavioural Cohorts &amp;amp; Retention curves&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Churn Prediction&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;How&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Using Excel &amp;amp; Pivot Tables&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;##&lt;/p&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;For a product, churn is like a hole in the boat, no matter how many users you acquire product will not thrive without strong retention of the acquired users. In fact, venture capitalists look at churn thoroughly as it is a strong indicator of whether you have a good product/market fit.&lt;/p&gt;
+
+&lt;p&gt;Churn analysis helps uncover patterns, product features, and behaviours that lead to user retention. Therefore, in this post we will learn how to do churn analysis by taking example of a fictious SaaS company, TakeZero, which allows developers to build no code web and mobile apps.&lt;/p&gt;
 
 &lt;h2 id=&quot;objective&quot;&gt;&lt;strong&gt;Objective&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Our objective is to suggest product changes needed to reduce churn&lt;/p&gt;
+&lt;p&gt;Our objective is to build an understanding of what metrics we need to look at to understand churn and build hypothesis around how to reduce it.&lt;/p&gt;
 
-&lt;h2 id=&quot;conceptual-overview&quot;&gt;&lt;strong&gt;Conceptual Overview&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conceptual-overview&quot;&gt;**Conceptual Overview&lt;/h2&gt;
+&lt;p&gt;**There are two kinds of churn -&lt;/p&gt;
 
-&lt;p&gt;In subscription businesses retention is the most important metric. Churn is like a hole in the boat, no matter how many customers a start-up acquires, it will not thrive without sticky features that retain users.&lt;/p&gt;
+&lt;p&gt;1)  &lt;strong&gt;Customer Churn&lt;/strong&gt; – Defined as ratio of number of customers churned compared to total number of customers. Here, the focus is on retaining high percentage of customers for a longer period&lt;/p&gt;
 
-&lt;p&gt;There are two kinds of churn -&lt;/p&gt;
+&lt;p&gt;2)  &lt;strong&gt;Revenue Churn&lt;/strong&gt; – Defined as ratio of revenue lost compared to overall revenue. Apart from customer churn we need to look at revenue churn because not all customers are equal. Hence, if a start-up is losing low churn but is mostly losing high value customers the impact on revenue will be much higher compared to if it was losing even high number of low value customers. Here, the focus is on retaining high value customers for a longer period or up-sell and cross-sell to decrease revenue churn&lt;/p&gt;
 
-&lt;p&gt;1)  &lt;strong&gt;Customer Churn&lt;/strong&gt; – Defined simply as number of customers churned compared to total number of customers. Focus is on retaining high percentage of customers for a longer period&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; For the sake of brevity this post will focus only on customer churn. We will focus on revenue churn in the next post.&lt;/p&gt;
 
-&lt;p&gt;2)  &lt;strong&gt;Revenue Churn&lt;/strong&gt; – Defined as revenue churned compared to overall revenue. It is a measure of lost revenue. It is critical to understand why this metric is important compared to customer churn. Not all customers are equal so if a start-up is losing high value customers the impact on revenue churn will be much higher than if it is losing low value customers&lt;/p&gt;
-
-&lt;p&gt;In this post, we will look at the following metrics for TakeZero (our fictitious company) –&lt;/p&gt;
+&lt;p&gt;We will look at the following metrics for TakeZero (our fictitious SaaS company) –&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;Monthly churn rate&lt;/strong&gt; – This is a basic month-on-month (MOM) customer churn.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Churn rates by customer segmentation&lt;/strong&gt; – Churn rates are reported with some customer segmentation. For instance, customers from different acquisition channels, region, subscription plan lead to different churn rates. Therefore, it is critical to understand what kind of customers have high churn rates&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Churn rates by customer segmentation&lt;/strong&gt; – Churn rates are reported with some customer segmentation. For instance, customers from different acquisition channels, region, subscription plan have different churn rates. Therefore, it is critical to understand what kind of customers have high churn rates&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -35,17 +80,15 @@
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Churn rates by customer behaviour&lt;/strong&gt; – A user takes a series of steps after subscribing. It is important to find features which are sticky and drive retention in short term and long term. Drive usage of that feature to other customers as well&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Churn rates by customer behaviour&lt;/strong&gt; – A user takes a series of steps after subscribing for the product. It is important to find features which are sticky and drive retention in short term and long term.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Cohort Analysis&lt;/strong&gt; – Cohorts are group of users sharing a common characteristic such as acquired in same month, acquisition channel etc. Over time as the product is getting improved, one needs to ensure that younger cohorts are showing better retention&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Cohort Analysis&lt;/strong&gt; – Cohorts are group of users sharing a common characteristic such as acquisition month, acquisition channel etc. Over time as the product is getting improved, one needs to ensure that younger cohorts are showing better retention or lower churn&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Churn Prediction&lt;/strong&gt; – Once we identify predictor variables which are significant to predict churn, we can use any of Machine Learning techniques such as Logistic Regression, Decision Tree to predict customer churn&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Churn Risk Score for every customer&lt;/strong&gt; – Through descriptive analysis we identify predictor variables which could be significant to predict churn and then we can use any of the ML techniques such as Logistic Regression, Decision Trees to predict customer churn and assign each new user a churn risk score. It helps us develop focus on high risk churn&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This post will focus on analysing customer churn and not revenue churn (we will do that in another post)&lt;/p&gt;
 
 &lt;h2 id=&quot;company-details--data&quot;&gt;&lt;strong&gt;Company Details &amp;amp; Data&lt;/strong&gt;&lt;/h2&gt;
 
@@ -57,7 +100,7 @@
 
 &lt;h2 id=&quot;data-overview&quot;&gt;&lt;strong&gt;Data Overview&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Here is a snapshot of the first 2 rows of the data –&lt;/p&gt;
+&lt;p&gt;Here is a snapshot of the first 5 rows of the data –&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -775,7 +818,7 @@
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Retention is the most important metric in subscription businesses because a leaky product will never be able to build a critical mass of hooked users. As a Product Manager, it is important to look deeper then just the obvious metrics such as monthly churn rate and analyse big numbers with scrutiny. Also, it is critical to remember that data should inform us in building and validating better hypotheses, and what areas to focus on our qualitative research.&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction</summary></entry><entry><title type="html">Building a basic search engine from scratch using Python, Sklearn, and Networkx</title><link href="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html" rel="alternate" type="text/html" title="Building a basic search engine from scratch using Python, Sklearn, and Networkx" /><published>2020-04-07T00:00:00-05:00</published><updated>2020-04-07T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html">&lt;!--
+&lt;p&gt;Retention is the most important metric in subscription businesses because a leaky product will never be able to build a critical mass of hooked users. As a Product Manager, it is important to look deeper then just the obvious metrics such as monthly churn rate and analyse big numbers with scrutiny. Also, it is critical to remember that data should inform us in building and validating better hypotheses, and what areas to focus on our qualitative research.&lt;/p&gt;</content><author><name></name></author><summary type="html">Why</summary></entry><entry><title type="html">Building a basic search engine from scratch using Python, Sklearn, and Networkx</title><link href="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html" rel="alternate" type="text/html" title="Building a basic search engine from scratch using Python, Sklearn, and Networkx" /><published>2020-04-07T00:00:00-05:00</published><updated>2020-04-07T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html">&lt;!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
