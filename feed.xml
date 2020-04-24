@@ -1,52 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-24T18:13:34-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;h2 id=&quot;why&quot;&gt;&lt;strong&gt;Why&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;To develop a framework on how to approach churn analysis problems as a Product Manager&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;To improve skills in Excel&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;To improve writing skills and whether I am able to convey my thought process&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Finally, currently focus is on improving metrics and analysis skills&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;What&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Take example of a fictious company TakeZero and dataset to do following analysis&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;Monthly churn rate&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Acquisition Cohorts &amp;amp; retention curves&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Behavioural Cohorts &amp;amp; Retention curves&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Churn Prediction&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;How&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Using Excel &amp;amp; Pivot Tables&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;##&lt;/p&gt;
-
-&lt;h2 id=&quot;introduction&quot;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-24T18:20:15-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;h2 id=&quot;introduction&quot;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;For a product, churn is like a hole in the boat, no matter how many users you acquire product will not thrive without strong retention of the acquired users. In fact, venture capitalists look at churn thoroughly as it is a strong indicator of whether you have a good product/market fit.&lt;/p&gt;
 
@@ -95,8 +47,6 @@
 &lt;p&gt;TakeZero is a fictitious SaaS company which provides an online platform to build no-code web and mobile apps. It works on a subscription model where customers can buy individual plans or team plans with pre-defined seats.&lt;/p&gt;
 
 &lt;p&gt;We have 2019 Q4 data. We have data on customers acquired in the month – October, November &amp;amp; December and which of these users churned by January month (i.e. churn within first 3 months).&lt;/p&gt;
-
-&lt;p&gt;##&lt;/p&gt;
 
 &lt;h2 id=&quot;data-overview&quot;&gt;&lt;strong&gt;Data Overview&lt;/strong&gt;&lt;/h2&gt;
 
@@ -202,7 +152,7 @@
 
 &lt;p&gt;File - &lt;a href=&quot;https://drive.google.com/file/d/1okQlxFfRKLR8Sakk0QjNtqA8frGCqZH2/view?usp=sharing&quot;&gt;https://drive.google.com/file/d/1okQlxFfRKLR8Sakk0QjNtqA8frGCqZH2/view?usp=sharing&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;data-preparation&quot;&gt;&lt;strong&gt;Data Preparation&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;data-pre-processing&quot;&gt;&lt;strong&gt;Data Pre-processing&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;I created following new columns by manipulating existing data –&lt;/p&gt;
 
@@ -855,7 +805,7 @@
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Retention is the most important metric in subscription businesses because a leaky product will never be able to build a critical mass of hooked users. As a Product Manager, it is important to look deeper then just the obvious metrics such as monthly churn rate and analyse big numbers with scrutiny. Also, it is critical to remember that data should inform us in building and validating better hypotheses, and what areas to focus on our qualitative research.&lt;/p&gt;</content><author><name></name></author><summary type="html">Why</summary></entry><entry><title type="html">Building a basic search engine from scratch using Python, Sklearn, and Networkx</title><link href="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html" rel="alternate" type="text/html" title="Building a basic search engine from scratch using Python, Sklearn, and Networkx" /><published>2020-04-07T00:00:00-05:00</published><updated>2020-04-07T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html">&lt;!--
+&lt;p&gt;Retention is the most important metric in subscription businesses because a leaky product will never be able to build a critical mass of hooked users. As a Product Manager, it is important to look deeper then just the obvious metrics such as monthly churn rate and analyse big numbers with scrutiny. Also, it is critical to remember that data should inform us in building and validating better hypotheses, and what areas to focus on our qualitative research.&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction</summary></entry><entry><title type="html">Building a basic search engine from scratch using Python, Sklearn, and Networkx</title><link href="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html" rel="alternate" type="text/html" title="Building a basic search engine from scratch using Python, Sklearn, and Networkx" /><published>2020-04-07T00:00:00-05:00</published><updated>2020-04-07T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html">&lt;!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
