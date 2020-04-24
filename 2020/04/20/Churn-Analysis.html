@@ -103,7 +103,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      6 min read
     
 </span></p>
 
@@ -331,7 +331,7 @@ window.onload = wrap_img;
       <th><strong>Region</strong></th>
       <th><strong>New customers</strong></th>
       <th><strong>Churned</strong></th>
-      <th><strong>%churn</strong></th>
+      <th><strong>Churn%</strong></th>
     </tr>
   </thead>
   <tbody>
@@ -366,148 +366,163 @@ window.onload = wrap_img;
 
 <ul>
   <li>
-    <p>Overall churn of customers who buy individual plans (47%) is much higher compared to customers who buy team plans (22-23%)</p>
+    <p>Customers who buy individual plans (1 seat) churn at much higher rate (47%) than customers who buy team plans (avg around 22-23%)</p>
   </li>
   <li>
-    <p>Customers who add users in less than 50% of the bought seats tend to churn much more. For ex, 100% of customers who bought 10-seat plan but filled less than 4 seats</p>
+    <p>Customers who buy team plans and add less than 60% of the team members in 1<sup>st</sup> 3 months churn at a much higher rate. For example, 100% of the customers who bought 10 seat plan but added less than 5 members, churned within first 3 months</p>
   </li>
 </ul>
 
 <table>
   <thead>
     <tr>
-      <th><strong>Purchase plan</strong></th>
-      <th><strong># of customers</strong></th>
+      <th><strong>Purchase Plan-# of seats bought</strong></th>
+      <th><strong># of team members added</strong></th>
+      <th><strong># of customers added</strong></th>
       <th><strong>Churn</strong></th>
-      <th><strong>%churn</strong></th>
+      <th><strong>Churn%</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>1</strong></td>
-      <td><strong>358</strong></td>
-      <td><strong>169</strong></td>
-      <td>47%</td>
-    </tr>
-    <tr>
+      <td>1</td>
       <td>1</td>
       <td>358</td>
       <td>169</td>
       <td>47%</td>
     </tr>
     <tr>
-      <td><strong>2</strong></td>
-      <td><strong>279</strong></td>
-      <td><strong>61</strong></td>
-      <td>22%</td>
+      <td> </td>
+      <td><strong>Total</strong></td>
+      <td><strong>358</strong></td>
+      <td><strong>169</strong></td>
+      <td><strong>47%</strong></td>
     </tr>
     <tr>
+      <td>2</td>
       <td>1</td>
       <td>57</td>
       <td>50</td>
       <td>88%</td>
     </tr>
     <tr>
+      <td> </td>
       <td>2</td>
       <td>222</td>
       <td>11</td>
       <td>5%</td>
     </tr>
     <tr>
-      <td><strong>5</strong></td>
-      <td><strong>275</strong></td>
-      <td><strong>63</strong></td>
-      <td>23%</td>
+      <td> </td>
+      <td><strong>Total</strong></td>
+      <td><strong>279</strong></td>
+      <td><strong>61</strong></td>
+      <td><strong>22%</strong></td>
     </tr>
     <tr>
+      <td>5</td>
       <td>1</td>
       <td>18</td>
       <td>17</td>
       <td>94%</td>
     </tr>
     <tr>
+      <td> </td>
       <td>2</td>
       <td>34</td>
       <td>34</td>
       <td>100%</td>
     </tr>
     <tr>
+      <td> </td>
       <td>3</td>
       <td>7</td>
       <td>0</td>
       <td>0%</td>
     </tr>
     <tr>
+      <td> </td>
       <td>4</td>
       <td>96</td>
       <td>5</td>
       <td>5%</td>
     </tr>
     <tr>
+      <td> </td>
       <td>5</td>
       <td>120</td>
       <td>7</td>
       <td>6%</td>
     </tr>
     <tr>
-      <td><strong>10</strong></td>
-      <td><strong>288</strong></td>
-      <td><strong>67</strong></td>
-      <td>23%</td>
+      <td> </td>
+      <td><strong>Total</strong></td>
+      <td><strong>275</strong></td>
+      <td><strong>63</strong></td>
+      <td><strong>23%</strong></td>
     </tr>
     <tr>
+      <td>10</td>
       <td>1</td>
       <td>2</td>
       <td>2</td>
       <td>100%</td>
     </tr>
     <tr>
+      <td> </td>
       <td>2</td>
       <td>16</td>
       <td>16</td>
       <td>100%</td>
     </tr>
     <tr>
+      <td> </td>
       <td>3</td>
       <td>22</td>
       <td>22</td>
       <td>100%</td>
     </tr>
     <tr>
+      <td> </td>
       <td>4</td>
       <td>20</td>
       <td>20</td>
       <td>100%</td>
     </tr>
     <tr>
+      <td> </td>
       <td>7</td>
       <td>59</td>
       <td>1</td>
       <td>2%</td>
     </tr>
     <tr>
+      <td> </td>
       <td>8</td>
       <td>53</td>
       <td>2</td>
       <td>4%</td>
     </tr>
     <tr>
+      <td> </td>
       <td>9</td>
       <td>63</td>
       <td>1</td>
       <td>2%</td>
     </tr>
     <tr>
+      <td> </td>
       <td>10</td>
       <td>53</td>
       <td>3</td>
       <td>6%</td>
     </tr>
     <tr>
-      <td><strong>Grand Total</strong></td>
-      <td><strong>1200</strong></td>
-      <td><strong>360</strong></td>
-      <td>30%</td>
+      <td> </td>
+      <td><strong>Total</strong></td>
+      <td><strong>288</strong></td>
+      <td><strong>67</strong></td>
+      <td><strong>23%</strong></td>
     </tr>
   </tbody>
 </table>
