@@ -7,15 +7,15 @@
 <meta name="generator" content="Jekyll v4.0.0" />
 <meta property="og:title" content="Churn Analysis" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Introduction" />
-<meta property="og:description" content="Introduction" />
+<meta name="description" content="TABLE OF CONTENTS" />
+<meta property="og:description" content="TABLE OF CONTENTS" />
 <link rel="canonical" href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" />
 <meta property="og:url" content="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" />
 <meta property="og:site_name" content="Home" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-04-20T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"Introduction","@type":"BlogPosting","headline":"Churn Analysis","dateModified":"2020-04-20T00:00:00-05:00","datePublished":"2020-04-20T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html"},"url":"https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html","@context":"https://schema.org"}</script>
+{"description":"TABLE OF CONTENTS","@type":"BlogPosting","headline":"Churn Analysis","dateModified":"2020-04-20T00:00:00-05:00","datePublished":"2020-04-20T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html"},"url":"https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/analyticsblog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://kn-neeraj.github.io/analyticsblog/feed.xml" title="Home" /><!-- the google_analytics_id gets auto inserted from the config file -->
 
@@ -28,15 +28,15 @@
 <meta name="generator" content="Jekyll v4.0.0" />
 <meta property="og:title" content="Churn Analysis" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Introduction" />
-<meta property="og:description" content="Introduction" />
+<meta name="description" content="TABLE OF CONTENTS" />
+<meta property="og:description" content="TABLE OF CONTENTS" />
 <link rel="canonical" href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" />
 <meta property="og:url" content="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" />
 <meta property="og:site_name" content="Home" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-04-20T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"Introduction","@type":"BlogPosting","headline":"Churn Analysis","dateModified":"2020-04-20T00:00:00-05:00","datePublished":"2020-04-20T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html"},"url":"https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html","@context":"https://schema.org"}</script>
+{"description":"TABLE OF CONTENTS","@type":"BlogPosting","headline":"Churn Analysis","dateModified":"2020-04-20T00:00:00-05:00","datePublished":"2020-04-20T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html"},"url":"https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -112,7 +112,35 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h2 id="introduction"><strong>Introduction</strong></h2>
+    <h2 id="table-of-contents"><strong>TABLE OF CONTENTS</strong></h2>
+
+<p><a href="#introduction">Introduction</a></p>
+
+<p><a href="#objective">Objective</a></p>
+
+<p><a href="#conceptual-overview">Conceptual Overview</a></p>
+
+<p><a href="#company-overview">Company Overview</a></p>
+
+<p><a href="#data-overview">Data Overview</a></p>
+
+<p><a href="#data-pre-processing">Data Pre-processing</a></p>
+
+<p><a href="#metrics-implementation">Metrics Implementation</a></p>
+
+<p><a href="#churn-rates-by-user-segments">Churn rates by user segments</a></p>
+
+<p><a href="#churn-rates-by-customer-behaviour">Churn rates by customer behaviour</a></p>
+
+<p><a href="#cohort-analysis-retention-curves">Cohort Analysis &amp; Retention Curves</a></p>
+
+<p><a href="#churn-prediction-churn-risk-score-to-customers">Churn Prediction –Churn Risk Score to customers</a></p>
+
+<p><a href="#recommendations-to-improve-short-term-retention-of-takezero">Recommendations to improve short term retention of TakeZero</a></p>
+
+<p>###</p>
+
+<h2 id="introduction"><strong>Introduction</strong></h2>
 
 <p>For a product, churn is like a hole in the boat, no matter how many users you acquire product will not thrive without strong retention of the acquired users. In fact, venture capitalists look at churn thoroughly as it is a strong indicator of whether you have a good product/market fit.</p>
 
@@ -120,42 +148,7 @@ window.onload = wrap_img;
 
 <h2 id="objective"><strong>Objective</strong></h2>
 
-<p>Our objective is to build an understanding of what metrics we need to look in order to understand churn and build hypothesis around how to reduce it.</p>
-
-<ul>
-  <li>
-    <p><a href="#conceptual-overview">Conceptual Overview</a></p>
-  </li>
-  <li>
-    <p><a href="#company-overview">Company Overview</a></p>
-  </li>
-  <li>
-    <p><a href="#section-1">Data Overview</a></p>
-  </li>
-  <li>
-    <p><a href="#section-2">Data Pre-processing</a></p>
-  </li>
-  <li>
-    <p><a href="#section-3">Metrics Implementation</a></p>
-  </li>
-  <li>
-    <p><a href="#churn-rates-by-user-segments">Churn rates by user segments</a></p>
-  </li>
-  <li>
-    <p><a href="#section-4">Churn rates by customer behaviour</a></p>
-  </li>
-  <li>
-    <p><a href="#section-5">Cohort Analysis &amp; Retention Curves</a></p>
-  </li>
-  <li>
-    <p><a href="#section-6">Churn Prediction –Churn Risk Score to customers</a></p>
-  </li>
-  <li>
-    <p><a href="#section-7">Recommendations to improve short term retention of TakeZero</a></p>
-  </li>
-</ul>
-
-<p>###</p>
+<p>Our objective is to build an understanding of what metrics we need to look at to understand churn and build hypothesis around how to reduce it.</p>
 
 <h2 id="conceptual-overview"><strong>Conceptual Overview</strong></h2>
 
@@ -202,8 +195,6 @@ window.onload = wrap_img;
 <p>TakeZero is a fictitious SaaS company which provides an online platform to build no-code web and mobile apps. It works on a subscription model where customers can buy individual plans or team plans with pre-defined seats.</p>
 
 <p>We have 2019 Q4 data. We have data on customers acquired in the month – October, November &amp; December and which of these users churned by January month (i.e. churn within first 3 months).</p>
-
-<p>##</p>
 
 <h2 id="data-overview"><strong>Data Overview</strong></h2>
 
@@ -309,8 +300,6 @@ window.onload = wrap_img;
 
 <p>File - <a href="https://drive.google.com/file/d/1okQlxFfRKLR8Sakk0QjNtqA8frGCqZH2/view?usp=sharing">https://drive.google.com/file/d/1okQlxFfRKLR8Sakk0QjNtqA8frGCqZH2/view?usp=sharing</a></p>
 
-<p>##</p>
-
 <h2 id="data-pre-processing"><strong>Data Pre-processing</strong></h2>
 
 <p>I created following new columns by manipulating existing data –</p>
@@ -329,8 +318,6 @@ window.onload = wrap_img;
     <p><strong>Churn Bool –</strong> A Boolean variable with value 1 if user churned and 0 otherwise</p>
   </li>
 </ul>
-
-<p>##</p>
 
 <h2 id="metrics-implementation"><strong>Metrics Implementation</strong></h2>
 
@@ -606,8 +593,6 @@ window.onload = wrap_img;
   </li>
 </ul>
 
-<p>##</p>
-
 <h2 id="churn-rates-by-customer-behaviour"><strong>Churn rates by customer behaviour</strong></h2>
 
 <ul>
@@ -676,8 +661,6 @@ window.onload = wrap_img;
     <p>We can build and test an hypothesis that more number of mobile app dev sessions per month per user lead to higher retention (<em>sticky feature!</em>)</p>
   </li>
 </ul>
-
-<p>##</p>
 
 <h2 id="cohort-analysis--retention-curves"><strong>Cohort Analysis &amp; Retention Curves</strong></h2>
 
@@ -766,8 +749,6 @@ window.onload = wrap_img;
 <p><img src="https://kn-neeraj.github.io/analyticsblog/assets/img/2020-04-20-Churn-Analysis/media/image3.png" alt="" /></p>
 
 <p><strong>Observations</strong> - Around 25% of the customers whose team does &lt; 5 mobile app dev sessions per month per user churn within 1<sup>st</sup> month. Whereas, 0% churn in customers whose team does more than 5 mobile app dev sessions per month per user on an average</p>
-
-<p>##</p>
 
 <h2 id="churn-prediction-churn-risk-score-to-customers"><strong>Churn Prediction –Churn Risk Score to customers</strong></h2>
 
@@ -878,8 +859,6 @@ window.onload = wrap_img;
 </table>
 
 <p><strong>Observation</strong> - As evident from the table above, mobile sessions per month per added user, and user added/seats bought are two metrics that are highly associated with churn. Customer region – Asia, Purchase plan – number of seats bought are weak predictors of churn.</p>
-
-<p>##</p>
 
 <h2 id="recommendations-to-improve-short-term-retention-of-takezero"><strong>Recommendations to improve short term retention of TakeZero</strong></h2>
 
