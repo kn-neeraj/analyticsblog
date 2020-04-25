@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-24T19:14:45-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;h2 id=&quot;introduction&quot;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-24T19:20:17-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;h2 id=&quot;introduction&quot;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;For a product, churn is like a hole in the boat, no matter how many users you acquire product will not thrive without strong retention of the acquired users. In fact, venture capitalists look at churn thoroughly as it is a strong indicator of whether you have a good product/market fit.&lt;/p&gt;
 
@@ -8,12 +8,17 @@
 
 &lt;p&gt;Our objective is to build an understanding of what metrics we need to look at to understand churn and build hypothesis around how to reduce it.&lt;/p&gt;
 
-&lt;h2 id=&quot;conceptual-overview&quot;&gt;**Conceptual Overview&lt;/h2&gt;
-&lt;p&gt;**There are two kinds of churn -&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Conceptual Overview&lt;/strong&gt;&lt;br /&gt;
+There are two kinds of churn -&lt;/p&gt;
 
-&lt;p&gt;1)  &lt;strong&gt;Customer Churn&lt;/strong&gt; – Defined as ratio of number of customers churned compared to total number of customers. Here, the focus is on retaining high percentage of customers for a longer period&lt;/p&gt;
-
-&lt;p&gt;2)  &lt;strong&gt;Revenue Churn&lt;/strong&gt; – Defined as ratio of revenue lost compared to overall revenue. Apart from customer churn we need to look at revenue churn because not all customers are equal. Hence, if a start-up is losing low churn but is mostly losing high value customers the impact on revenue will be much higher compared to if it was losing even high number of low value customers. Here, the focus is on retaining high value customers for a longer period or up-sell and cross-sell to decrease revenue churn&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Customer Churn&lt;/strong&gt; – Defined as ratio of number of customers churned compared to total number of customers. Here, the focus is on retaining high percentage of customers for a longer period&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Revenue Churn&lt;/strong&gt; – Defined as ratio of revenue lost compared to overall revenue. Apart from customer churn we need to look at revenue churn because not all customers are equal. Hence, if a start-up is losing low churn but is mostly losing high value customers the impact on revenue will be much higher compared to if it was losing even high number of low value customers. Here, the focus is on retaining high value customers for a longer period or up-sell and cross-sell to decrease revenue churn&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; For the sake of brevity this post will focus only on customer churn. We will focus on revenue churn in the next post.&lt;/p&gt;
 
