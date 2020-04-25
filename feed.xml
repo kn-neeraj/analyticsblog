@@ -1,28 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-24T22:23:12-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;p&gt;TABLE OF CONTENTS&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-24T22:28:28-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;h2 id=&quot;table-of-contents&quot;&gt;&lt;strong&gt;TABLE OF CONTENTS&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;#introduction&quot;&gt;Introduction 2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;#objective&quot;&gt;Objective 2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#objective&quot;&gt;Objective&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;#conceptual-overview&quot;&gt;Conceptual Overview 2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#conceptual-overview&quot;&gt;Conceptual Overview&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;#company-overview&quot;&gt;Company Overview 3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#company-overview&quot;&gt;Company Overview&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;#data-overview&quot;&gt;Data Overview 3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#data-overview&quot;&gt;Data Overview&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;#data-pre-processing&quot;&gt;Data Pre-processing 3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#data-pre-processing&quot;&gt;Data Pre-processing&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;#metrics-implementation&quot;&gt;Metrics Implementation 4&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#metrics-implementation&quot;&gt;Metrics Implementation&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;#churn-rates-by-user-segments&quot;&gt;Churn rates by user segments 4&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#churn-rates-by-user-segments&quot;&gt;Churn rates by user segments&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;#churn-rates-by-customer-behaviour&quot;&gt;Churn rates by customer behaviour 5&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#churn-rates-by-customer-behaviour&quot;&gt;Churn rates by customer behaviour&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;#cohort-analysis-retention-curves&quot;&gt;Cohort Analysis &amp;amp; Retention Curves 6&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#cohort-analysis-retention-curves&quot;&gt;Cohort Analysis &amp;amp; Retention Curves&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;#churn-prediction-churn-risk-score-to-customers&quot;&gt;Churn Prediction –Churn Risk Score to customers 7&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#churn-prediction-churn-risk-score-to-customers&quot;&gt;Churn Prediction –Churn Risk Score to customers&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;#recommendations-to-improve-short-term-retention-of-takezero&quot;&gt;Recommendations to improve short term retention of TakeZero 8&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#recommendations-to-improve-short-term-retention-of-takezero&quot;&gt;Recommendations to improve short term retention of TakeZero&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;###&lt;/p&gt;
 
