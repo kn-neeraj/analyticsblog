@@ -103,7 +103,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      15 min read
+      13 min read
     
 </span></p>
 
@@ -636,35 +636,25 @@ window.onload = wrap_img;
 
 <h2 id="cohort-analysis--retention-curves"><strong>Cohort Analysis &amp; Retention Curves</strong></h2>
 
-<ul>
-  <li>
-    <p>Cohort are groups of users sharing by a common characteristic. For instance, cohorts by acquisition date, daily, weekly, monthly cohorts etc</p>
-  </li>
-  <li>
-    <p>Once can compare metrics such as engagement, retention, or conversion across cohorts</p>
-  </li>
-  <li>
-    <p>Through cohort analysis, we want to understand if our product changes, campaigns or other investments are leading to positive retention among younger cohorts</p>
-  </li>
-</ul>
+<p><strong>Cohorts</strong> are groups of users sharing by a common characteristic. For instance, cohorts by acquisition date, daily, weekly, monthly cohorts etc. Once can compare metrics such as engagement, retention, or conversion across cohorts. Through cohort analysis, we want to understand if our product changes, campaigns or other investments are leading to positive retention among younger cohorts</p>
 
-<p>For improving retention, there are two broadly types of cohorts</p>
+<p>To improve retention, we can use two types of cohorts -</p>
 
 <ul>
   <li>
-    <p>Acquisition Cohorts - Group user by their acquisition day, week or month and measure retention. This helps to understand when we are losing customers and when does churn stablise</p>
+    <p><strong>Acquisition Cohorts</strong> - Group user by their acquisition day, week or month and measure retention. This helps to understand when we are losing customers and when does churn stabilise</p>
   </li>
   <li>
-    <p>Behavioural Cohorts – Group users by specific behaviours they have or haven’t take on the product within a given timeframe. (For example – inviting a team member in 1<sup>st</sup> month, Following 5 users in 1<sup>st</sup> week etc). Then we can track retention across such cohorts and find out which are sticky features or which features lead to +ve retention</p>
+    <p><strong>Behavioural Cohorts</strong> – Group users by specific behaviours they have or have not take on the product within a given timeframe. (For example – inviting a team member in 1<sup>st</sup> month, following 5 users in 1<sup>st</sup> week etc). We can track retention across such cohorts and find out which are sticky features</p>
   </li>
 </ul>
 
-<p><strong>Acquisition Cohorts</strong></p>
+<p><strong>Acquisition Cohort</strong></p>
 
 <table>
   <thead>
     <tr>
-      <th><strong>% of customers retained in lifetime month</strong></th>
+      <th><strong>% of customers retained in lifetime months</strong></th>
       <th> </th>
       <th> </th>
       <th> </th>
@@ -673,7 +663,7 @@ window.onload = wrap_img;
   </thead>
   <tbody>
     <tr>
-      <td> </td>
+      <td><strong>Cohort</strong></td>
       <td><strong>0</strong></td>
       <td><strong>1</strong></td>
       <td><strong>2</strong></td>
@@ -712,46 +702,33 @@ window.onload = wrap_img;
 
 <p><img src="https://kn-neeraj.github.io/analyticsblog/assets/img/2020-04-20-Churn-Analysis/media/image1.png" alt="" /></p>
 
-<p>Observations,</p>
-
-<ul>
-  <li>If we look at cohorts of users acquired in month October, Nov, December – we can understand that we lose majority of customers in 1<sup>st</sup> month and churn stabilises around 2<sup>nd</sup>-3<sup>rd</sup> month.</li>
-</ul>
+<p><strong>Observations</strong> - If we look at cohorts of users acquired in month October, Nov, December – we can understand that we lose majority of customers in 1<sup>st</sup> month and churn stabilises around 2<sup>nd</sup>-3<sup>rd</sup> month.</p>
 
 <p><strong>Behavioural Cohorts</strong></p>
 
-<p>Based on what we saw in “Churn rate by Customer Behaviour” section, we can form two hypotheses</p>
-
-<p><img src="https://kn-neeraj.github.io/analyticsblog/assets/img/2020-04-20-Churn-Analysis/media/image2.png" alt="" />Hypothesis 1: We believe team plan subscribers who fill more than 60% of the bought seats within first 3 months retain better</p>
-
 <ul>
-  <li>
-    <p>Around 20% of the customers who fill &lt; 60% of the bought seats in team plan churn within 1<sup>st</sup> month. Whereas, 0% churn in customers who fill &gt; 60% seats bought in team plan</p>
-  </li>
-  <li>
-    <p>Therefore, it is essential to improve team member invitation feature to ensure customers add more team members and fill as many seats bought in first month after onboarding</p>
-  </li>
+  <li><img src="https://kn-neeraj.github.io/analyticsblog/assets/img/2020-04-20-Churn-Analysis/media/image2.png" alt="" />Cohort of customers who fill more than 60% of the bought seats within first 3 months vs those who do not</li>
 </ul>
 
-<p><img src="https://kn-neeraj.github.io/analyticsblog/assets/img/2020-04-20-Churn-Analysis/media/image3.png" alt="" />Hypothesis 2: We believe customers who do more mobile app dev sessions per month per user retain better</p>
+<p><strong>Observations -</strong> Around 20% of the customers who fill &lt; 60% of the bought seats in team plan churn within 1<sup>st</sup> month compared to 0% churn in customers who fill &gt; 60% seats in same timeframe</p>
 
 <ul>
-  <li>
-    <p>Around 25% of the customers whose team does &lt; 5 mobile app dev sessions per month per user churn within 1<sup>st</sup> month. Whereas, 0% churn in customers whose team does more than 5 mobile app dev sessions per month per user</p>
-  </li>
-  <li>
-    <p>Therefore, mobile app dev seems to be a sticky feature for short term retention. Therefore, it is important to improve its discovery, usage, flow to ensure 100% of the customers start using this feature in 1<sup>st</sup> month after acquisition</p>
-  </li>
+  <li><img src="https://kn-neeraj.github.io/analyticsblog/assets/img/2020-04-20-Churn-Analysis/media/image3.png" alt="" />Cohort of customers who do &gt; 5 mobile app dev sessions per month vs those who do not</li>
 </ul>
 
-<h2 id="churn-prediction"><strong>Churn Prediction</strong></h2>
+<p><strong>Observations</strong> - Around 25% of the customers whose team does &lt; 5 mobile app dev sessions per month per user churn within 1<sup>st</sup> month. Whereas, 0% churn in customers whose team does more than 5 mobile app dev sessions per month per user on an average</p>
 
-<p>We can use historical data to build a churn prediction model which attaches churn risk score to new customers. Our exploratory analysis till now has revealed following predictors that could be significant in explaining churn</p>
+<h2 id="churn-prediction-assign-churn-risk-score-to-customers"><strong>Churn Prediction –Assign Churn Risk Score to customers</strong></h2>
+
+<p>We can use historical data to build a churn prediction model which attaches churn risk score to new customers. Our exploratory analysis till now reveals following predictors could help in explaining churn</p>
 
 <ul>
-  <li>
-    <p>Customer region</p>
-  </li>
+  <li>Customer region</li>
+</ul>
+
+<!-- end list -->
+
+<ul>
   <li>
     <p># of seats bought</p>
   </li>
@@ -763,9 +740,9 @@ window.onload = wrap_img;
   </li>
 </ul>
 
-<p>We can use any of the tools such as XLMiner (a paid Excel plugin) or Scikit-learn to perform classification machine learning algorithms to create a model. Simpler techniques like Logistic Regression or Decision Trees should product good results.</p>
+<p>I have used XLMiner (a paid Excel plugin) to run Logistic Regression model but same can be done in Python using Scikit-learn library.</p>
 
-<p>I have used Logistic Regression on XLMiner to do data partition (training (70%) &amp; validation(30%)) and the resultant classification model provides following evaluation metrics on validation data</p>
+<p>Logistic Regression model provides following model evaluation metrics on validation data -</p>
 
 <table>
   <thead>
@@ -810,9 +787,7 @@ window.onload = wrap_img;
   </tbody>
 </table>
 
-<p>Since we are predicting churn we are optimising for low False -ves i.e. our model should not predict large number of customers who will churn as not churn. Therefore, Recall metric is primary model evaluation metric and a value of 98% on validation data is a good outcome.</p>
-
-<p>Let us look at what predictors are significant at 95% confident interval (i.e. p-value &lt; 0.05)</p>
+<p><strong>Observation</strong> - Since we want to optimise for False -ves, a 98.6% value of Recall on validation data is a great outcome. Let us look at what predictors are significant at 95% confident interval (i.e. p-value &lt; 0.05)</p>
 
 <table>
   <thead>
@@ -824,109 +799,52 @@ window.onload = wrap_img;
   <tbody>
     <tr>
       <td>Intercept</td>
-      <td><strong>4.41E-6</strong></td>
+      <td>4.41E-6</td>
     </tr>
     <tr>
-      <td>Number of user seats bought</td>
-      <td><strong>0.113</strong></td>
+      <td>Number of seats bought</td>
+      <td>0.113</td>
     </tr>
     <tr>
-      <td>User added/seats bought</td>
-      <td><strong>0.018</strong></td>
+      <td>Team members added/ # of seats bought</td>
+      <td>0.018</td>
     </tr>
     <tr>
-      <td>Mobile sessions per month per added user</td>
-      <td><strong>5.83E-09</strong></td>
+      <td>Mobile app dev sessions per month per added user</td>
+      <td>5.83E-09</td>
     </tr>
     <tr>
       <td>Customer Region_Asia</td>
-      <td><strong>0.044</strong></td>
+      <td>0.044</td>
     </tr>
     <tr>
       <td>Customer Region_Europe</td>
-      <td><strong>N/A</strong></td>
+      <td>N/A</td>
     </tr>
     <tr>
       <td>Customer Region_North America</td>
-      <td><strong>0.196</strong></td>
+      <td>0.196</td>
     </tr>
   </tbody>
 </table>
 
-<p>As evident from the table above, mobile sessions per month per added user, and user added/seats bought are two metrics that are highly associated with churn. Customer region – Asia, Purchase plan – number of seats bought are weak predictors of churn.</p>
+<p><strong>Observation</strong> - As evident from the table above, mobile sessions per month per added user, and user added/seats bought are two metrics that are highly associated with churn. Customer region – Asia, Purchase plan – number of seats bought are weak predictors of churn.</p>
 
-<h2 id="key-learnings"><strong>Key Learnings</strong></h2>
+<h2 id="recommendations-to-improve-short-term-retention-of-takezero"><strong>Recommendations to improve short term retention of TakeZero</strong></h2>
 
-<ol>
+<ul>
   <li>
-    <p>Customers who buy individual plans churn more</p>
+    <p>Customers who buy individual plans churn more. Customer research should be done to understand why they are leaving. Is it happy churn (they are just done with their task and don’t want to pay subscription) or product doesn’t suit their needs or pricing is the issue</p>
   </li>
   <li>
-    <p>Customers from Asia region churn more</p>
+    <p>Establish causality b/w metrics - # of mobile app dev sessions, team members added and short-term retention through A/B test. Based on results, if these are sticky features, we should look at onboarding flow and product funnels to identify where user drop off or why they are not using these features. We should improve discoverability and usability of the features to ensure 100% of customers use them within first 3 months</p>
   </li>
   <li>
-    <p>Majority of users who buy individual plans come from Asia</p>
+    <p>Engage users who have high churn risk score through various channels such as mailers, push notifications or sales calls to ensure their problems are resolved before they churn out</p>
   </li>
-  <li>
-    <p>Churn stabilises by 2<sup>nd</sup>-3<sup>rd</sup> month</p>
-  </li>
-  <li>
-    <p>Customers who fill more than 60% of the seats bought within first 1<sup>st</sup> month of onboarding churn less.</p>
-  </li>
-  <li>
-    <p>Customers who use more do more than 5 mobile app dev sessions per month per user churn less</p>
-  </li>
-  <li>
-    <p>Therefore, features such as adding members to the team and mobile app dev sessions are sticky features leading to better short-term retention of the onboarded users</p>
-  </li>
-</ol>
+</ul>
 
-<p>##</p>
-
-<h2 id="recommendations"><strong>Recommendations</strong></h2>
-
-<p>It is important to understand that data analysis tells us “what” is happening but to understand “why” we should supplement it with qualitative user research.</p>
-
-<ol>
-  <li>
-    <p>Talk to customers who purchase individual plans and are leaving platform within first 3 month of on-boarding. Understand why they are leaving. We can form several hypotheses here –</p>
-
-    <ul>
-      <li>
-        <p>It could be happy churn i.e. customers are satisfied with the product, but they still churn because their job is completed, and they don’t think they should pay for subscription anymore</p>
-      </li>
-      <li>
-        <p>It could be that our product is not suited to the needs of customer persona who buys individual purchase plans. I would want to go back to the user research in revalidate our assumptions and hypotheses there</p>
-      </li>
-      <li>
-        <p>Are they even the most profitable customers that we want to go after?</p>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>We have identified +ve correlation between features such as mobile app dev sessions, onboarding more team members against seats bought in the purchase plan and short-term retention.</p>
-
-    <ul>
-      <li>
-        <p>We should try to look at more data from previous quarters and see if same pattern follows</p>
-      </li>
-      <li>
-        <p>Talk to customers who are using these features and understand what works for them</p>
-      </li>
-      <li>
-        <p>We should establish causal effect of these features to short-term retention through A/B experiments</p>
-      </li>
-      <li>
-        <p>If the above identified features indeed make the product sticky then we should focus on improving their discovery and usage through improvements in onboarding flow and nudge users towards these features early in their lifetime</p>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>Use the churn prediction model to assign churn risk score to every customer. Prepare a marketing plan through various channels such as mailers, push notifications etc to keep those users engaged on the platform</p>
-  </li>
-</ol>
-
-<p>Retention is the most important metric in subscription businesses because a leaky product will never be able to build a critical mass of hooked users. As a Product Manager, it is important to look deeper then just the obvious metrics such as monthly churn rate and analyse big numbers with scrutiny. Also, it is critical to remember that data should inform us in building and validating better hypotheses, and what areas to focus on our qualitative research.</p>
+<p>Retention is the most important metric in subscription businesses because a leaky product will never be able to build a critical mass of hooked users. As a PM, it is important to look deeper then just the obvious metrics and analyse big numbers with scrutiny. Also, it is pertinent to remember that data should inform us in building and validating better hypotheses, and should be backed by qualitative research before implementation.</p>
 
   </div><a class="u-url" href="/analyticsblog/2020/04/20/Churn-Analysis.html" hidden></a>
 </article>
