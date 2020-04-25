@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-24T22:52:23-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;h2 id=&quot;table-of-contents&quot;&gt;&lt;strong&gt;TABLE OF CONTENTS&lt;/strong&gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-24T22:59:35-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;p&gt;&lt;a href=&quot;#_Toc38699315&quot;&gt;INDEX&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;#introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/p&gt;
 
@@ -12,15 +12,15 @@
 
 &lt;p&gt;&lt;a href=&quot;#data-pre-processing&quot;&gt;Data Pre-processing&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;#metrics-implementation&quot;&gt;Metrics Implementation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#implementation&quot;&gt;Implementation&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;#churn-rates-by-user-segments&quot;&gt;Churn rates by user segments&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;#churn-rates-by-customer-behaviour&quot;&gt;Churn rates by customer behaviour&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;#cohort-analysis-retention-curves&quot;&gt;Cohort Analysis &amp;amp; Retention Curves&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#cohort-analysis-and-retention-curves&quot;&gt;Cohort Analysis and Retention Curves&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;#churn-prediction-churn-risk-score-to-customers&quot;&gt;Churn Prediction –Churn Risk Score to customers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#churn-prediction-churn-risk-score-for-customers&quot;&gt;Churn Prediction –Churn Risk Score for customers&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;#recommendations-to-improve-short-term-retention-of-takezero&quot;&gt;Recommendations to improve short term retention of TakeZero&lt;/a&gt;&lt;/p&gt;
 
@@ -205,7 +205,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;metrics-implementation&quot;&gt;&lt;strong&gt;Metrics Implementation&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;implementation&quot;&gt;&lt;strong&gt;Implementation&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Monthly Churn Rate -&lt;/strong&gt; Total customers churned in the month / Avg. number of customers in month&lt;/li&gt;
@@ -548,7 +548,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;cohort-analysis--retention-curves&quot;&gt;&lt;strong&gt;Cohort Analysis &amp;amp; Retention Curves&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;cohort-analysis-and-retention-curves&quot;&gt;&lt;strong&gt;Cohort Analysis and Retention Curves&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Cohorts&lt;/strong&gt; are groups of users sharing by a common characteristic. For instance, cohorts by acquisition date, daily, weekly, monthly cohorts etc. Once can compare metrics such as engagement, retention, or conversion across cohorts. Through cohort analysis, we want to understand if our product changes, campaigns or other investments are leading to positive retention among younger cohorts&lt;/p&gt;
 
@@ -636,7 +636,7 @@
 
 &lt;p&gt;&lt;strong&gt;Observations&lt;/strong&gt; - Around 25% of the customers whose team does &amp;lt; 5 mobile app dev sessions per month per user churn within 1&lt;sup&gt;st&lt;/sup&gt; month. Whereas, 0% churn in customers whose team does more than 5 mobile app dev sessions per month per user on an average&lt;/p&gt;
 
-&lt;h2 id=&quot;churn-prediction-churn-risk-score-to-customers&quot;&gt;&lt;strong&gt;Churn Prediction –Churn Risk Score to customers&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;churn-prediction-churn-risk-score-for-customers&quot;&gt;&lt;strong&gt;Churn Prediction –Churn Risk Score for customers&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;We can use historical data to build a churn prediction model which attaches churn risk score to new customers. Our exploratory analysis till now reveals following predictors could help in explaining churn&lt;/p&gt;
 
@@ -760,7 +760,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Retention is the most important metric in subscription businesses because a leaky product will never be able to build a critical mass of hooked users. As a PM, it is important to look deeper then just the obvious metrics and analyse big numbers with scrutiny. Also, it is pertinent to remember that data should inform us in building and validating better hypotheses, and should be backed by qualitative research before implementation.&lt;/p&gt;</content><author><name></name></author><summary type="html">TABLE OF CONTENTS</summary></entry><entry><title type="html">Building a basic search engine from scratch using Python, Sklearn, and Networkx</title><link href="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html" rel="alternate" type="text/html" title="Building a basic search engine from scratch using Python, Sklearn, and Networkx" /><published>2020-04-07T00:00:00-05:00</published><updated>2020-04-07T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html">&lt;!--
+&lt;p&gt;Retention is the most important metric in subscription businesses because a leaky product will never be able to build a critical mass of hooked users. As a PM, it is important to look deeper then just the obvious metrics and analyse big numbers with scrutiny. Also, it is pertinent to remember that data should inform us in building and validating better hypotheses and should be backed by qualitative research before implementation.&lt;/p&gt;</content><author><name></name></author><summary type="html">INDEX</summary></entry><entry><title type="html">Building a basic search engine from scratch using Python, Sklearn, and Networkx</title><link href="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html" rel="alternate" type="text/html" title="Building a basic search engine from scratch using Python, Sklearn, and Networkx" /><published>2020-04-07T00:00:00-05:00</published><updated>2020-04-07T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html">&lt;!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
