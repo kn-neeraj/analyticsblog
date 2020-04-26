@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-26T02:22:18-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;p&gt;INDEX&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-26T02:48:51-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;p&gt;INDEX&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;#introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;#objective&quot;&gt;Objective&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;#conceptual-overview&quot;&gt;Conceptual Overview&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#our-objective-is-to-build-an-understanding-of-what-metrics-we-need-to-look-at-to-understand-churn-and-build-hypotheses-around-how-to-reduce-it.&quot;&gt;Conceptual Overview&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;#company-overview&quot;&gt;Company Overview&lt;/a&gt;&lt;/p&gt;
 
@@ -30,13 +30,13 @@
 
 &lt;h2 id=&quot;introduction&quot;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;For a product, churn is like a hole in the boat, no matter how many users you acquire product will not thrive without strong retention of the acquired users. In fact, venture capitalists look at churn thoroughly as it is a strong indicator of whether you have a good product/market fit.&lt;/p&gt;
+&lt;p&gt;For a product, churn is like a hole in the boat, no matter how many users you acquire product will not thrive without strong retention of the acquired users. Venture Capitalists have a thorough look at churn as it is a strong indicator of whether you have a good product/market fit.&lt;/p&gt;
 
-&lt;p&gt;Churn analysis helps uncover patterns, product features, and behaviours that lead to user retention. Therefore, in this post we will learn how to do churn analysis by taking example of a fictious SaaS company, TakeZero, which allows developers to build no code web and mobile apps.&lt;/p&gt;
+&lt;p&gt;Churn analysis helps uncover patterns, product features, and behaviours that lead to user retention. Therefore, in this post we will learn how to do churn analysis by taking an example of a fictitious SaaS company, TakeZero, which allows developers to build no-code web and mobile apps.&lt;/p&gt;
 
 &lt;h2 id=&quot;objective&quot;&gt;&lt;strong&gt;Objective&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Our objective is to build an understanding of what metrics we need to look at in order to understand churn and build hypothesis around how to reduce it.&lt;/p&gt;
+&lt;h2 id=&quot;our-objective-is-to-build-an-understanding-of-what-metrics-we-need-to-look-at-to-understand-churn-and-build-hypotheses-around-how-to-reduce-it&quot;&gt;Our objective is to build an understanding of what metrics we need to look at to understand churn and build hypotheses around how to reduce it.&lt;/h2&gt;
 
 &lt;h2 id=&quot;conceptual-overview&quot;&gt;&lt;strong&gt;Conceptual Overview&lt;/strong&gt;&lt;/h2&gt;
 
@@ -44,14 +44,14 @@
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Customer Churn&lt;/strong&gt; – Defined as ratio of number of customers churned compared to total number of customers. Here, the focus is on retaining high percentage of customers for a longer period&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Customer Churn&lt;/strong&gt; – Defined as the ratio of the number of customers churned compared to the total number of customers. Here, the focus is on retaining a high percentage of customers for a longer period&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Revenue Churn&lt;/strong&gt; – Defined as ratio of revenue lost compared to overall revenue. Apart from customer churn we need to look at revenue churn because not all customers are equal. Hence, if a start-up has low churn but it is mostly losing high value customers the impact on revenue will be much higher compared to if it was losing mostly low value customers. Here, the focus is on retaining high value customers for a longer period&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Revenue Churn&lt;/strong&gt; – Defined as the ratio of revenue lost compared to overall revenue. Apart from customer churn we need to look at revenue churn because not all customers are equal. Hence, if a start-up has low churn but it is mostly losing high-value customers the impact on revenue will be much higher compared to if it was losing mostly low-value customers. Here, the focus is on retaining high-value customers for a longer period&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; For the sake of brevity this post will focus only on customer churn. We will focus on revenue churn in the next post.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; For the sake of brevity this post will focus only on customer churn. We will focus on the evenue churn in the next post.&lt;/p&gt;
 
 &lt;p&gt;In this post, we will look at the following metrics –&lt;/p&gt;
 
@@ -60,7 +60,7 @@
     &lt;p&gt;&lt;strong&gt;Monthly churn rate&lt;/strong&gt; – This is a basic month-on-month (MOM) customer churn.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Churn rates by user segments&lt;/strong&gt; – Churn rates are reported with some customer segmentation. For instance, customers from different acquisition channels, region, subscription plan have different churn rates. Therefore, it is critical to understand what kind of customers have high churn rates&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Churn rates by user segments&lt;/strong&gt; – Churn rates are reported with some customer segmentation. For instance, customers from different acquisition channels, regions, subscription plans have different churn rates. Therefore, it is critical to understand what kind of customers have high churn rates&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -68,25 +68,25 @@
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Churn rates by customer behaviour&lt;/strong&gt; – A user takes a series of steps after subscribing for the product. It is important to find features which are sticky and drive retention in short term and long term.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Churn rates by customer behaviour&lt;/strong&gt; – A user takes a series of steps after subscribing to the product. It is important to find features which are sticky and drive retention in short-term and long-term.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Cohort Analysis &amp;amp; Retention Curves&lt;/strong&gt; – Cohorts are group of users sharing a common characteristic such as acquisition month, acquisition channel etc. Over time as the product is getting improved, one needs to ensure that younger cohorts are showing better retention&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Cohort Analysis &amp;amp; Retention Curves&lt;/strong&gt; – Cohorts are a group of users sharing a common characteristic such as acquisition month, acquisition channel, etc. Over time as the product is getting improved, one needs to ensure that younger cohorts are showing better retention&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Churn Prediction Model&lt;/strong&gt; – Through descriptive analysis we identify predictor variables which could be significant for churn prediction and use Logistic Regression to build a simple churn prediction model&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Churn Prediction Model&lt;/strong&gt; – Through descriptive analysis, we identify predictor variables which could be significant for churn prediction and use Logistic Regression to build a simple churn prediction model&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;company-overview&quot;&gt;&lt;strong&gt;Company Overview&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;TakeZero is a fictitious SaaS company which provides an online platform to build no-code web and mobile apps. It works on a subscription model where customers can buy individual plans or team plans with pre-defined seats.&lt;/p&gt;
+&lt;p&gt;TakeZero is a fictitious SaaS company that provides an online platform to build no-code web and mobile apps. It works on a subscription model where customers can buy individual plans or team plans with pre-defined seats.&lt;/p&gt;
 
 &lt;p&gt;We have 2019 Q4 data. We have data on customers acquired in the month – October, November &amp;amp; December and which of these users churned by January month&lt;/p&gt;
 
 &lt;h2 id=&quot;data-files&quot;&gt;&lt;strong&gt;Data Files&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;&lt;em&gt;Only way to learn data analysis is to do it!!&lt;/em&gt; To get your hands dirty download the data files and get started - &lt;a href=&quot;https://drive.google.com/open?id=1T59xFu-0tUlO-SaDqfUCO6bUJUqI24Gl&quot;&gt;Churn Analysis Files&lt;/a&gt;. There are separate question and answer Excel files in case you want to practice before looking at the solution&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;The only way to learn data analysis is to do it!!&lt;/em&gt; To get your hands dirty download the data files and get started - &lt;a href=&quot;https://drive.google.com/open?id=1T59xFu-0tUlO-SaDqfUCO6bUJUqI24Gl&quot;&gt;Churn Analysis Files&lt;/a&gt;. There are separate question and answer Excel files in case you want to practice before looking at the solution&lt;/p&gt;
 
 &lt;h2 id=&quot;data-overview&quot;&gt;&lt;strong&gt;Data Overview&lt;/strong&gt;&lt;/h2&gt;
 
@@ -184,7 +184,7 @@
     &lt;p&gt;&lt;strong&gt;Avg # of mobile app development sessions per month&lt;/strong&gt; - This number captures on an average how many mobile app development sessions did a customer (inclusive of all her team members) do in a month&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Month Churned&lt;/strong&gt; – Month in which customer cancelled her plan. We have churn data for Nov, Dec, Jan. If empty, it means customer did NOT churn till end of the month January 2020&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Month Churned&lt;/strong&gt; – Month in which the customer cancelled her plan. We have churn data for Nov, Dec, Jan. If empty, it means the customer did NOT churn till end of the January 2020&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -194,7 +194,7 @@
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Team members added/# of seats bought&lt;/strong&gt; – This ratio helps us determine of how many team members are onboarded against the seats bought by the customer. Having more team members onboarded is a leading indicator of engagement of the user and its team on the platform. On the vice versa, very few members onboarded means customer may not be finding value in the platform&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Team members added/# of seats bought&lt;/strong&gt; – This ratio helps us determine how many team members are onboarded against the seats bought by the customer. Having more team members onboarded is a leading indicator of engagement of the user and its team on the platform. On the vice versa, very few members onboarded means the customer may not be finding value in the platform&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;Avg # of web app dev sessions per month per team member -&lt;/strong&gt; Since different customers buy different team plans, to compare engagement of web app development feature across customers we normalize it by calculating a per team member ratio&lt;/p&gt;
@@ -474,10 +474,10 @@
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;Customers who buy individual plans (1 seat) churn at much higher rate (47%) than customers who buy team plans (avg around 22-23%)&lt;/p&gt;
+    &lt;p&gt;Customers who buy individual plans (1 seat) churn at a much higher rate (47%) than customers who buy team plans (avg around 22-23%)&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Customers who add only a small number of team members compared to seats bought tend to churn much more than customers who fill all the seats bought. For example – As seen in the table, customers who bought 10 seat team plan and added less than 5 members in first 3 months, churn at 100%&lt;/p&gt;
+    &lt;p&gt;Customers who add only a small number of team members compared to seats bought tend to churn much more than customers who fill all the seats bought. For example – As seen in the table, customers who bought 10 seat team plan and added less than 5 members in the first 3 months, churn at 100%&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -510,7 +510,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;strong&gt;Observations –&lt;/strong&gt; There is NO significant difference between the avg # of web app dev sessions user does per month between churned and retained user. Therefore, according to our data, there is no significant association between this metric and churn&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Observations –&lt;/strong&gt; There is NO significant difference between the avg # of web app dev sessions done per month between a churned and retained customer. Therefore, according to our sample data, there is no significant association between this metric and churn&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;avg # of mobile app development sessions per month per team member&lt;/strong&gt;&lt;/li&gt;
@@ -543,10 +543,10 @@
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;Aha! there is significant difference between avg # of mobile app dev sessions ran per month between a churned and retained user&lt;/p&gt;
+    &lt;p&gt;Aha! there is a significant difference between avg # of mobile app dev sessions ran per month between a churned and retained user&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;We can build and test a hypothesis that a greater number of mobile app dev sessions per month per user lead to higher short term retention (&lt;em&gt;sticky feature!&lt;/em&gt;)&lt;/p&gt;
+    &lt;p&gt;We can build and test a hypothesis that a greater number of mobile app dev sessions per month per user leads to higher short-term retention (a plausible &lt;em&gt;sticky feature!&lt;/em&gt;)&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -565,7 +565,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;acquisition-cohort&quot;&gt;&lt;strong&gt;Acquisition Cohort&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Acquisition Cohort&lt;/strong&gt;&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -618,9 +618,9 @@
 
 &lt;p&gt;&lt;img src=&quot;https://kn-neeraj.github.io/analyticsblog/assets/img/2020-04-20-Churn-Analysis/media/image1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Observations&lt;/strong&gt; - If we look at cohorts of users acquired in month October, Nov, December – we can understand that we lose majority of customers in 1&lt;sup&gt;st&lt;/sup&gt; month and churn stabilises around 2&lt;sup&gt;nd&lt;/sup&gt;-3&lt;sup&gt;rd&lt;/sup&gt; month.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Observations&lt;/strong&gt; - If we look at cohorts of users acquired in month October, Nov, December – it is evident that we lose most customers in 1&lt;sup&gt;st&lt;/sup&gt; month and churn stabilises around 2&lt;sup&gt;nd&lt;/sup&gt;-3&lt;sup&gt;rd&lt;/sup&gt; month.&lt;/p&gt;
 
-&lt;h3 id=&quot;behavioural-cohorts&quot;&gt;&lt;strong&gt;Behavioural Cohorts&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Behavioural Cohorts&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Cohort of customers who fill more than 60% of the bought seats within first 3 months vs those who do not&lt;/li&gt;
@@ -640,7 +640,7 @@
 
 &lt;h2 id=&quot;churn-prediction&quot;&gt;&lt;strong&gt;Churn Prediction&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;We can use historical data to build a churn prediction model which attaches churn risk score to new customers. Our exploratory analysis till now reveals following predictors could help in explaining churn&lt;/p&gt;
+&lt;p&gt;We can use historical data to build a churn prediction model which attaches a churn risk score to new customers. Our exploratory analysis till now reveals following predictors could help in explaining churn&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Customer region&lt;/li&gt;
@@ -660,7 +660,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I have used XLMiner (a paid Excel plugin) to run Logistic Regression model but same can be done in Python using Scikit-learn library. Logistic Regression model provides following model evaluation metrics on validation data -&lt;/p&gt;
+&lt;p&gt;I have used XLMiner (a paid Excel plugin) to run Logistic Regression model but same can be done in Python using Scikit-learn library. Logistic Regression model provides following model evaluation metrics on our validation data -&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -705,7 +705,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;strong&gt;Observation&lt;/strong&gt; - Since we want to optimise for False -ves, a 98.6% value of Recall on validation data is a great outcome. Let us look at what predictors are significant at 95% confident interval (i.e. p-value &amp;lt; 0.05)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Observation&lt;/strong&gt; - Since we want to optimise for False -ves, a 98.6% value of Recall on validation data is a good outcome. Let us look at what predictors are significant at 95% confident interval (i.e. p-value &amp;lt; 0.05)&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -746,23 +746,25 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;strong&gt;Observation&lt;/strong&gt; - As evident from the table above, mobile app dev sessions per month per team member, and team members added/# of seats bought are two metrics that are highly associated with churn. Customer region – Asia, and # of seats bought are weak predictors of churn.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Observation&lt;/strong&gt; - As evident from the table above, &lt;em&gt;mobile app dev sessions per month per team member, and team members added/# of seats bought&lt;/em&gt; are two metrics that are highly associated with churn. &lt;em&gt;Customer region – Asia, and # of seats bought&lt;/em&gt; are weak predictors of churn.&lt;/p&gt;
 
 &lt;h2 id=&quot;recommendations-to-improve-short-term-retention-of-takezero&quot;&gt;&lt;strong&gt;Recommendations to improve short term retention of TakeZero&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;Customers who buy individual plans churn more. Customer research should be done to understand why they are leaving. Is it happy churn (they are just done with their task and don’t want to pay subscription) or product doesn’t suit their needs or pricing is the issue&lt;/p&gt;
+    &lt;p&gt;Customers who buy individual plans churn more. Customer research should be done to understand why they are leaving. Is it happy churn (they are just done with their task and don’t want to pay for subscription) or product doesn’t suit their needs or pricing is the issue&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Establish causality b/w metrics - # of mobile app dev sessions, team members added and short-term retention through A/B test. Based on results, if these are sticky features, we should look at onboarding flow and product funnels to identify where users drop off or why they are not using these features. We should improve discoverability and usability of the features to ensure 100% of customers use them within first 3 months&lt;/p&gt;
+    &lt;p&gt;Establish causality b/w metrics - # of mobile app dev sessions, team members added and short-term retention through A/B test. Based on results, if these are sticky features, we should look at onboarding flow and product funnels to identify where users drop off or why they are not using these features. We should improve the discoverability and usability of the features to ensure 100% of customers use them within the first 3 months&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Engage users who have high churn risk score through various channels such as mailers, push notifications or sales calls to ensure their problems are resolved before they actually churn out&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Retention is the most important metric in subscription businesses because a leaky product will never be able to build a critical mass of hooked users. As a PM, it is important to look deeper then just the obvious metrics and analyse big numbers with scrutiny. Also, it is pertinent to remember that data should inform us in building and validating better hypotheses and should be backed by qualitative research before implementation.&lt;/p&gt;
+&lt;p&gt;Retention is the most important metric in subscription businesses because a leaky product will never be able to build a critical mass of hooked users.&lt;/p&gt;
+
+&lt;p&gt;As a PM, it is important to look deeper than just the obvious metrics and analyse big numbers with scrutiny. Also, it is pertinent to remember that data should inform us in building and validating better hypotheses and should be backed by qualitative research before implementation.&lt;/p&gt;
 
 &lt;p&gt;If you have any comments or suggestions please comment below or reach out to me at - &lt;a href=&quot;https://twitter.com/kn_neeraj&quot;&gt;https://twitter.com/kn_neeraj&lt;/a&gt; or on &lt;a href=&quot;https://www.linkedin.com/in/neerajkumar89/&quot;&gt;LinkedIn&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">INDEX</summary></entry><entry><title type="html">Building a basic search engine from scratch using Python, Sklearn, and Networkx</title><link href="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html" rel="alternate" type="text/html" title="Building a basic search engine from scratch using Python, Sklearn, and Networkx" /><published>2020-04-07T00:00:00-05:00</published><updated>2020-04-07T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html">&lt;!--
 #################################################
