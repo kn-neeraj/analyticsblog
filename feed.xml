@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-26T02:13:26-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;p&gt;INDEX&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-26T02:22:18-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;p&gt;INDEX&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;#introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/p&gt;
 
@@ -565,7 +565,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Acquisition Cohort&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;acquisition-cohort&quot;&gt;&lt;strong&gt;Acquisition Cohort&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -620,7 +620,7 @@
 
 &lt;p&gt;&lt;strong&gt;Observations&lt;/strong&gt; - If we look at cohorts of users acquired in month October, Nov, December – we can understand that we lose majority of customers in 1&lt;sup&gt;st&lt;/sup&gt; month and churn stabilises around 2&lt;sup&gt;nd&lt;/sup&gt;-3&lt;sup&gt;rd&lt;/sup&gt; month.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Behavioural Cohorts&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;behavioural-cohorts&quot;&gt;&lt;strong&gt;Behavioural Cohorts&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Cohort of customers who fill more than 60% of the bought seats within first 3 months vs those who do not&lt;/li&gt;
