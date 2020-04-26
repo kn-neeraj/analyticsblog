@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-25T04:45:47-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;p&gt;INDEX&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-26T02:13:26-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;p&gt;INDEX&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;#introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/p&gt;
 
@@ -22,7 +22,7 @@
 
 &lt;p&gt;&lt;a href=&quot;#cohort-analysis-and-retention-curves&quot;&gt;Cohort Analysis and Retention Curves&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;#churn-prediction-churn-risk-score-for-customers&quot;&gt;Churn Prediction –Churn Risk Score for customers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#churn-prediction&quot;&gt;Churn Prediction –Churn Risk Score for customers&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;#recommendations-to-improve-short-term-retention-of-takezero&quot;&gt;Recommendations to improve short term retention of TakeZero&lt;/a&gt;&lt;/p&gt;
 
@@ -36,7 +36,7 @@
 
 &lt;h2 id=&quot;objective&quot;&gt;&lt;strong&gt;Objective&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;Our objective is to build an understanding of what metrics we need to look at to understand churn and build hypothesis around how to reduce it.&lt;/p&gt;
+&lt;p&gt;Our objective is to build an understanding of what metrics we need to look at in order to understand churn and build hypothesis around how to reduce it.&lt;/p&gt;
 
 &lt;h2 id=&quot;conceptual-overview&quot;&gt;&lt;strong&gt;Conceptual Overview&lt;/strong&gt;&lt;/h2&gt;
 
@@ -47,13 +47,13 @@
     &lt;p&gt;&lt;strong&gt;Customer Churn&lt;/strong&gt; – Defined as ratio of number of customers churned compared to total number of customers. Here, the focus is on retaining high percentage of customers for a longer period&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Revenue Churn&lt;/strong&gt; – Defined as ratio of revenue lost compared to overall revenue. Apart from customer churn we need to look at revenue churn because not all customers are equal. Hence, if a start-up is losing low churn but is mostly losing high value customers the impact on revenue will be much higher compared to if it was losing even high number of low value customers. Here, the focus is on retaining high value customers for a longer period or up-sell and cross-sell to decrease revenue churn&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Revenue Churn&lt;/strong&gt; – Defined as ratio of revenue lost compared to overall revenue. Apart from customer churn we need to look at revenue churn because not all customers are equal. Hence, if a start-up has low churn but it is mostly losing high value customers the impact on revenue will be much higher compared to if it was losing mostly low value customers. Here, the focus is on retaining high value customers for a longer period&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; For the sake of brevity this post will focus only on customer churn. We will focus on revenue churn in the next post.&lt;/p&gt;
 
-&lt;p&gt;We will look at the following metrics for TakeZero (our fictitious SaaS company) –&lt;/p&gt;
+&lt;p&gt;In this post, we will look at the following metrics –&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -71,10 +71,10 @@
     &lt;p&gt;&lt;strong&gt;Churn rates by customer behaviour&lt;/strong&gt; – A user takes a series of steps after subscribing for the product. It is important to find features which are sticky and drive retention in short term and long term.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Cohort Analysis &amp;amp; Retention Curves&lt;/strong&gt; – Cohorts are group of users sharing a common characteristic such as acquisition month, acquisition channel etc. Over time as the product is getting improved, one needs to ensure that younger cohorts are showing better retention or lower churn&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Cohort Analysis &amp;amp; Retention Curves&lt;/strong&gt; – Cohorts are group of users sharing a common characteristic such as acquisition month, acquisition channel etc. Over time as the product is getting improved, one needs to ensure that younger cohorts are showing better retention&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Churn Risk Score for every customer&lt;/strong&gt; – Through descriptive analysis we identify predictor variables which could be significant to predict churn and then we can use any of the ML techniques such as Logistic Regression, Decision Trees to predict customer churn and assign each new user a churn risk score. It helps us develop focus on high risk churn&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Churn Prediction Model&lt;/strong&gt; – Through descriptive analysis we identify predictor variables which could be significant for churn prediction and use Logistic Regression to build a simple churn prediction model&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -82,7 +82,11 @@
 
 &lt;p&gt;TakeZero is a fictitious SaaS company which provides an online platform to build no-code web and mobile apps. It works on a subscription model where customers can buy individual plans or team plans with pre-defined seats.&lt;/p&gt;
 
-&lt;p&gt;We have 2019 Q4 data. We have data on customers acquired in the month – October, November &amp;amp; December and which of these users churned by January month (i.e. churn within first 3 months).&lt;/p&gt;
+&lt;p&gt;We have 2019 Q4 data. We have data on customers acquired in the month – October, November &amp;amp; December and which of these users churned by January month&lt;/p&gt;
+
+&lt;h2 id=&quot;data-files&quot;&gt;&lt;strong&gt;Data Files&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Only way to learn data analysis is to do it!!&lt;/em&gt; To get your hands dirty download the data files and get started - &lt;a href=&quot;https://drive.google.com/open?id=1T59xFu-0tUlO-SaDqfUCO6bUJUqI24Gl&quot;&gt;Churn Analysis Files&lt;/a&gt;. There are separate question and answer Excel files in case you want to practice before looking at the solution&lt;/p&gt;
 
 &lt;h2 id=&quot;data-overview&quot;&gt;&lt;strong&gt;Data Overview&lt;/strong&gt;&lt;/h2&gt;
 
@@ -177,16 +181,12 @@
     &lt;p&gt;&lt;strong&gt;Avg # of web app development sessions per month&lt;/strong&gt; - This number captures on an average how many web app development sessions did a customer (inclusive of all her team members) do in a month&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Avg # if mobile app development sessions per month&lt;/strong&gt; - This number captures on an average how many mobile app development sessions did a customer (inclusive of all her team members) do in a month&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Avg # of mobile app development sessions per month&lt;/strong&gt; - This number captures on an average how many mobile app development sessions did a customer (inclusive of all her team members) do in a month&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;Month Churned&lt;/strong&gt; – Month in which customer cancelled her plan. We have churn data for Nov, Dec, Jan. If empty, it means customer did NOT churn till end of the month January 2020&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&quot;data-files&quot;&gt;&lt;strong&gt;Data Files&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;Data files are available &lt;a href=&quot;https://drive.google.com/open?id=1T59xFu-0tUlO-SaDqfUCO6bUJUqI24Gl&quot;&gt;here&lt;/a&gt;. There are separate question and answer Excel files in case you want to practice on your own&lt;/p&gt;
 
 &lt;h2 id=&quot;data-pre-processing&quot;&gt;&lt;strong&gt;Data Pre-processing&lt;/strong&gt;&lt;/h2&gt;
 
@@ -194,16 +194,16 @@
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Team members added/# of seats bought&lt;/strong&gt; – This ratio helps us determine of how many of team members are onboarded against the seats bought by the customer. Having more team members onboarded is a leading indicator engagement of the user and its team on the platform. On the vice versa, very few members onboarded means customer may not be finding value in the platform&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Team members added/# of seats bought&lt;/strong&gt; – This ratio helps us determine of how many team members are onboarded against the seats bought by the customer. Having more team members onboarded is a leading indicator of engagement of the user and its team on the platform. On the vice versa, very few members onboarded means customer may not be finding value in the platform&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Avg # of web app dev sessions per month per team member -&lt;/strong&gt; Since different customers buy different team plans to compare engagement with web app development feature across customers we normalize by calculating avg number of sessions done in a month per user&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Avg # of web app dev sessions per month per team member -&lt;/strong&gt; Since different customers buy different team plans, to compare engagement of web app development feature across customers we normalize it by calculating a per team member ratio&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Avg # of mobile app dev sessions per month per team member -&lt;/strong&gt; Since different customers buy different team plans to compare engagement with mobile app development feature across customers, we normalize by calculating avg number of sessions done in a month per user&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Avg # of mobile app dev sessions per month per team member -&lt;/strong&gt; Since different customers buy different team plans, to compare engagement with mobile app development feature across customers we normalize it by calculating a per team member ratio&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Churn Bool –&lt;/strong&gt; A Boolean variable with value 1 if user churned and 0 otherwise&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Churn Bool –&lt;/strong&gt; A Boolean variable with value 1 if user churned and 0 otherwise (You can find all these fields in the solution Excel file)&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -265,7 +265,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;strong&gt;Observations&lt;/strong&gt; - Our monthly churn rate is around 2-3% (5% is anomalously higher because January acquisition data is not available). For a SaaS company especially early to mid-stage this is on a much lower end of the spectrum.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Observations&lt;/strong&gt; - Our monthly churn rate is around 2-3% (5% is anomalously higher because January user acquisition data is not available). For a SaaS company especially early to mid-stage this is at a much lower end of the spectrum.&lt;/p&gt;
 
 &lt;h2 id=&quot;churn-rates-by-user-segments&quot;&gt;&lt;strong&gt;Churn rates by user segments&lt;/strong&gt;&lt;/h2&gt;
 
@@ -310,7 +310,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;strong&gt;Observations&lt;/strong&gt; - 69% of customers from Asia churn within 3 months. This is much higher than 16-18% churn of European and US customers in the same time period.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Observations&lt;/strong&gt; - 69% of customers from Asia churn within 3 months. This is much higher than 16-19% churn of European and US customers in the same time period.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Churn rate by purchase plan&lt;/strong&gt; –&lt;/li&gt;
@@ -477,21 +477,21 @@
     &lt;p&gt;Customers who buy individual plans (1 seat) churn at much higher rate (47%) than customers who buy team plans (avg around 22-23%)&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Customers who add a smaller number of team members compared to seats bought tend to churn much higher than customers who fill all the seats bought. For example – As seen in the table, customers who bought 10 seat team plan and added less than 5 members in first 3 months, churn at 100%&lt;/p&gt;
+    &lt;p&gt;Customers who add only a small number of team members compared to seats bought tend to churn much more than customers who fill all the seats bought. For example – As seen in the table, customers who bought 10 seat team plan and added less than 5 members in first 3 months, churn at 100%&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;churn-rates-by-customer-behaviour&quot;&gt;&lt;strong&gt;Churn rates by customer behaviour&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;avg # of web app development sessions per month per added user&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;avg # of web app development sessions per month per team member&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;&lt;strong&gt;Churn&lt;/strong&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;strong&gt;avg web app dev sessions ran per month per added user&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;avg web app dev sessions ran per month per team member&lt;/strong&gt;&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -513,14 +513,14 @@
 &lt;p&gt;&lt;strong&gt;Observations –&lt;/strong&gt; There is NO significant difference between the avg # of web app dev sessions user does per month between churned and retained user. Therefore, according to our data, there is no significant association between this metric and churn&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;avg # of mobile app development sessions per month per added user&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;avg # of mobile app development sessions per month per team member&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;&lt;strong&gt;Churn&lt;/strong&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;strong&gt;avg mobile app dev sessions ran per month per added user&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;avg mobile app dev sessions ran per month per team member&lt;/strong&gt;&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -543,16 +543,16 @@
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;There is significant difference between avg # of mobile app dev sessions ran per month per added user between churned and retained user&lt;/p&gt;
+    &lt;p&gt;Aha! there is significant difference between avg # of mobile app dev sessions ran per month between a churned and retained user&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;We can build and test an hypothesis that more number of mobile app dev sessions per month per user lead to higher retention (&lt;em&gt;sticky feature!&lt;/em&gt;)&lt;/p&gt;
+    &lt;p&gt;We can build and test a hypothesis that a greater number of mobile app dev sessions per month per user lead to higher short term retention (&lt;em&gt;sticky feature!&lt;/em&gt;)&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;cohort-analysis-and-retention-curves&quot;&gt;&lt;strong&gt;Cohort Analysis and Retention Curves&lt;/strong&gt;&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Cohorts&lt;/strong&gt; are groups of users sharing by a common characteristic. For instance, cohorts by acquisition date, daily, weekly, monthly cohorts etc. Once can compare metrics such as engagement, retention, or conversion across cohorts. Through cohort analysis, we want to understand if our product changes, campaigns or other investments are leading to positive retention among younger cohorts&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cohorts&lt;/strong&gt; are groups of users sharing by a common characteristic. For instance, cohorts by acquisition date, daily, weekly, monthly cohorts etc. One can compare metrics such as engagement, retention, or conversion across cohorts. Through cohort analysis, we want to understand if our product changes, campaigns or other investments are leading to positive retention among younger cohorts&lt;/p&gt;
 
 &lt;p&gt;To improve retention, we can use two types of cohorts -&lt;/p&gt;
 
@@ -561,7 +561,7 @@
     &lt;p&gt;&lt;strong&gt;Acquisition Cohorts&lt;/strong&gt; - Group user by their acquisition day, week or month and measure retention. This helps to understand when we are losing customers and when does churn stabilise&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Behavioural Cohorts&lt;/strong&gt; – Group users by specific behaviours they have or have not take on the product within a given timeframe. (For example – inviting a team member in 1&lt;sup&gt;st&lt;/sup&gt; month, following 5 users in 1&lt;sup&gt;st&lt;/sup&gt; week etc). We can track retention across such cohorts and find out which are sticky features&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Behavioural Cohorts&lt;/strong&gt; – Group users by specific behaviours they have or have not taken on the product within a given timeframe. (For example – inviting a team member in 1&lt;sup&gt;st&lt;/sup&gt; month, following 5 users in 1&lt;sup&gt;st&lt;/sup&gt; week etc). We can track retention across such cohorts and find out which features are sticky&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -631,14 +631,14 @@
 &lt;p&gt;&lt;strong&gt;Observations -&lt;/strong&gt; Around 20% of the customers who fill &amp;lt; 60% of the bought seats in team plan churn within 1&lt;sup&gt;st&lt;/sup&gt; month compared to 0% churn in customers who fill &amp;gt; 60% seats in same timeframe&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Cohort of customers who do &amp;gt; 5 mobile app dev sessions per month vs those who do not&lt;/li&gt;
+  &lt;li&gt;Cohort of customers who do &amp;gt; 5 mobile app dev sessions per month per team member vs those who do not&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://kn-neeraj.github.io/analyticsblog/assets/img/2020-04-20-Churn-Analysis/media/image3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Observations&lt;/strong&gt; - Around 25% of the customers whose team does &amp;lt;= 5 mobile app dev sessions per month churn within 1&lt;sup&gt;st&lt;/sup&gt; month compared to 0% churn in customers whose team does &amp;gt; 5 mobile app dev sessions per month&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Observations&lt;/strong&gt; - Around 25% of the customers whose team does &amp;lt;= 5 mobile app dev sessions per month per team member churn within 1&lt;sup&gt;st&lt;/sup&gt; month compared to 0% churn in customers whose team does &amp;gt; 5 mobile app dev sessions per month per team member&lt;/p&gt;
 
-&lt;h2 id=&quot;churn-prediction-churn-risk-score-for-customers&quot;&gt;&lt;strong&gt;Churn Prediction –Churn Risk Score for customers&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;churn-prediction&quot;&gt;&lt;strong&gt;Churn Prediction&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;We can use historical data to build a churn prediction model which attaches churn risk score to new customers. Our exploratory analysis till now reveals following predictors could help in explaining churn&lt;/p&gt;
 
@@ -746,7 +746,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;strong&gt;Observation&lt;/strong&gt; - As evident from the table above, mobile sessions per month per added user, and user added/seats bought are two metrics that are highly associated with churn. Customer region – Asia, Purchase plan – number of seats bought are weak predictors of churn.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Observation&lt;/strong&gt; - As evident from the table above, mobile app dev sessions per month per team member, and team members added/# of seats bought are two metrics that are highly associated with churn. Customer region – Asia, and # of seats bought are weak predictors of churn.&lt;/p&gt;
 
 &lt;h2 id=&quot;recommendations-to-improve-short-term-retention-of-takezero&quot;&gt;&lt;strong&gt;Recommendations to improve short term retention of TakeZero&lt;/strong&gt;&lt;/h2&gt;
 
@@ -755,10 +755,10 @@
     &lt;p&gt;Customers who buy individual plans churn more. Customer research should be done to understand why they are leaving. Is it happy churn (they are just done with their task and don’t want to pay subscription) or product doesn’t suit their needs or pricing is the issue&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Establish causality b/w metrics - # of mobile app dev sessions, team members added and short-term retention through A/B test. Based on results, if these are sticky features, we should look at onboarding flow and product funnels to identify where user drop off or why they are not using these features. We should improve discoverability and usability of the features to ensure 100% of customers use them within first 3 months&lt;/p&gt;
+    &lt;p&gt;Establish causality b/w metrics - # of mobile app dev sessions, team members added and short-term retention through A/B test. Based on results, if these are sticky features, we should look at onboarding flow and product funnels to identify where users drop off or why they are not using these features. We should improve discoverability and usability of the features to ensure 100% of customers use them within first 3 months&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Engage users who have high churn risk score through various channels such as mailers, push notifications or sales calls to ensure their problems are resolved before they churn out&lt;/p&gt;
+    &lt;p&gt;Engage users who have high churn risk score through various channels such as mailers, push notifications or sales calls to ensure their problems are resolved before they actually churn out&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
