@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-26T04:46:59-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-20T00:00:00-05:00</published><updated>2020-04-20T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/20/Churn-Analysis.html">&lt;p&gt;&lt;img src=&quot;https://kn-neeraj.github.io/analyticsblog/assets/img/2020-04-20-Churn-Analysis/media/image1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;INDEX&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://kn-neeraj.github.io/analyticsblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kn-neeraj.github.io/analyticsblog/" rel="alternate" type="text/html" /><updated>2020-04-26T04:53:38-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/feed.xml</id><title type="html">Home</title><subtitle>Personal website for all analytics projects.</subtitle><entry><title type="html">Churn Analysis</title><link href="https://kn-neeraj.github.io/analyticsblog/2020/04/26/Churn-Analysis.html" rel="alternate" type="text/html" title="Churn Analysis" /><published>2020-04-26T00:00:00-05:00</published><updated>2020-04-26T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/2020/04/26/Churn-Analysis</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/2020/04/26/Churn-Analysis.html">&lt;p&gt;INDEX&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;#introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/p&gt;
 
@@ -618,7 +616,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kn-neeraj.github.io/analyticsblog/assets/img/2020-04-20-Churn-Analysis/media/image2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kn-neeraj.github.io/analyticsblog/assets/img/2020-04-26-Churn-Analysis/media/image1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Observations&lt;/strong&gt; - If we look at cohorts of users acquired in month October, Nov, December – it is evident that we lose most customers in 1&lt;sup&gt;st&lt;/sup&gt; month and churn stabilises around 2&lt;sup&gt;nd&lt;/sup&gt;-3&lt;sup&gt;rd&lt;/sup&gt; month.&lt;/p&gt;
 
@@ -628,7 +626,7 @@
   &lt;li&gt;Cohort of customers who fill more than 60% of the bought seats within first 3 months vs those who do not&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kn-neeraj.github.io/analyticsblog/assets/img/2020-04-20-Churn-Analysis/media/image3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kn-neeraj.github.io/analyticsblog/assets/img/2020-04-26-Churn-Analysis/media/image2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Observations -&lt;/strong&gt; Around 20% of the customers who fill &amp;lt; 60% of the bought seats in team plan churn within 1&lt;sup&gt;st&lt;/sup&gt; month compared to 0% churn in customers who fill &amp;gt; 60% seats in same timeframe&lt;/p&gt;
 
@@ -636,7 +634,7 @@
   &lt;li&gt;Cohort of customers who do &amp;gt; 5 mobile app dev sessions per month per team member vs those who do not&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kn-neeraj.github.io/analyticsblog/assets/img/2020-04-20-Churn-Analysis/media/image4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kn-neeraj.github.io/analyticsblog/assets/img/2020-04-26-Churn-Analysis/media/image3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Observations&lt;/strong&gt; - Around 25% of the customers whose team does &amp;lt;= 5 mobile app dev sessions per month per team member churn within 1&lt;sup&gt;st&lt;/sup&gt; month compared to 0% churn in customers whose team does &amp;gt; 5 mobile app dev sessions per month per team member&lt;/p&gt;
 
@@ -768,7 +766,7 @@
 
 &lt;p&gt;As a PM, it is important to look deeper than just the obvious metrics and analyse big numbers with scrutiny. Also, it is pertinent to remember that data should inform us in building and validating better hypotheses and should be backed by qualitative research before implementation.&lt;/p&gt;
 
-&lt;p&gt;If you have any comments or suggestions please comment below or reach out to me at - &lt;a href=&quot;https://twitter.com/kn_neeraj&quot;&gt;https://twitter.com/kn_neeraj&lt;/a&gt; or on &lt;a href=&quot;https://www.linkedin.com/in/neerajkumar89/&quot;&gt;LinkedIn&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Building a basic search engine from scratch using Python, Sklearn, and Networkx</title><link href="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html" rel="alternate" type="text/html" title="Building a basic search engine from scratch using Python, Sklearn, and Networkx" /><published>2020-04-07T00:00:00-05:00</published><updated>2020-04-07T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html">&lt;!--
+&lt;p&gt;If you have any comments or suggestions please comment below or reach out to me at - &lt;a href=&quot;https://twitter.com/kn_neeraj&quot;&gt;https://twitter.com/kn_neeraj&lt;/a&gt; or on &lt;a href=&quot;https://www.linkedin.com/in/neerajkumar89/&quot;&gt;LinkedIn&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">INDEX</summary></entry><entry><title type="html">Building a basic search engine from scratch using Python, Sklearn, and Networkx</title><link href="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html" rel="alternate" type="text/html" title="Building a basic search engine from scratch using Python, Sklearn, and Networkx" /><published>2020-04-07T00:00:00-05:00</published><updated>2020-04-07T00:00:00-05:00</updated><id>https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search</id><content type="html" xml:base="https://kn-neeraj.github.io/analyticsblog/python/search%20engine/sklearn/tfidf/network%20analytics/2020/04/07/vertical-search.html">&lt;!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
